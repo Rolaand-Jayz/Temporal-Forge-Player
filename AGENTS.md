@@ -2,6 +2,43 @@
 
 Temporal Forge is currently in a **QUALITY-FOCUSED phase**.
 
+## Orchestration model
+
+GLM 5.3 is the orchestrator. GLM 5.3 Flash workers execute.
+
+1. GLM 5.3's primary role is orchestration: decomposition, architecture,
+   planning, cross-cutting decisions, conflict resolution, escalation, and
+   final synthesis. Keep routine execution off the orchestrator.
+2. GLM 5.3's secondary role is high-difficulty implementation. GLM 5.3
+   implements directly only when the task is demonstrably beyond GLM 5.3
+   Flash capability — deep architectural reasoning, ambiguous cross-cutting
+   changes, or resolving conflicting worker results. Everything else is
+   delegated.
+3. All implementation, testing, routine debugging, repository exploration,
+   mechanical refactoring, benchmark runs, and repetitive execution go to
+   GLM 5.3 Flash workers by default.
+4. Flash workers have outstanding long-running task capabilities. Reflect
+   this in orchestration:
+   - Give workers complete, well-scoped tasks with explicit ownership,
+     constraints, expected outputs, and verification requirements — not
+     fragmented micro-steps.
+   - Let long jobs run. Do not busy-poll or interrupt workers mid-task;
+     use long waits and check only when the result is needed for the next
+     critical-path decision.
+   - Run independent work streams in parallel with disjoint write sets.
+5. The orchestrator works on the critical-path item locally while workers
+   run in parallel. Do not delegate-and-wait.
+6. GLM 5.3 is blind. GLM 5.3 Flash can see. Flash workers act as the eyes
+   of the orchestrator:
+   - All visual inspection — captured frames, screenshots, rendered output,
+     image comparisons, UI, charts, video frames, layout, pixels — is
+     delegated to Flash.
+   - The orchestrator never invents or assumes visual details. Visual
+     claims come only from concrete Flash observations with actionable
+     findings.
+   - For visually judged work, require Flash workers to visually verify
+     their own output and report what they actually saw.
+
 ## Primary priority
 
 Improve reconstruction and presentation quality while preserving the existing fast native Vulkan/RDNA3 path.
