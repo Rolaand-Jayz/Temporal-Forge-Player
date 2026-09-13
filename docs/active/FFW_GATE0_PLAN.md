@@ -1,6 +1,6 @@
 # Forge's Final Word — Gate 0: experiment-system trustworthiness
 
-**Status:** ACTIVE
+**Status:** EVIDENCE COMPLETE — INDEPENDENT AUDIT PENDING
 
 **As of:** 2026-09-13
 
@@ -143,18 +143,22 @@ review possible without undocumented operator knowledge.
 | FFW-T0-4 | complete 2026-09-13 | `benchmarks/gate0/control_liveness.py`, `tests/test_gate0_control_liveness.py`, evidence `benchmarks/gate0/evidence/FFW-T0-4/` — 8/8 controls `live_output` (trace-visible in both arms AND outputs differ) | Defect found & fixed: runtime trace misreported default jitter as enabled (trace-only fix + contract test). Ablation env doubles as estimator selector (producer `off+ablation:<kind>`) — documented, not a defect |
 | FFW-T0-2 | complete 2026-09-13 | `benchmarks/gate0/determinism_probe.py`, `tests/test_gate0_determinism_probe.py`, evidence `benchmarks/gate0/evidence/FFW-T0-2/` — verdict `metric_stable`: not byte-identical; run-to-run max MAE 0.000105 (0-255), ±1-LSB isolated samples on moving content only; comparison rule recorded (noise envelope 0.05) | Envelope measured on one tier (360p→1080p native INT8); exact HW source of ±1-LSB differences not isolated (downstream; does not affect comparability) |
 | FFW-T0-5 | complete 2026-09-13 | `benchmarks/gate0/evaluator_policy.py`, `run_evaluator_controls.py`, `tests/test_gate0_evaluator_policy.py` (10 pass), evidence `benchmarks/gate0/evidence/FFW-T0-5/` — 18/18 invalid candidates rejected on real frames; phase sanity `phase_sensitive` (0.754 vs 5.196 MAE) | Live sharpening-only construct never wins fidelity on this content (probe 0.25–1.0) — those arms are rejected via the fidelity gate; the dedicated sharpening-only rule is contract-tested on synthetic frames only |
-| FFW-T0-6 | not started | — | — |
+| FFW-T0-6 | complete 2026-09-13 | `benchmarks/gate0/audit_bundle.py`, bundle `benchmarks/gate0/audit/20260913/` (index + checklist; 8/8 acceptance rules pass, no missing artifacts), report `docs/reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md` | Independent audit verdict pending — recorded in `audit_index.json → independent_review`; downstream gates stay locked until it exists |
 
 ## Completion criteria
 
-1. All six tasks implemented, validated, and evidenced per their sections.
+1. All six tasks implemented, validated, and evidenced per their sections. ✅ 2026-09-13
 2. Every R1–R6 requirement has primary evidence reachable from the audit
-   bundle index.
+   bundle index. ✅ 2026-09-13
 3. All defects found (no-op controls, nondeterminism beyond the recorded
-   envelope, evaluator blind spots) are recorded with disposition.
-4. Remaining uncertainties explicitly recorded.
+   envelope, evaluator blind spots) are recorded with disposition. ✅ One
+   trace-provenance defect found and fixed (R4); all other findings recorded
+   as uncertainties or filed findings.
+4. Remaining uncertainties explicitly recorded. ✅ Plan results log +
+   evidence report §"Remaining uncertainties and filed findings".
 5. Independent audit verdict pending — recorded as such; downstream gates stay
-   locked until it exists.
+   locked until it exists. ⏳ PENDING — the audit bundle
+   (`benchmarks/gate0/audit/20260913/`) is the review input.
 
 ## Risks
 
