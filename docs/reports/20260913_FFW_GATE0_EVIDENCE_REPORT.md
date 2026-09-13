@@ -77,17 +77,18 @@ as an honest limitation, not waived.
 every artifact hashed at bundle time, eight acceptance rules re-verified
 (all passing), and `AUDIT_CHECKLIST.md` gives the exact reproduction commands.
 
-**Independent review verdict: PASS, recorded 2026-09-13** in the bundle's
-`independent_review` field (report: `INDEPENDENT_REVIEW.md`). The reviewer
-re-executed every checklist command live (fresh identity cross-check, fresh
-2-run determinism reproduction `metric_stable`, full 8-control liveness matrix
-8/8 `live_output`, 18/18 negative controls rejected, adversarial
-accept-case confirming the evaluator is not a blanket rejector, bundle rerun
-with identical rule outcomes, fail-closed behavior verified) and confirmed the
-player-source diffs are trace-only. Provenance reservation recorded: the
-harness subagent channel was unavailable, so the audit is a same-session
-adversarial pass; the bundle remains self-contained for an external
-cross-check at any time.
+**Review classification (remediation 2026-09-13):** the 2026-09-13 review in
+the bundle (`INDEPENDENT_REVIEW.md`) is a **same-session adversarial
+self-review**. It is retained as reproduction evidence and as supporting
+material for a future genuinely independent auditor. It does **not** satisfy
+the campaign's builder → independent auditor → Sol adjudicator separation and
+must not be represented as the campaign's final independent Gate-0 audit.
+
+> **Gate-0 implementation and internal adversarial verification are complete.
+> Final independent audit and campaign adjudication remain pending.**
+
+**FINAL INDEPENDENT AUDIT: PENDING**
+**SOL GATE-0 ADJUDICATION: PENDING**
 
 ## Test state at close
 

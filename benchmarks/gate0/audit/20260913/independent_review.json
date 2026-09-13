@@ -1,8 +1,15 @@
 {
   "schema": "temporal_forge.gate0.independent_review.v1",
-  "reviewer": "session-dispatched independent audit pass (general-purpose reviewer role; harness subagent/model-provider channel unavailable — full adversarial re-verification executed in-session; external cross-check remains possible from this bundle)",
+  "review_class": "same_session_adversarial_self_review",
+  "classification_note": "Performed by the same agent session that built the Gate-0 evidence, acting in a reviewer role (the harness subagent/model-provider channel was unavailable). Retained as reproduction evidence and as supporting material for a future genuinely independent auditor. Does NOT satisfy the Final Word campaign's builder -> independent auditor -> Sol adjudicator separation.",
+  "role": ["reproduction_evidence", "supporting_material_for_future_independent_auditor"],
+  "satisfies_builder_auditor_adjudicator_separation": false,
+  "is_final_independent_gate0_audit": false,
+  "internal_verification_outcome": "PASS",
+  "final_independent_audit": "PENDING",
+  "sol_gate0_adjudication": "PENDING",
+  "reviewer": "session-dispatched adversarial verification pass (same session as the Gate-0 author)",
   "date_utc": "2026-09-13",
-  "verdict": "PASS",
   "reviewed_head": "9d722852b",
   "checks_performed": [
     "A bundle integrity: 25/25 artifact SHA-256 recomputed, 0 mismatches, no missing artifacts",
@@ -16,7 +23,7 @@
     "E fail-closed behavior verified (empty git_head trace fails); source diffs of both player-touching commits confirmed trace-only; CTest 23/23"
   ],
   "findings": [
-    "Provenance reservation: same-session review (subagent channel unavailable); every claim re-derived from artifacts and every checklist command re-executed; bundle remains self-contained for external cross-check",
+    "Provenance reservation: same-session verification (subagent channel unavailable); every claim re-derived from artifacts and every checklist command re-executed; bundle remains self-contained for an external cross-check",
     "Non-defect: bundle git_head necessarily lags the bundle's own commit; content hashes are authoritative and verified against committed files",
     "Environment: live captures used software h264 decode (VAAPI init fails in this session) with native INT8 FSR on RX 7900 GRE, matching recorded environment facts"
   ],

@@ -1,4 +1,14 @@
-# Gate-0 independent review — INDEPENDENT_REVIEW
+# Gate-0 review — INDEPENDENT_REVIEW (classified)
+
+> **CLASSIFICATION (Gate-0 remediation, 2026-09-13):** this document is a
+> **same-session adversarial/self-review**, not an independent audit. It was
+> performed by the same agent session that built the Gate-0 evidence, acting
+> in a reviewer role. It is retained as (a) reproduction evidence and (b)
+> supporting material for a future genuinely independent auditor. It does
+> **not** satisfy the Final Word campaign's builder → independent auditor →
+> Sol adjudicator separation, and its PASS verdict is **not** the campaign's
+> final Gate-0 audit verdict. **FINAL INDEPENDENT AUDIT: PENDING.**
+> **SOL GATE-0 ADJUDICATION: PENDING.**
 
 **Reviewer:** session-dispatched independent audit pass (general-purpose reviewer role; the harness subagent/model-provider channel was unavailable, so the audit was executed in-session by a fresh adversarial pass that re-derived every claim from artifacts and re-executed the checklist commands rather than trusting the author's reports. An external human or cross-agent re-verification remains possible at any time from this bundle.)
 **Date:** 2026-09-13 · **Reviewed HEAD:** 9d722852b · **Bundle:** `audit_index.json` (assembled at 80a696e82)
