@@ -1,0 +1,318 @@
+[
+ {
+  "frame": "temporal_forge_fsr4_0000.ppm",
+  "byte_identical": true
+ },
+ {
+  "frame": "temporal_forge_fsr4_0001.ppm",
+  "byte_identical": true
+ },
+ {
+  "frame": "temporal_forge_fsr4_0002.ppm",
+  "byte_identical": false,
+  "differing_samples": 38,
+  "first_10": [
+   {
+    "x": 178,
+    "y": 166,
+    "channel": 1,
+    "run0": 147,
+    "run1": 148
+   },
+   {
+    "x": 204,
+    "y": 166,
+    "channel": 0,
+    "run0": 252,
+    "run1": 253
+   },
+   {
+    "x": 185,
+    "y": 167,
+    "channel": 1,
+    "run0": 88,
+    "run1": 87
+   },
+   {
+    "x": 163,
+    "y": 170,
+    "channel": 0,
+    "run0": 254,
+    "run1": 255
+   },
+   {
+    "x": 212,
+    "y": 177,
+    "channel": 1,
+    "run0": 250,
+    "run1": 251
+   },
+   {
+    "x": 215,
+    "y": 179,
+    "channel": 1,
+    "run0": 102,
+    "run1": 103
+   },
+   {
+    "x": 120,
+    "y": 181,
+    "channel": 0,
+    "run0": 254,
+    "run1": 255
+   },
+   {
+    "x": 234,
+    "y": 181,
+    "channel": 0,
+    "run0": 212,
+    "run1": 211
+   },
+   {
+    "x": 225,
+    "y": 182,
+    "channel": 0,
+    "run0": 227,
+    "run1": 228
+   },
+   {
+    "x": 234,
+    "y": 182,
+    "channel": 1,
+    "run0": 136,
+    "run1": 137
+   }
+  ]
+ },
+ {
+  "frame": "temporal_forge_fsr4_0003.ppm",
+  "byte_identical": false,
+  "differing_samples": 255,
+  "first_10": [
+   {
+    "x": 146,
+    "y": 164,
+    "channel": 2,
+    "run0": 8,
+    "run1": 9
+   },
+   {
+    "x": 133,
+    "y": 169,
+    "channel": 1,
+    "run0": 133,
+    "run1": 134
+   },
+   {
+    "x": 129,
+    "y": 171,
+    "channel": 2,
+    "run0": 28,
+    "run1": 27
+   },
+   {
+    "x": 142,
+    "y": 173,
+    "channel": 1,
+    "run0": 104,
+    "run1": 103
+   },
+   {
+    "x": 97,
+    "y": 175,
+    "channel": 0,
+    "run0": 255,
+    "run1": 254
+   },
+   {
+    "x": 135,
+    "y": 176,
+    "channel": 0,
+    "run0": 240,
+    "run1": 241
+   },
+   {
+    "x": 144,
+    "y": 176,
+    "channel": 1,
+    "run0": 115,
+    "run1": 114
+   },
+   {
+    "x": 153,
+    "y": 176,
+    "channel": 0,
+    "run0": 236,
+    "run1": 237
+   },
+   {
+    "x": 97,
+    "y": 177,
+    "channel": 0,
+    "run0": 255,
+    "run1": 254
+   },
+   {
+    "x": 144,
+    "y": 177,
+    "channel": 1,
+    "run0": 117,
+    "run1": 116
+   }
+  ]
+ },
+ {
+  "frame": "temporal_forge_fsr4_0004.ppm",
+  "byte_identical": false,
+  "differing_samples": 627,
+  "first_10": [
+   {
+    "x": 295,
+    "y": 116,
+    "channel": 2,
+    "run0": 13,
+    "run1": 12
+   },
+   {
+    "x": 97,
+    "y": 125,
+    "channel": 2,
+    "run0": 0,
+    "run1": 1
+   },
+   {
+    "x": 102,
+    "y": 126,
+    "channel": 1,
+    "run0": 2,
+    "run1": 3
+   },
+   {
+    "x": 96,
+    "y": 131,
+    "channel": 0,
+    "run0": 249,
+    "run1": 248
+   },
+   {
+    "x": 96,
+    "y": 131,
+    "channel": 1,
+    "run0": 11,
+    "run1": 10
+   },
+   {
+    "x": 100,
+    "y": 131,
+    "channel": 0,
+    "run0": 240,
+    "run1": 241
+   },
+   {
+    "x": 105,
+    "y": 131,
+    "channel": 1,
+    "run0": 1,
+    "run1": 2
+   },
+   {
+    "x": 99,
+    "y": 132,
+    "channel": 2,
+    "run0": 9,
+    "run1": 8
+   },
+   {
+    "x": 105,
+    "y": 133,
+    "channel": 1,
+    "run0": 90,
+    "run1": 91
+   },
+   {
+    "x": 112,
+    "y": 134,
+    "channel": 1,
+    "run0": 89,
+    "run1": 90
+   }
+  ]
+ },
+ {
+  "frame": "temporal_forge_fsr4_0005.ppm",
+  "byte_identical": false,
+  "differing_samples": 652,
+  "first_10": [
+   {
+    "x": 277,
+    "y": 68,
+    "channel": 0,
+    "run0": 227,
+    "run1": 228
+   },
+   {
+    "x": 278,
+    "y": 68,
+    "channel": 1,
+    "run0": 190,
+    "run1": 189
+   },
+   {
+    "x": 330,
+    "y": 68,
+    "channel": 1,
+    "run0": 255,
+    "run1": 254
+   },
+   {
+    "x": 278,
+    "y": 71,
+    "channel": 1,
+    "run0": 96,
+    "run1": 97
+   },
+   {
+    "x": 278,
+    "y": 72,
+    "channel": 0,
+    "run0": 90,
+    "run1": 89
+   },
+   {
+    "x": 295,
+    "y": 72,
+    "channel": 2,
+    "run0": 77,
+    "run1": 78
+   },
+   {
+    "x": 295,
+    "y": 73,
+    "channel": 0,
+    "run0": 209,
+    "run1": 208
+   },
+   {
+    "x": 306,
+    "y": 74,
+    "channel": 0,
+    "run0": 213,
+    "run1": 214
+   },
+   {
+    "x": 111,
+    "y": 75,
+    "channel": 0,
+    "run0": 71,
+    "run1": 72
+   },
+   {
+    "x": 296,
+    "y": 75,
+    "channel": 0,
+    "run0": 183,
+    "run1": 184
+   }
+  ]
+ }
+]
