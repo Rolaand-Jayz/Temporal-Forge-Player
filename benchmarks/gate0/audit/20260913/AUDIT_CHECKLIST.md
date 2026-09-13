@@ -1,6 +1,6 @@
 # Gate-0 audit checklist
 
-Generated: 2026-09-13T13:22:45Z · git_head: `9d722852b85e44168c45d14288f6bb33825f1a4f`
+Generated: 2026-09-13T18:20:45Z · git_head: `a78c999c759b4f00cbdcc6e6a9ec7a1341fbd62b`
 
 Reproduce each verification from the repository root:
 
@@ -26,6 +26,26 @@ python3 -m benchmarks.gate0.run_evaluator_controls \
     --reference-dir <refs> --baseline-dir <bases> \
     --report /tmp/negative.json
 
+# Remediation Task B: terminal-tier determinism (1080p -> 2160p,
+# performance_2160 native graph; see the RECORD.md for the exact
+# env_overrides) — verdict must be byte_identical or metric_stable
+python3 -c "from pathlib import Path; import json; \
+  from benchmarks.gate0.determinism_probe import run_determinism; \
+  r = run_determinism(player_path=Path('<player>'), \
+    input_media=Path('benchmarks/video_corpus/clips/bbb_branches_1920x1080_medium_crf23.mp4'), \
+    output_dir=Path('/tmp/rem-t0b'), runs=3, frames=6, warmup=2, \
+    timeout_s=300, env_overrides={'TFORGE_FSR4_FORCE_VIEWPORT': '3840x2160', \
+    'TFORGE_FSR4_FORCE_SCALE': '2.0'}); \
+    print(r['verification']['verdict'])"
+
+# Remediation Task C: anti-sharpening adversarial challenge — the
+# naive detail-match signal must prefer the unsharp candidate while
+# the evaluator rejects it via unsupported detail; the legitimate
+# blend candidate must be accepted
+python3 -m benchmarks.gate0.run_sharpening_challenge \
+    --reference <lanczos_3840x2160.ppm> --baseline <bilinear_3840x2160.ppm> \
+    --report /tmp/challenge.json
+
 # Contract tests (all Gate-0 suites)
 python3 -m pytest tests/test_gate0_*.py -q
 ```
@@ -43,8 +63,10 @@ python3 -m pytest tests/test_gate0_*.py -q
 
 ## Independent review
 
-Status: PASS
-Verdict: PASS
-Reviewer: session-dispatched independent audit pass (general-purpose reviewer role; harness subagent/model-provider channel unavailable — full adversarial re-verification executed in-session; external cross-check remains possible from this bundle)
-Date_utc: 2026-09-13
+Review class: same_session_adversarial_self_review
+Classification: Performed by the same agent session that built the Gate-0 evidence, acting in a reviewer role (the harness subagent/model-provider channel was unavailable). Retained as reproduction evidence and as supporting material for a future genuinely independent auditor. Does NOT satisfy the Final Word campaign's builder -> independent auditor -> Sol adjudicator separation.
+Internal verification outcome: PASS
+FINAL INDEPENDENT AUDIT: PENDING
+SOL GATE-0 ADJUDICATION: PENDING
+Date: 2026-09-13
 Report: INDEPENDENT_REVIEW.md
