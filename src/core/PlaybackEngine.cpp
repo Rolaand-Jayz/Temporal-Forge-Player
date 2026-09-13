@@ -881,11 +881,25 @@ bool dumpEventTraceFrame(const std::filesystem::path &path,
                          uint32_t eventIndex,
                          bool forcedReset,
                          const SideBufferInputs &sideInputs,
-                         float ptsDeltaMs) {
+                         float ptsDeltaMs,
+                         uint64_t seekGeneration,
+                         uint64_t sceneCutCount,
+                         uint64_t historyResetCount,
+                         uint64_t temporalResetCount,
+                         uint64_t uploaderAllocationGeneration,
+                         const std::string &motionProducer,
+                         uint32_t modelW, uint32_t modelH,
+                         uint32_t outputW, uint32_t outputH) {
   // Authoritative runtime evidence for an event-spanning capture. This records
   // the detector decision and its inputs, not a conclusion derived from image
   // error. The capture assembler adds candidate/scene/config identity and the
   // explicit metric thresholds after the player exits successfully.
+  //
+  // Gate-0 R3: the stateGenerations section additionally binds every dumped
+  // frame to the seek generation, reset generations, uploader resource
+  // generation, producer identity, and dispatch geometry it was produced
+  // under, so stale or mismatched state is detectable from the capture
+  // itself without operator knowledge.
   std::error_code directoryError;
   if (!path.parent_path().empty())
     std::filesystem::create_directories(path.parent_path(), directoryError);
@@ -952,6 +966,21 @@ bool dumpEventTraceFrame(const std::filesystem::path &path,
          << "    \"histogramDeltaGreaterThan\": 0.65,\n"
          << "    \"motionConfidenceLessThan\": 0.15,\n"
          << "    \"ptsGapMultiplierGreaterThan\": 2.5\n"
+         << "  },\n"
+         << "  \"stateGenerations\": {\n"
+         << "    \"seekGeneration\": " << seekGeneration << ",\n"
+         << "    \"sceneCutCount\": " << sceneCutCount << ",\n"
+         << "    \"historyResetCount\": " << historyResetCount << ",\n"
+         << "    \"temporalResetCount\": " << temporalResetCount << ",\n"
+         << "    \"uploaderAllocationGeneration\": "
+         << uploaderAllocationGeneration << ",\n"
+         << "    \"motionProducer\": \"" << motionProducer << "\"\n"
+         << "  },\n"
+         << "  \"resourceGeometry\": {\n"
+         << "    \"modelWidth\": " << modelW << ",\n"
+         << "    \"modelHeight\": " << modelH << ",\n"
+         << "    \"outputWidth\": " << outputW << ",\n"
+         << "    \"outputHeight\": " << outputH << "\n"
          << "  },\n"
          << "  \"event\": " << (event ? "true" : "false") << "\n"
          << "}\n";
@@ -3323,6 +3352,23 @@ void PlaybackEngine::videoDecodeLoop() {
            std::getenv("TFORGE_FSR4_EXPERIMENTAL_CONFIDENCE_ORDERED_MOTION"))) {
         orderMotionByConfidence(pastMotion);
       }
+      // Gate-0 R3 trace provenance: record which producer actually settled
+      // the final field for this frame (estimator mode, payload ablation,
+      // dense replay). Diagnostic only; consumed by the per-frame event
+      // trace so every capture carries its producer identity.
+      {
+        const char *modeLabel =
+            effectiveMotionConfig.mode == MotionEstimatorMode::Off ? "off"
+            : effectiveMotionConfig.mode == MotionEstimatorMode::Codec
+                ? "codec"
+                : "codec_refined";
+        std::string producer = modeLabel;
+        if (motionAblation)
+          producer += std::string("+ablation:") + motionAblation;
+        if (std::getenv("TFORGE_FSR4_EXPERIMENTAL_DENSE_MOTION"))
+          producer += "+dense_replay";
+        fsr4MotionProducerLabel_ = std::move(producer);
+      }
       // Apply the UI/benchmark value on the decode thread immediately before
       // synthesizing side inputs. The setter is intentionally atomic because
       // it can be called from Qt's UI thread while this loop is running; the
@@ -4337,6 +4383,11 @@ void PlaybackEngine::videoDecodeLoop() {
               // Commit only after the complete FSR chain succeeds. The next
               // decoded frame may then consume this frame's persistent state.
               temporalFrameContinuity.commit(sourceFrameIndex);
+              // Gate-0 R3: the recurrent/history state generation advances
+              // only when a reset frame fully committed. Failed dispatches
+              // roll the reset back, so they must not advance it.
+              if (in.reset)
+                temporalResetCount_.fetch_add(1, std::memory_order_relaxed);
               static bool dumpedDecoder = false;
               if (!dumpedDecoder && dumpDecoderEnv &&
                   sourceFrameIndex >= dumpDecoderFrame) {
@@ -4651,7 +4702,18 @@ void PlaybackEngine::videoDecodeLoop() {
                           std::filesystem::path(dumpEventTraceDirectory) /
                               eventName,
                           *fsrFrame, fsr4SequenceDumpCount_, reset,
-                          sideInputs, ptsDeltaMs);
+                          sideInputs, ptsDeltaMs,
+                          seekGeneration_.load(std::memory_order_acquire),
+                          sceneCuts_.load(std::memory_order_relaxed),
+                          historyResets_.load(std::memory_order_relaxed),
+                          temporalResetCount_.load(std::memory_order_relaxed),
+                          fsr4Uploader_
+                              ? fsr4Uploader_->allocationGeneration()
+                              : 0,
+                          fsr4MotionProducerLabel_,
+                          fsrModelW, fsrModelH,
+                          jitterPair.neuralTargetW,
+                          jitterPair.neuralTargetH);
                     }
                   }
                   }

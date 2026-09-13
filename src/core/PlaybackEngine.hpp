@@ -387,6 +387,17 @@ private:
     std::atomic<uint64_t> sceneCuts_{0};
     std::atomic<float> lastReactive_{0.0f};
     std::atomic<float> lastMotionConf_{1.0f};
+    // Trace-only (Gate-0 R3): cumulative count of reset frames that reached a
+    // fully committed FSR dispatch. This is the recurrent/history state
+    // generation: recurrent and color history restart exactly at these
+    // boundaries, so a per-frame record of this value detects stale or
+    // mismatched temporal state. Unlike historyResets_ it covers every reset
+    // cause (seek, render-size change, discontinuity, scene cut).
+    std::atomic<uint64_t> temporalResetCount_{0};
+    // Trace-only (Gate-0 R3): the motion producer identity settled for the
+    // current frame (estimator mode, payload ablation, dense replay). Written
+    // and read only on the decode thread.
+    std::string fsr4MotionProducerLabel_{"unresolved"};
 };
 
 } // namespace temporal_forge

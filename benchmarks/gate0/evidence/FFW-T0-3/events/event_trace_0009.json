@@ -1,0 +1,47 @@
+{
+  "schema": "temporal_forge.event_trace.v1",
+  "eventIndex": 9,
+  "eventFrameIndex": 9,
+  "decoderReceiveIndex": 33,
+  "transitionIndex": 8,
+  "ptsUs": 1100000,
+  "ptsDeltaMs": 33.3330002,
+  "jitterX": -0,
+  "jitterY": -0,
+  "jitterApplied": false,
+  "reset": false,
+  "forcedReset": false,
+  "detectorSceneCut": false,
+  "resetCause": "none",
+  "ghostCause": "none",
+  "detectorInputs": {
+    "histogramDelta": 0,
+    "avgLumaDelta": 0,
+    "motionConfidence": 0.974166691,
+    "reactiveAverage": 0,
+    "ptsGapMs": 33.3330002,
+    "expectedFrameIntervalMs": 33.3333549
+  },
+  "thresholdProvenance": {
+    "contract": "side_buffer_scene_cut.v1",
+    "implementation": "SideBufferSynth::shouldReset",
+    "histogramDeltaGreaterThan": 0.65,
+    "motionConfidenceLessThan": 0.15,
+    "ptsGapMultiplierGreaterThan": 2.5
+  },
+  "stateGenerations": {
+    "seekGeneration": 0,
+    "sceneCutCount": 1,
+    "historyResetCount": 1,
+    "temporalResetCount": 2,
+    "uploaderAllocationGeneration": 1,
+    "motionProducer": "codec_refined"
+  },
+  "resourceGeometry": {
+    "modelWidth": 1280,
+    "modelHeight": 720,
+    "outputWidth": 1920,
+    "outputHeight": 1080
+  },
+  "event": false
+}

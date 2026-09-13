@@ -730,6 +730,7 @@ bool GpuImageUploader::allocate(uint32_t sourceW, uint32_t sourceH,
     return true; // no change
   if (sourceW == 0 || sourceH == 0 || outputW == 0 || outputH == 0)
     return false;
+  ++allocationGeneration_;
 
   destroyGpuImage(device_, sourceModel_);
   destroyGpuImage(device_, color_);
