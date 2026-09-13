@@ -139,7 +139,7 @@ review possible without undocumented operator knowledge.
 | Task | Status | Evidence | Uncertainties |
 |---|---|---|---|
 | FFW-T0-1 | complete 2026-09-13 | `benchmarks/gate0/experiment_identity.py`, `tests/test_gate0_identity_manifest.py` (13 pass), live launch record + manifest + runtime trace in `benchmarks/gate0/evidence/FFW-T0-1/` (cross-check passed: binary_sha256, git_head, config_sha256, run_id) | Generic v4.1 weight blob not installed on this host (native INT8 packs hashed instead — production path); git dirty=True at capture because Gate-0 tooling itself was untracked (dirty path list recorded in manifest) |
-| FFW-T0-3 | not started | — | — |
+| FFW-T0-3 | complete 2026-09-13 | `benchmarks/gate0/evidence/FFW-T0-3/` (scene-cut live capture: generations advance at the cut, stable elsewhere; `tests/test_gate0_state_generation_trace.py` 5 pass; CTest 23/23) | Live seek / live realloc generation-change captures unreachable headlessly (seek is QML-only; playlist advance skipped in headless); covered by contract tests. Pre-existing Python failures (3) confirmed on clean tree: M6 retention contract vs retained `review_harness/images` payloads — filed for quality-campaign authority |
 | FFW-T0-4 | not started | — | — |
 | FFW-T0-2 | not started | — | — |
 | FFW-T0-5 | not started | — | — |
