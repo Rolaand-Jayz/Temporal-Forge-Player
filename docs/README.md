@@ -7,7 +7,7 @@ This is the documentation entry point. The governing structure is defined by
 |---|---|
 | What is true now? | [`current/STATE.md`](current/STATE.md) |
 | How does the current system work? | [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md), [`reference/environment.md`](reference/environment.md) (the `TFORGE_*` environment contract) |
-| What is being worked on now? | [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md) (the single active quality authority) and [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md) |
+| What is being worked on now? | [`active/FFW_GATE0_PLAN.md`](active/FFW_GATE0_PLAN.md) (Forge's Final Word Gate 0 — experiment-system trustworthiness), [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md) (the single active quality authority), and [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md) |
 | Where is the campaign progress log and historical gate record? | [`active/progress-state.md`](active/progress-state.md) (supporting record, not an authority) |
 | Why did the design change? | [`decisions/TECHNICAL_HISTORY.md`](decisions/TECHNICAL_HISTORY.md) |
 | What did a dated campaign find? | [`reports/`](reports/) (e.g. the review adjudication of 2026-09-06, [`reports/QUALITY_LAB_REVIEW_ADJUDICATION_20260906.md`](reports/QUALITY_LAB_REVIEW_ADJUDICATION_20260906.md)) and the benchmark READMEs |
@@ -27,6 +27,10 @@ this map.
 - Current FSR input and motion contracts: [`reference/motion/`](reference/motion/).
 - Active quality work: [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md)
   is the single canonical active quality authority.
+- Active Gate-0 campaign work: [`active/FFW_GATE0_PLAN.md`](active/FFW_GATE0_PLAN.md)
+  is the single authority for the Forge's Final Word Gate-0 instrumentation
+  campaign; its evidence report is
+  [`reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md`](reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md).
 - Active portability/reproducibility remediation:
   [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md).
 - [`active/progress-state.md`](active/progress-state.md) is a supporting

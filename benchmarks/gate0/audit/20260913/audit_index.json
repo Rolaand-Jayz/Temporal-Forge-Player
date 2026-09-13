@@ -1,0 +1,244 @@
+{
+  "acceptance_rules": [
+    {
+      "detail": "binary/git/config provenance cross-checked: True",
+      "passed": true,
+      "rule": "identity_crosscheck[FFW-T0-1]"
+    },
+    {
+      "detail": "binary/git/config provenance cross-checked: True",
+      "passed": true,
+      "rule": "identity_crosscheck[FFW-T0-2]"
+    },
+    {
+      "detail": "binary/git/config provenance cross-checked: True",
+      "passed": true,
+      "rule": "identity_crosscheck[FFW-T0-3]"
+    },
+    {
+      "detail": "binary/git/config provenance cross-checked: True",
+      "passed": true,
+      "rule": "identity_crosscheck[FFW-T0-4]"
+    },
+    {
+      "detail": "summary={'inconclusive': 0, 'live_output': 8, 'live_trace_only': 0, 'no_op': 0}",
+      "passed": true,
+      "rule": "liveness_no_noop_controls"
+    },
+    {
+      "detail": "8/8 live_output",
+      "passed": true,
+      "rule": "liveness_all_controls_live"
+    },
+    {
+      "detail": "verdict=metric_stable",
+      "passed": true,
+      "rule": "determinism_envelope_recorded"
+    },
+    {
+      "detail": "summary={'total': 18, 'rejected': 18, 'accepted': 0}",
+      "passed": true,
+      "rule": "negative_controls_all_rejected"
+    }
+  ],
+  "all_rules_passed": true,
+  "generated_utc": "2026-09-13T13:10:21Z",
+  "git_dirty": true,
+  "git_head": "80a696e823f482684c980f9ab044aa16eff241a7",
+  "independent_review": {
+    "note": "Gate-0 completion requires an independent review verdict that the experiment system can support trustworthy downstream conclusions. This bundle is the review input; downstream gates stay locked until the verdict is recorded here.",
+    "status": "pending"
+  },
+  "missing_artifacts": [],
+  "repo_root": "/mnt/workdrive/ZCodeProject/temporal_forge_player",
+  "requirements": {
+    "R1_identity": [
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/experiment_identity.py",
+        "role": "identity manifest builder (library + CLI)",
+        "sha256": "fad49681d65104d4f0f6dfe8d0f86ace1b39336c395c6f31dd64f149ac8efc39",
+        "size_bytes": 16386
+      },
+      {
+        "exists": true,
+        "path": "tests/test_gate0_identity_manifest.py",
+        "role": "identity contract tests",
+        "sha256": "d5678577bf85a4972ff713faaffc6fe81b653b5e9096dc162f25f81eb7042779",
+        "size_bytes": 7046
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-1/experiment_identity.json",
+        "role": "live identity manifest, cross-check passed",
+        "sha256": "9efbbe4149cc025c4157d1573d8ae79e11ca7b7138b51a42324c614345e4d0f6",
+        "size_bytes": 8637
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-1/runtime_trace.json",
+        "role": "player runtime pipeline trace from the same launch",
+        "sha256": "359e96173052114c209c86c2a9b6ec8349a2b3fc4bd0008dda627eb7b5bbbe41",
+        "size_bytes": 2125
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-1/launch_record.json",
+        "role": "launch record + environment facts",
+        "sha256": "b1a7ebf8624c3cfaa432b2c4045c58076897a6833748ccc54318c98b2cb33e5b",
+        "size_bytes": 4897
+      }
+    ],
+    "R2_determinism": [
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/determinism_probe.py",
+        "role": "determinism probe (library + CLI)",
+        "sha256": "3f14c66950213c81467700aa962b1d89a28b8dc7243dfb29576663fcaa3cc923",
+        "size_bytes": 7586
+      },
+      {
+        "exists": true,
+        "path": "tests/test_gate0_determinism_probe.py",
+        "role": "determinism contract tests",
+        "sha256": "cb783573207624b160d8ab1e9d31cecb4d85f777f01b8c6802add170fea26f26",
+        "size_bytes": 3829
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-2/determinism_report.json",
+        "role": "3-run determinism report",
+        "sha256": "ed8cf2e7cfe5c243ada601316c455fb1081bef767ef2a6d0bfbd09915706dd46",
+        "size_bytes": 3558
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-2/pixel_diff_details_run0_run1.json",
+        "role": "per-pixel diff characterization",
+        "sha256": "b980577fd340460faf891c2aad32d80db27845a85a47df1754d8750a944a8e9b",
+        "size_bytes": 4191
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-2/RECORD.md",
+        "role": "envelope + A/B comparison rule",
+        "sha256": "0faba8c0f43aab7f33dd6858478f6165981d236f4df231b0cdf3bb9addde90c9",
+        "size_bytes": 2391
+      }
+    ],
+    "R3_generation_tracing": [
+      {
+        "exists": true,
+        "path": "tests/test_gate0_state_generation_trace.py",
+        "role": "trace contract tests (player source contracts)",
+        "sha256": "d168e2c475883caeaa050a675206241fd8a07ced8eacad6d4f4b2fe5090d3f4e",
+        "size_bytes": 4050
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-3/RECORD.md",
+        "role": "scene-cut generation evidence record",
+        "sha256": "3aa26c0dc0be18f37806fb0fbd7dfb8165f4104afdd1f2410cddb8c5504f6b20",
+        "size_bytes": 3437
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-3/events/event_trace_0006.json",
+        "role": "scene-cut frame with advancing generations",
+        "sha256": "1f512b246db710f5970f0905dce54bc9cb97c3c58d9aaba151604211568e6282",
+        "size_bytes": 1236
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-3/experiment_identity.json",
+        "role": "identity manifest for the trace capture",
+        "sha256": "7ec813f33ad57f1a0303de332851bfda712ba299223808ed8d2e610e84149fd9",
+        "size_bytes": 8766
+      }
+    ],
+    "R4_control_liveness": [
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/control_liveness.py",
+        "role": "liveness probe + control registry",
+        "sha256": "333ad30fe3650d7130f200020304f5f31c35f59f49111f3e9c4b3bada39f28f7",
+        "size_bytes": 11070
+      },
+      {
+        "exists": true,
+        "path": "tests/test_gate0_control_liveness.py",
+        "role": "verdict-rule contract tests",
+        "sha256": "e7c00c808bdaab99dacd44e1738dd5056b26a60247c62a33f66669e1c5de6f5c",
+        "size_bytes": 5615
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-4/liveness_report.json",
+        "role": "8-control paired liveness report",
+        "sha256": "bed736075847377194613679ad975a13bca16fbf8986bb901ce96017efc0b9fd",
+        "size_bytes": 5574
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-4/launch_record.json",
+        "role": "defects found and dispositions",
+        "sha256": "3013c958455ea9862450b92bf7442f898799501fc21a0323ff8cf5d85c169260",
+        "size_bytes": 2018
+      }
+    ],
+    "R5_evaluator_validity": [
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evaluator_policy.py",
+        "role": "evaluator policy (library + CLI)",
+        "sha256": "721e68d8bb36fb2831e1809595fc0537a9bda3f1915ef1336edec122f51dc776",
+        "size_bytes": 10005
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/run_evaluator_controls.py",
+        "role": "negative-control constructor/runner",
+        "sha256": "4e58bd0e092ecf49f83c621b56de5951fa88f94f7488ceb16d061bbe1f405470",
+        "size_bytes": 6090
+      },
+      {
+        "exists": true,
+        "path": "tests/test_gate0_evaluator_policy.py",
+        "role": "rejection-rule contract tests",
+        "sha256": "c2660bb64ffa10f816bf61aa10068abba6290eb98c5aa27a06a30f0b2b1d1db2",
+        "size_bytes": 6013
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/FFW-T0-5/negative_controls_report.json",
+        "role": "live negative-control report on real frames",
+        "sha256": "27c20965db5c0e527e23b83300d80b0042290c40d4c76d59a69d8475a6c795c5",
+        "size_bytes": 18860
+      }
+    ],
+    "R6_audit": [
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/audit_bundle.py",
+        "role": "this tool",
+        "sha256": "5cf0118cab44622d5a7ca12c6a112886708c1666d8e0941c125a6c5dca898bc9",
+        "size_bytes": 12171
+      },
+      {
+        "exists": true,
+        "path": "docs/active/FFW_GATE0_PLAN.md",
+        "role": "Gate-0 plan with results log and uncertainties",
+        "sha256": "b82c308e3b95a5c476b2ad66900dc5a5db5ec1cb4a990e3601437fdc1c2631a6",
+        "size_bytes": 11301
+      },
+      {
+        "exists": true,
+        "path": "docs/reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md",
+        "role": "Gate-0 evidence report",
+        "sha256": "3289d4162100cc8bba14daec0e50e1267dfb0e4b09867c43bedb3006a28db7fc",
+        "size_bytes": 5916
+      }
+    ]
+  },
+  "schema": "temporal_forge.gate0.audit.v1"
+}
