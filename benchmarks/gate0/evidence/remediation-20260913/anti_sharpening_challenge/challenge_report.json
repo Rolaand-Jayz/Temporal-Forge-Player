@@ -1,0 +1,66 @@
+{
+  "schema": "temporal_forge.gate0.evaluator.v1",
+  "generated_utc": "2026-09-13T18:16:30Z",
+  "tier": "terminal (1920x1080 source -> 3840x2160 evaluation geometry)",
+  "reference": {
+    "path": "/tmp/remediation/t0c/reference.ppm",
+    "sha256": "9e61051ca9c5dd9d5032671d1957016bc1588341d8d5652100c1bf396555819d"
+  },
+  "baseline": {
+    "path": "/tmp/remediation/t0c/baseline.ppm",
+    "sha256": "9cc3979b9ce4c86b1a7031829d119a822b451e10cd090d7ae813c19108dcbdb3"
+  },
+  "adversarial": {
+    "hypothesis": "unsharp masking recovers apparent acutance without source-correlated reconstruction information",
+    "construction": "baseline + amount * (baseline - box3x3(baseline))",
+    "parameters": {
+      "unsharp_amount": 1.0,
+      "radius_px": 1,
+      "searched_or_tuned": false
+    },
+    "candidate_sha256": "1799387fc53f6c9ad23a78609103da4ebc86cabec5393b5b2e98ddf112025e16",
+    "naive_detail_match_signal": {
+      "metric": "abs(detail_energy - reference_detail_energy)",
+      "baseline_score": 0.14198486333195048,
+      "candidate_score": 0.08034768649295554,
+      "candidate_preferred_by_naive_signal": true,
+      "reference_detail_energy": 1.2478681310402149,
+      "baseline_detail_energy": 1.1058832677082644,
+      "candidate_detail_energy": 1.3282158175331704
+    },
+    "fidelity": {
+      "candidate_mae": 0.7165920781893004,
+      "baseline_mae": 0.6997841113683128
+    },
+    "evaluator_verdict": "reject",
+    "rule_outcomes": {
+      "fidelity_win": false,
+      "unsupported_detail": true,
+      "sharpening_only": false
+    },
+    "rejection_reasons": [
+      "fidelity: candidate MAE 0.7166 is not better than baseline MAE 0.6998 by the required margin",
+      "unsupported detail: candidate detail energy 1.3282 exceeds reference 1.2479 (ratio 1.064 > 1.050)"
+    ]
+  },
+  "legitimate_acceptance_case": {
+    "construction": "blend(reference, baseline, weight_a=0.6)",
+    "candidate_sha256": "5b5d277b2c17c6b3073e12b646669d1e9d3fdc1e4c7e1909fdfd7c76a7815cf3",
+    "evaluator_verdict": "accept",
+    "metrics": {
+      "candidate_mae": 0.22098210841049382,
+      "baseline_mae": 0.6997841113683128,
+      "reference_detail_energy": 1.2478681310402149,
+      "candidate_detail_energy": 1.1222311782907475,
+      "detail_ratio": 0.8993187263747675,
+      "stride": 2,
+      "hf_tolerance": 0.05,
+      "fidelity_win_margin": 0.05
+    },
+    "rule_outcomes": {
+      "fidelity_win": true,
+      "unsupported_detail": false,
+      "sharpening_only": false
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "comparison_rule": "Later A/B testing must pair arms captured under this envelope: byte-identical repeats make frame hashes valid provenance keys; otherwise spatial deltas within the recorded MAE threshold are the maximum expected run-to-run noise.",
+  "frames": 6,
+  "generated_utc": "2026-09-13T18:12:43Z",
+  "input_media": "benchmarks/video_corpus/clips/bbb_branches_1920x1080_medium_crf23.mp4",
+  "player": "/tmp/temporal-forge-integrated-build/temporal_forge_player",
+  "runs": [
+    {
+      "dump_dir": "run_00/dumps",
+      "dumps": {
+        "temporal_forge_fsr4_0000.ppm": "f22f1b8e4b457db84c4bc75d09be265dd387f275a296afb309e3a0bf27af4489",
+        "temporal_forge_fsr4_0001.ppm": "9d6a2ed4cacd0c09fcc745c8a1fe6e18ce9fe69010fd95c2af42154e8f347418",
+        "temporal_forge_fsr4_0002.ppm": "057bf4fb430d9d439dc71cc3975934d5a6acce480f37ebe7d96b6d865a87f2cb",
+        "temporal_forge_fsr4_0003.ppm": "9857bb8782761f4547294af06d89a995f53dcab8bd5a3938aea2b12d1705997a",
+        "temporal_forge_fsr4_0004.ppm": "aceaff880472afa461c094acd51982bd072371c0304015db08b7f602ff41c273",
+        "temporal_forge_fsr4_0005.ppm": "1268b93696b8293a9e075074bf0cbdfac8342c9d0876274b3465056a5bbb4e80"
+      },
+      "ok": true,
+      "run_id": "FFW-T0-2-det-00",
+      "terminated_after_capture": true,
+      "timed_out": false
+    },
+    {
+      "dump_dir": "run_01/dumps",
+      "dumps": {
+        "temporal_forge_fsr4_0000.ppm": "f22f1b8e4b457db84c4bc75d09be265dd387f275a296afb309e3a0bf27af4489",
+        "temporal_forge_fsr4_0001.ppm": "9d6a2ed4cacd0c09fcc745c8a1fe6e18ce9fe69010fd95c2af42154e8f347418",
+        "temporal_forge_fsr4_0002.ppm": "057bf4fb430d9d439dc71cc3975934d5a6acce480f37ebe7d96b6d865a87f2cb",
+        "temporal_forge_fsr4_0003.ppm": "9857bb8782761f4547294af06d89a995f53dcab8bd5a3938aea2b12d1705997a",
+        "temporal_forge_fsr4_0004.ppm": "aceaff880472afa461c094acd51982bd072371c0304015db08b7f602ff41c273",
+        "temporal_forge_fsr4_0005.ppm": "1268b93696b8293a9e075074bf0cbdfac8342c9d0876274b3465056a5bbb4e80"
+      },
+      "ok": true,
+      "run_id": "FFW-T0-2-det-01",
+      "terminated_after_capture": true,
+      "timed_out": false
+    },
+    {
+      "dump_dir": "run_02/dumps",
+      "dumps": {
+        "temporal_forge_fsr4_0000.ppm": "f22f1b8e4b457db84c4bc75d09be265dd387f275a296afb309e3a0bf27af4489",
+        "temporal_forge_fsr4_0001.ppm": "9d6a2ed4cacd0c09fcc745c8a1fe6e18ce9fe69010fd95c2af42154e8f347418",
+        "temporal_forge_fsr4_0002.ppm": "057bf4fb430d9d439dc71cc3975934d5a6acce480f37ebe7d96b6d865a87f2cb",
+        "temporal_forge_fsr4_0003.ppm": "9857bb8782761f4547294af06d89a995f53dcab8bd5a3938aea2b12d1705997a",
+        "temporal_forge_fsr4_0004.ppm": "aceaff880472afa461c094acd51982bd072371c0304015db08b7f602ff41c273",
+        "temporal_forge_fsr4_0005.ppm": "1268b93696b8293a9e075074bf0cbdfac8342c9d0876274b3465056a5bbb4e80"
+      },
+      "ok": true,
+      "run_id": "FFW-T0-2-det-02",
+      "terminated_after_capture": true,
+      "timed_out": false
+    }
+  ],
+  "runs_requested": 3,
+  "schema": "temporal_forge.gate0.determinism.v1",
+  "verification": {
+    "mae_threshold": 0.05,
+    "pairwise": [
+      {
+        "byte_identical_frames": 6,
+        "compared": 6,
+        "max_mae": 0.0,
+        "runs": [
+          "FFW-T0-2-det-00",
+          "FFW-T0-2-det-01"
+        ]
+      },
+      {
+        "byte_identical_frames": 6,
+        "compared": 6,
+        "max_mae": 0.0,
+        "runs": [
+          "FFW-T0-2-det-01",
+          "FFW-T0-2-det-02"
+        ]
+      }
+    ],
+    "verdict": "byte_identical"
+  },
+  "warmup": 2
+}

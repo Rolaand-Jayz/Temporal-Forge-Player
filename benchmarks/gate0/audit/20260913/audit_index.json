@@ -42,9 +42,9 @@
     }
   ],
   "all_rules_passed": true,
-  "generated_utc": "2026-09-13T13:22:45Z",
+  "generated_utc": "2026-09-13T18:20:45Z",
   "git_dirty": true,
-  "git_head": "9d722852b85e44168c45d14288f6bb33825f1a4f",
+  "git_head": "a78c999c759b4f00cbdcc6e6a9ec7a1341fbd62b",
   "independent_review": {
     "checks_performed": [
       "A bundle integrity: 25/25 artifact SHA-256 recomputed, 0 mismatches, no missing artifacts",
@@ -57,19 +57,29 @@
       "C6 R6 bundle: re-run to scratch dir, all 8 rule outcomes identical to committed index",
       "E fail-closed behavior verified (empty git_head trace fails); source diffs of both player-touching commits confirmed trace-only; CTest 23/23"
     ],
+    "classification_note": "Performed by the same agent session that built the Gate-0 evidence, acting in a reviewer role (the harness subagent/model-provider channel was unavailable). Retained as reproduction evidence and as supporting material for a future genuinely independent auditor. Does NOT satisfy the Final Word campaign's builder -> independent auditor -> Sol adjudicator separation.",
     "date_utc": "2026-09-13",
+    "final_independent_audit": "PENDING",
     "findings": [
-      "Provenance reservation: same-session review (subagent channel unavailable); every claim re-derived from artifacts and every checklist command re-executed; bundle remains self-contained for external cross-check",
+      "Provenance reservation: same-session verification (subagent channel unavailable); every claim re-derived from artifacts and every checklist command re-executed; bundle remains self-contained for an external cross-check",
       "Non-defect: bundle git_head necessarily lags the bundle's own commit; content hashes are authoritative and verified against committed files",
       "Environment: live captures used software h264 decode (VAAPI init fails in this session) with native INT8 FSR on RX 7900 GRE, matching recorded environment facts"
     ],
+    "internal_verification_outcome": "PASS",
+    "is_final_independent_gate0_audit": false,
     "report": "INDEPENDENT_REVIEW.md",
     "reservations": [],
+    "review_class": "same_session_adversarial_self_review",
     "reviewed_head": "9d722852b",
-    "reviewer": "session-dispatched independent audit pass (general-purpose reviewer role; harness subagent/model-provider channel unavailable \u2014 full adversarial re-verification executed in-session; external cross-check remains possible from this bundle)",
+    "reviewer": "session-dispatched adversarial verification pass (same session as the Gate-0 author)",
+    "role": [
+      "reproduction_evidence",
+      "supporting_material_for_future_independent_auditor"
+    ],
+    "satisfies_builder_auditor_adjudicator_separation": false,
     "schema": "temporal_forge.gate0.independent_review.v1",
-    "status": "PASS",
-    "verdict": "PASS"
+    "sol_gate0_adjudication": "PENDING",
+    "status": "PASS"
   },
   "missing_artifacts": [],
   "repo_root": "/mnt/workdrive/ZCodeProject/temporal_forge_player",
@@ -146,6 +156,27 @@
         "role": "envelope + A/B comparison rule",
         "sha256": "0faba8c0f43aab7f33dd6858478f6165981d236f4df231b0cdf3bb9addde90c9",
         "size_bytes": 2391
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/determinism_report_terminal_tier.json",
+        "role": "remediation: terminal-tier (1080p->2160p, performance_2160) determinism report",
+        "sha256": "c5954fce993f0351a193b95b0993bbc735ee6d325e5c06146acc14f9711c88bf",
+        "size_bytes": 3574
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/RECORD.md",
+        "role": "remediation: terminal-tier configuration, fixture justification, envelope determination",
+        "sha256": "ab4ad72f275428abf293e56f10f2a5f3f9e2a305a142961658375267974ee08f",
+        "size_bytes": 5347
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/experiment_identity.json",
+        "role": "remediation: identity manifest for the terminal-tier run",
+        "sha256": "443457c5ef9e280a7f0fc46bbdbfef016bd9e9e2ee5127919c39c83c38e953fc",
+        "size_bytes": 8840
       }
     ],
     "R3_generation_tracing": [
@@ -236,6 +267,27 @@
         "role": "live negative-control report on real frames",
         "sha256": "27c20965db5c0e527e23b83300d80b0042290c40d4c76d59a69d8475a6c795c5",
         "size_bytes": 18860
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/run_sharpening_challenge.py",
+        "role": "remediation: fixed-parameter anti-sharpening challenge runner",
+        "sha256": "170dc311d92171a732a0cff2ece46c4de4fb261dba76cf623daa86d3628265da",
+        "size_bytes": 7278
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/remediation-20260913/anti_sharpening_challenge/challenge_report.json",
+        "role": "remediation: live anti-sharpening false-positive challenge (terminal tier)",
+        "sha256": "2c2978a0a77818855f0db2a084a3a05616a8b2e60ef855257752bafa036a6c92",
+        "size_bytes": 2495
+      },
+      {
+        "exists": true,
+        "path": "benchmarks/gate0/evidence/remediation-20260913/anti_sharpening_challenge/RECORD.md",
+        "role": "remediation: challenge hypothesis, result, acceptance case",
+        "sha256": "4e913716e57b5d3e56eec8fdbfdf0f0247965459b6630b0b3bc6295d851d9a9f",
+        "size_bytes": 3634
       }
     ],
     "R6_audit": [
@@ -243,22 +295,22 @@
         "exists": true,
         "path": "benchmarks/gate0/audit_bundle.py",
         "role": "this tool",
-        "sha256": "c92e692a8e64cdaeacc5f66b12e8b452ca5aac1be42f67c56631c9768a579c99",
-        "size_bytes": 13303
+        "sha256": "bec5ad14416bb7d2bb090a28af6a46bf98cc55a27d4f5224499f9af2a044e877",
+        "size_bytes": 16306
       },
       {
         "exists": true,
         "path": "docs/active/FFW_GATE0_PLAN.md",
         "role": "Gate-0 plan with results log and uncertainties",
-        "sha256": "ae4a89183faa81285f7826f278aad71b03fcb1ceef6207bb0e29aa3760d69ebd",
-        "size_bytes": 11582
+        "sha256": "fe856ec5c2facff751f66978d0a0ad666f489b472f376ab7786aeba73fc4383a",
+        "size_bytes": 13418
       },
       {
         "exists": true,
         "path": "docs/reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md",
         "role": "Gate-0 evidence report",
-        "sha256": "dabe6d590ec949e454afb2ebc3049b3899360bc7e0a3b1581fcbe05743d21452",
-        "size_bytes": 6778
+        "sha256": "91270b0fdbc43b4295d23ac169abe877889d6f0b39da5a6054262770e0a8cfd9",
+        "size_bytes": 6690
       }
     ]
   },

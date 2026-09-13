@@ -103,9 +103,21 @@ def run_player(
     log_path = output_dir / "player.log"
     runtime_trace = output_dir / "runtime_trace.json"
 
-    def capture_complete() -> bool:
-        dumped = sum(1 for _ in dumps_dir.glob("temporal_forge_fsr4_*.ppm"))
-        return dumped >= frames and runtime_trace.is_file()
+    def capture_complete(previous_inventory: dict[str, int]) -> bool:
+        """Complete when all dumps exist, the trace exists, AND the dump
+        inventory (name → size) is unchanged since the previous poll. At 4K a
+        25 MB dump file can exist for several hundred milliseconds while still
+        being flushed; terminating on mere existence truncates the payload."""
+        entries = {
+            entry.name: entry.stat().st_size
+            for entry in dumps_dir.glob("temporal_forge_fsr4_*.ppm")
+            if entry.is_file()
+        }
+        dumped = len(entries)
+        stable = bool(entries) and entries == previous_inventory
+        previous_inventory.clear()
+        previous_inventory.update(entries)
+        return dumped >= frames and runtime_trace.is_file() and stable
 
     def terminate(process: subprocess.Popen) -> None:
         process.terminate()
@@ -119,6 +131,7 @@ def run_player(
     timed_out = False
     terminated_after_capture = False
     exit_code: int | None = None
+    previous_inventory: dict[str, int] = {}
     with open(log_path, "w", encoding="utf-8") as log:
         process = subprocess.Popen(
             [str(player_path), str(input_media)],
@@ -137,7 +150,7 @@ def run_player(
                 timed_out = True
                 terminate(process)
                 break
-            if capture_complete():
+            if capture_complete(previous_inventory):
                 terminated_after_capture = True
                 terminate(process)
                 exit_code = process.returncode
