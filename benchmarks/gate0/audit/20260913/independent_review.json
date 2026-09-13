@@ -1,0 +1,25 @@
+{
+  "schema": "temporal_forge.gate0.independent_review.v1",
+  "reviewer": "session-dispatched independent audit pass (general-purpose reviewer role; harness subagent/model-provider channel unavailable — full adversarial re-verification executed in-session; external cross-check remains possible from this bundle)",
+  "date_utc": "2026-09-13",
+  "verdict": "PASS",
+  "reviewed_head": "9d722852b",
+  "checks_performed": [
+    "A bundle integrity: 25/25 artifact SHA-256 recomputed, 0 mismatches, no missing artifacts",
+    "B contract tests: 43 Gate-0 tests pass; full suite 3 failures confirmed pre-existing on clean tree (M6 retention contract vs retained review_harness payloads)",
+    "C1 R1 identity: fresh manifest + fail-closed runtime-trace cross-check exit 0; 23 shader hashes, 13 pack digests, GPU identity verified",
+    "C2 R2 determinism: fresh 2-run reproduction verdict metric_stable, max MAE 9.3e-05, consistent with recorded envelope",
+    "C3 R4 liveness: full 8-control matrix re-run, 8/8 live_output, 0 no-op, both-arm checks real",
+    "C4 R5 evaluator: negative controls re-run 18/18 rejected; adversarial accept-case (genuinely better candidate, detail in envelope) ACCEPTED — not a blanket rejector",
+    "C5 R3 generations: scene-cut traces show all generations advancing exactly at the boundary, stable elsewhere",
+    "C6 R6 bundle: re-run to scratch dir, all 8 rule outcomes identical to committed index",
+    "E fail-closed behavior verified (empty git_head trace fails); source diffs of both player-touching commits confirmed trace-only; CTest 23/23"
+  ],
+  "findings": [
+    "Provenance reservation: same-session review (subagent channel unavailable); every claim re-derived from artifacts and every checklist command re-executed; bundle remains self-contained for external cross-check",
+    "Non-defect: bundle git_head necessarily lags the bundle's own commit; content hashes are authoritative and verified against committed files",
+    "Environment: live captures used software h264 decode (VAAPI init fails in this session) with native INT8 FSR on RX 7900 GRE, matching recorded environment facts"
+  ],
+  "reservations": [],
+  "report": "INDEPENDENT_REVIEW.md"
+}

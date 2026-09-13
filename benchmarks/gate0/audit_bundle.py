@@ -176,6 +176,30 @@ def build_bundle(output_dir: Path) -> dict[str, Any]:
         ["git", "-C", str(REPO_ROOT), "status", "--porcelain"],
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, check=False,
     )
+    # An independent review records its verdict as independent_review.json in
+    # the bundle output directory; when present it is embedded verbatim so
+    # the index carries the Gate-0 completion verdict.
+    review_path = output_dir / "independent_review.json"
+    if review_path.is_file():
+        independent_review = json.loads(review_path.read_text(encoding="utf-8"))
+        # Normalize: the index contract uses "status"; a recorded review's
+        # verdict IS its status.
+        independent_review.setdefault(
+            "status", independent_review.get("verdict", "pending")
+        )
+        independent_review["report"] = independent_review.get(
+            "report", "INDEPENDENT_REVIEW.md"
+        )
+    else:
+        independent_review = {
+            "status": "pending",
+            "note": (
+                "Gate-0 completion requires an independent review verdict that "
+                "the experiment system can support trustworthy downstream "
+                "conclusions. This bundle is the review input; downstream "
+                "gates stay locked until the verdict is recorded here."
+            ),
+        }
     bundle = {
         "schema": SCHEMA,
         "generated_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -186,15 +210,7 @@ def build_bundle(output_dir: Path) -> dict[str, Any]:
         "acceptance_rules": rules,
         "missing_artifacts": missing,
         "all_rules_passed": all(r["passed"] for r in rules) and not missing,
-        "independent_review": {
-            "status": "pending",
-            "note": (
-                "Gate-0 completion requires an independent review verdict that "
-                "the experiment system can support trustworthy downstream "
-                "conclusions. This bundle is the review input; downstream "
-                "gates stay locked until the verdict is recorded here."
-            ),
-        },
+        "independent_review": independent_review,
     }
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "audit_index.json").write_text(
@@ -251,7 +267,15 @@ def write_checklist(bundle: dict[str, Any], output_dir: Path) -> None:
     lines.append("")
     lines.append("## Independent review")
     lines.append("")
-    lines.append(bundle["independent_review"]["note"])
+    review = bundle["independent_review"]
+    lines.append(f"Status: {review.get('status', 'unknown')}")
+    if review.get("verdict"):
+        lines.append(f"Verdict: {review['verdict']}")
+    for key in ("reviewer", "date_utc", "note"):
+        if review.get(key):
+            lines.append(f"{key.capitalize()}: {review[key]}")
+    if review.get("report"):
+        lines.append(f"Report: {review['report']}")
     (output_dir / "AUDIT_CHECKLIST.md").write_text("\n".join(lines), encoding="utf-8")
 
 

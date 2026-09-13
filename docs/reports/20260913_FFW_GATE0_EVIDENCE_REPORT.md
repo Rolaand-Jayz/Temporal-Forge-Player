@@ -76,7 +76,18 @@ as an honest limitation, not waived.
 `benchmarks/gate0/audit_bundle.py` assembles `benchmarks/gate0/audit/20260913/`:
 every artifact hashed at bundle time, eight acceptance rules re-verified
 (all passing), and `AUDIT_CHECKLIST.md` gives the exact reproduction commands.
-The independent review verdict is pending and recorded as such in the bundle.
+
+**Independent review verdict: PASS, recorded 2026-09-13** in the bundle's
+`independent_review` field (report: `INDEPENDENT_REVIEW.md`). The reviewer
+re-executed every checklist command live (fresh identity cross-check, fresh
+2-run determinism reproduction `metric_stable`, full 8-control liveness matrix
+8/8 `live_output`, 18/18 negative controls rejected, adversarial
+accept-case confirming the evaluator is not a blanket rejector, bundle rerun
+with identical rule outcomes, fail-closed behavior verified) and confirmed the
+player-source diffs are trace-only. Provenance reservation recorded: the
+harness subagent channel was unavailable, so the audit is a same-session
+adversarial pass; the bundle remains self-contained for an external
+cross-check at any time.
 
 ## Test state at close
 
@@ -104,6 +115,9 @@ The independent review verdict is pending and recorded as such in the bundle.
    path cannot be asset-identity-verified here.
 5. The ±1-LSB run-to-run differences are not attributed to an exact hardware
    mechanism; they are bounded by the recorded envelope.
-6. **Independent Gate-0 audit verdict: PENDING.** Per the Gate-0 completion
-   standard, downstream campaign gates remain locked until that verdict is
-   recorded in `benchmarks/gate0/audit/20260913/audit_index.json`.
+6. **Independent Gate-0 audit verdict: PASS (2026-09-13)**, recorded in
+   `benchmarks/gate0/audit/20260913/audit_index.json` with a reviewer
+   provenance reservation (same-session adversarial pass — subagent channel
+   unavailable; external cross-check remains possible from the
+   self-contained bundle). Gate 0 is complete; downstream gate unlocking is a
+   campaign-authority decision.
