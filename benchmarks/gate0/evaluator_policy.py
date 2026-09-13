@@ -166,39 +166,40 @@ def adjudicate(
 
 
 def phase_sanity(
-    references: list[dict[str, Any]], baseline: dict[str, Any], stride: int = STRIDE
+    references: list[dict[str, Any]],
+    baselines: list[dict[str, Any]],
+    stride: int = STRIDE,
 ) -> dict[str, Any]:
-    """Metric sanity probe: aligned fidelity must beat off-by-one fidelity.
+    """Metric sanity probe: aligned pairs must beat phase-shifted pairs.
 
-    A metric that cannot tell frame N from frame N±1 is blind to phase and
-    cannot adjudicate temporal reconstruction. This is a Gate-0 evaluator
-    self-check, not a candidate verdict.
+    The aligned mean is the fidelity of each reference against its own
+    baseline; the shifted mean is the fidelity of each reference against the
+    NEXT frame's baseline. A metric that cannot tell frame N from frame N±1
+    is blind to phase and cannot adjudicate temporal reconstruction. This is
+    a Gate-0 evaluator self-check, not a candidate verdict.
     """
-    if len(references) < 2:
-        return {"verdict": "inconclusive", "reason": "need at least 2 frames"}
+    if not references or len(references) != len(baselines):
+        return {
+            "verdict": "inconclusive",
+            "reason": "need equal-length non-empty frame lists",
+        }
     aligned = [
-        fidelity(references[i], baseline, stride)
+        fidelity(references[i], baselines[i], stride)
         for i in range(len(references))
     ]
-    aligned_pairs_mean = sum(aligned) / len(aligned)
     shifted = [
-        fidelity(references[i], baseline, stride)
-        for i in range(1, len(references))
+        fidelity(references[i], baselines[(i + 1) % len(baselines)], stride)
+        for i in range(len(references))
     ]
-    shifted_pairs_mean = (
-        sum(
-            fidelity(references[i + 1], references[i], stride)
-            for i in range(len(references) - 1)
-        )
-        / (len(references) - 1)
-    )
-    # The aligned reference pair (baseline vs its own reference) must score
-    # clearly better than inter-frame (shifted) comparisons.
-    phase_sensitive = shifted_pairs_mean > aligned_pairs_mean
+    aligned_mean = sum(aligned) / len(aligned)
+    shifted_mean = sum(shifted) / len(shifted)
+    phase_sensitive = shifted_mean > aligned_mean
     return {
         "verdict": "phase_sensitive" if phase_sensitive else "phase_blind",
-        "aligned_mean_mae": aligned_pairs_mean,
-        "shifted_mean_mae": shifted_pairs_mean,
+        "aligned_mean_mae": aligned_mean,
+        "shifted_mean_mae": shifted_mean,
+        "aligned_mae": aligned,
+        "shifted_mae": shifted,
         "stride": stride,
     }
 
