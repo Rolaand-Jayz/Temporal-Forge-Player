@@ -1,0 +1,63 @@
+{
+  "task": "FFW-T0-4",
+  "description": "Control liveness proofs (R4): paired default/set captures per control",
+  "date_utc": "2026-09-13",
+  "input_media": "tests/sample.mp4",
+  "frames": 6,
+  "warmup": 2,
+  "summary": {
+    "inconclusive": 0,
+    "live_output": 8,
+    "live_trace_only": 0,
+    "no_op": 0
+  },
+  "controls": [
+    {
+      "control": "motion_ablation_zero",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "motion_ablation_block",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "motion_estimator_off",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "jitter_synthetic",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "cas_disabled",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "history_confidence_threshold_035",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "color_history_enabled",
+      "verdict": "live_output",
+      "output_differs": true
+    },
+    {
+      "control": "recurrent_enabled",
+      "verdict": "live_output",
+      "output_differs": true
+    }
+  ],
+  "defect_found_and_fixed": [
+    "Runtime trace reported jitter_enabled=true for the default (unset) jitter mode, diverging from the effective JitterMode::Off selection. Found by the liveness probe; writeRuntimePipelineTrace now mirrors the effective selection and records requested_jitter_mode. Trace-only change; contract test test_gate0_state_generation_trace.py::test_runtime_trace_reports_effective_default_jitter_as_off."
+  ],
+  "notes": [
+    "TFORGE_FSR4_MOTION_ABLATION doubles as the estimator-mode selector: ablation arms run with the estimator off; producer labels record 'off+ablation:<kind>' honestly.",
+    "The dispatch-trace log line (threshold=0.55/0.35) proves the history-confidence threshold reaches the prepass constants in both arms."
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "controls": [
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": "off+ablation:zero",
+          "field_path": "stateGenerations.motionProducer",
+          "kind": "event_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": "codec_refined",
+          "field_path": "stateGenerations.motionProducer",
+          "kind": "event_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "motion_ablation_zero",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_MOTION_ABLATION": "zero"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": "off+ablation:block",
+          "field_path": "stateGenerations.motionProducer",
+          "kind": "event_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": "codec_refined",
+          "field_path": "stateGenerations.motionProducer",
+          "kind": "event_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "motion_ablation_block",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_MOTION_ABLATION": "block"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": "off",
+          "field_path": "stateGenerations.motionProducer",
+          "kind": "event_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": "codec_refined",
+          "field_path": "stateGenerations.motionProducer",
+          "kind": "event_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "motion_estimator_off",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_MOTION_ESTIMATOR": "off"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": true,
+          "field_path": "jitter_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": false,
+          "field_path": "jitter_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "jitter_synthetic",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_JITTER_MODE": "synthetic"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": false,
+          "field_path": "cas_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": true,
+          "field_path": "cas_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "cas_disabled",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_DISABLE_CAS": "1"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": "threshold=0.35",
+          "field_path": "",
+          "kind": "log_contains",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": "threshold=0.55",
+          "field_path": "",
+          "kind": "log_contains",
+          "passed": true
+        }
+      ],
+      "control": "history_confidence_threshold_035",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_HISTORY_CONFIDENCE_THRESHOLD": "0.35"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": true,
+          "field_path": "history_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": false,
+          "field_path": "history_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "color_history_enabled",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_ENABLE_COLOR_HISTORY": "1"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    },
+    {
+      "checks": [
+        {
+          "arm": "set",
+          "expected": true,
+          "field_path": "recurrent_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        },
+        {
+          "arm": "default",
+          "expected": false,
+          "field_path": "recurrent_enabled",
+          "kind": "runtime_trace_field",
+          "passed": true
+        }
+      ],
+      "control": "recurrent_enabled",
+      "default_arm_ok": true,
+      "env": {
+        "TFORGE_FSR4_ENABLE_RECURRENT": "1"
+      },
+      "output_differs": true,
+      "set_arm_ok": true,
+      "verdict": "live_output"
+    }
+  ],
+  "frames": 6,
+  "generated_utc": "2026-09-13T12:53:43Z",
+  "input_media": "tests/sample.mp4",
+  "player": "/tmp/temporal-forge-integrated-build/temporal_forge_player",
+  "schema": "temporal_forge.gate0.liveness.v1",
+  "summary": {
+    "inconclusive": 0,
+    "live_output": 8,
+    "live_trace_only": 0,
+    "no_op": 0
+  },
+  "warmup": 2
+}

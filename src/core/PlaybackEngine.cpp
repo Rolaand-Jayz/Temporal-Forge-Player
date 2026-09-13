@@ -210,7 +210,25 @@ void writeRuntimePipelineTrace(uint32_t decodedW, uint32_t decodedH,
     return;
 
   const char *jitterEnv = std::getenv("TFORGE_FSR4_JITTER_MODE");
-  const bool jitterOff = jitterEnv && std::strcmp(jitterEnv, "off") == 0;
+  // Mirror the effective jitter-mode selection exactly (see the decode-loop
+  // selector): unset or unknown values are Off, never synthetic. The trace
+  // previously reported jitter_enabled=true for the default-off path — a
+  // provenance defect found by the Gate-0 control-liveness probe.
+  const bool integratedBestFindingsJitterTrace =
+      std::getenv("TFORGE_FSR4_INTEGRATED_BEST_FINDINGS_JITTER") != nullptr;
+  const char *effectiveJitterMode = "off";
+  if (jitterEnv && *jitterEnv) {
+    if (std::strcmp(jitterEnv, "reduced") == 0)
+      effectiveJitterMode = "reduced";
+    else if (std::strcmp(jitterEnv, "controlled") == 0)
+      effectiveJitterMode = "controlled";
+    else if (std::strcmp(jitterEnv, "synthetic") == 0 ||
+             std::strcmp(jitterEnv, "current") == 0)
+      effectiveJitterMode = "synthetic";
+  } else if (integratedBestFindingsJitterTrace) {
+    effectiveJitterMode = "synthetic";
+  }
+  const bool jitterOff = std::strcmp(effectiveJitterMode, "off") == 0;
   const bool prepassJitter =
       std::getenv("TFORGE_FSR4_EXPERIMENTAL_PREPASS_JITTER_ORDERING") ||
       std::getenv("TFORGE_FSR4_EXPERIMENTAL_SOURCE_TAP_MULAW") ||
@@ -269,6 +287,8 @@ void writeRuntimePipelineTrace(uint32_t decodedW, uint32_t decodedH,
   trace["jitter_mode"] = jitterOff ? "off" :
                          (prepassJitter ? "prepass_input_resolve" : "synthetic_upload");
   trace["jitter_enabled"] = !jitterOff;
+  trace["requested_jitter_mode"] = QString::fromUtf8(
+      jitterEnv ? jitterEnv : "");
   trace["motion_lookup"] = "unjittered_source_coordinates";
   // Motion is expanded into the model-sized RG16F/R8 pair before the FSR
   // prepass. Keep the domain and transform explicit: a source-space vector
