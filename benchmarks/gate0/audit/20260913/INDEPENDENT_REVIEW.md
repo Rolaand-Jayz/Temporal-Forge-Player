@@ -118,8 +118,9 @@ Executed fresh in this session against
 
 ## Verdict
 
-**VERDICT: PASS** — the Gate-0 evidence bundle is complete, internally
-consistent, independently reproducible, and the experiment system can support
-trustworthy downstream A/B conclusions within the recorded determinism
-envelope and the recorded control-liveness registry. Downstream gates may be
-unlocked by the campaign authority on the strength of this review.
+**INTERNAL VERIFICATION OUTCOME: PASS** — the Gate-0 evidence bundle is
+complete and internally consistent under this same-session adversarial review.
+This is not an independent-audit verdict, does not satisfy the builder →
+independent auditor → Sol adjudicator separation, and does not unlock
+downstream gates. **FINAL INDEPENDENT AUDIT: PENDING.**
+**SOL GATE-0 ADJUDICATION: PENDING.**

@@ -42,9 +42,9 @@
     }
   ],
   "all_rules_passed": true,
-  "generated_utc": "2026-09-13T18:20:45Z",
+  "generated_utc": "2026-09-13T21:52:10Z",
   "git_dirty": true,
-  "git_head": "a78c999c759b4f00cbdcc6e6a9ec7a1341fbd62b",
+  "git_head": "dec86736ce89e7e26603631faff40cf9031ee7dc",
   "independent_review": {
     "checks_performed": [
       "A bundle integrity: 25/25 artifact SHA-256 recomputed, 0 mismatches, no missing artifacts",
@@ -309,8 +309,8 @@
         "exists": true,
         "path": "docs/reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md",
         "role": "Gate-0 evidence report",
-        "sha256": "91270b0fdbc43b4295d23ac169abe877889d6f0b39da5a6054262770e0a8cfd9",
-        "size_bytes": 6690
+        "sha256": "82d00f6c894647b898a84688b6ffe4f1fe8f93e83d16bd929f40bcf8055779ac",
+        "size_bytes": 6658
       }
     ]
   },

@@ -116,9 +116,8 @@ must not be represented as the campaign's final independent Gate-0 audit.
    path cannot be asset-identity-verified here.
 5. The ±1-LSB run-to-run differences are not attributed to an exact hardware
    mechanism; they are bounded by the recorded envelope.
-6. **Independent Gate-0 audit verdict: PASS (2026-09-13)**, recorded in
-   `benchmarks/gate0/audit/20260913/audit_index.json` with a reviewer
-   provenance reservation (same-session adversarial pass — subagent channel
-   unavailable; external cross-check remains possible from the
-   self-contained bundle). Gate 0 is complete; downstream gate unlocking is a
-   campaign-authority decision.
+6. **No independent Gate-0 audit verdict has been issued.** The retained
+   `independent_review.json` records only the same-session internal
+   verification outcome (`PASS`) and explicitly states that it does not satisfy
+   builder → independent auditor → Sol adjudicator separation. Final
+   independent audit and downstream gate unlocking remain pending.

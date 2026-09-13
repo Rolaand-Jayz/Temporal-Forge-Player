@@ -1,6 +1,6 @@
 # Gate-0 audit checklist
 
-Generated: 2026-09-13T18:20:45Z · git_head: `a78c999c759b4f00cbdcc6e6a9ec7a1341fbd62b`
+Generated: 2026-09-13T21:52:10Z · git_head: `dec86736ce89e7e26603631faff40cf9031ee7dc`
 
 Reproduce each verification from the repository root:
 
