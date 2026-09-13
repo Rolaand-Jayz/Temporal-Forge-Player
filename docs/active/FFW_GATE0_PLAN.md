@@ -1,8 +1,9 @@
 # Forge's Final Word — Gate 0: experiment-system trustworthiness
 
-**Status:** COMPLETE — INDEPENDENT REVIEW VERDICT: PASS (2026-09-13)
+**Status:** GATE-0 IMPLEMENTATION AND INTERNAL ADVERSARIAL VERIFICATION ARE
+COMPLETE. FINAL INDEPENDENT AUDIT AND CAMPAIGN ADJUDICATION REMAIN PENDING.
 
-**As of:** 2026-09-13
+**As of:** 2026-09-13 (remediation classification)
 
 **Campaign branch:** `forge's-final-word-campaign`
 
@@ -144,6 +145,10 @@ review possible without undocumented operator knowledge.
 | FFW-T0-2 | complete 2026-09-13 | `benchmarks/gate0/determinism_probe.py`, `tests/test_gate0_determinism_probe.py`, evidence `benchmarks/gate0/evidence/FFW-T0-2/` — verdict `metric_stable`: not byte-identical; run-to-run max MAE 0.000105 (0-255), ±1-LSB isolated samples on moving content only; comparison rule recorded (noise envelope 0.05) | Envelope measured on one tier (360p→1080p native INT8); exact HW source of ±1-LSB differences not isolated (downstream; does not affect comparability) |
 | FFW-T0-5 | complete 2026-09-13 | `benchmarks/gate0/evaluator_policy.py`, `run_evaluator_controls.py`, `tests/test_gate0_evaluator_policy.py` (10 pass), evidence `benchmarks/gate0/evidence/FFW-T0-5/` — 18/18 invalid candidates rejected on real frames; phase sanity `phase_sensitive` (0.754 vs 5.196 MAE) | Live sharpening-only construct never wins fidelity on this content (probe 0.25–1.0) — those arms are rejected via the fidelity gate; the dedicated sharpening-only rule is contract-tested on synthetic frames only |
 | FFW-T0-6 | complete 2026-09-13 | `benchmarks/gate0/audit_bundle.py`, bundle `benchmarks/gate0/audit/20260913/` (index + checklist; 8/8 acceptance rules pass, no missing artifacts), report `docs/reports/20260913_FFW_GATE0_EVIDENCE_REPORT.md` | Independent audit verdict pending — recorded in `audit_index.json → independent_review`; downstream gates stay locked until it exists |
+| REM-A (2026-09-13) | complete | Review classification corrected across plan, evidence report, `INDEPENDENT_REVIEW.md`, `independent_review.json`: the 2026-09-13 review is a same-session adversarial/self-review (reproduction evidence; supporting material for a future genuinely independent auditor; does NOT satisfy builder → auditor → Sol separation) | — |
+| REM-B (2026-09-13) | complete | Terminal-tier determinism: `benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/` — 1080p→2160p, native INT8 `performance_2160`, 3 runs **byte_identical** (max MAE 0.0); 0.05 comparison floor confirmed conservative (measured floor 0.0); recorded why default 1.5× scale is native-ineligible at this tier (model height > 1080) and why the fixture is the closest canonical equivalent | Envelope measured on one terminal-tier scene; generic-graph terminal tier unverifiable here (missing v4.1 blob) |
+| REM-C (2026-09-13) | complete | Live anti-sharpening challenge: `benchmarks/gate0/evidence/remediation-20260913/anti_sharpening_challenge/` — naive detail-match signal prefers the fixed-parameter unsharp candidate (0.142→0.080), evaluator REJECTS via unsupported-detail rule firing live (ratio 1.064 > 1.050); legitimate blend acceptance case still ACCEPTED | Full sharpening_only conjunction (fidelity win + overshoot) remains contract-covered only — no unsharp amount wins fidelity on this content |
+| REM-D (2026-09-13) | complete | Bundle refreshed: remediation evidence indexed with hashes, reproduction commands added, review correctly classified, `FINAL INDEPENDENT AUDIT: PENDING` and `SOL GATE-0 ADJUDICATION: PENDING` stated | — |
 
 ## Completion criteria
 
@@ -156,13 +161,14 @@ review possible without undocumented operator knowledge.
    as uncertainties or filed findings.
 4. Remaining uncertainties explicitly recorded. ✅ Plan results log +
    evidence report §"Remaining uncertainties and filed findings".
-5. Independent audit verdict — ✅ **PASS, recorded 2026-09-13** in
-   `benchmarks/gate0/audit/20260913/audit_index.json → independent_review`
-   (report: `INDEPENDENT_REVIEW.md`). Provenance reservation recorded by the
-   reviewer: the harness subagent channel was unavailable, so the audit was a
-   same-session adversarial pass that re-executed every checklist command and
-   recomputed every hash; the bundle remains self-contained for an external
-   cross-check.
+5. Independent audit verdict — the 2026-09-13 review
+   (`benchmarks/gate0/audit/20260913/INDEPENDENT_REVIEW.md`) is classified as
+   a **same-session adversarial/self-review**: reproduction evidence and
+   supporting material for a future genuinely independent auditor. It does
+   **not** satisfy the campaign's builder → independent auditor → Sol
+   adjudicator separation and must not be represented as the campaign's final
+   independent Gate-0 audit. Final independent audit and Sol adjudication
+   remain **PENDING**.
 
 ## Risks
 

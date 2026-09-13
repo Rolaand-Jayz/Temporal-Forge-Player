@@ -53,6 +53,12 @@ def _requirement_artifacts() -> dict[str, list[dict[str, str]]]:
              "role": "per-pixel diff characterization"},
             {"path": "benchmarks/gate0/evidence/FFW-T0-2/RECORD.md",
              "role": "envelope + A/B comparison rule"},
+            {"path": "benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/determinism_report_terminal_tier.json",
+             "role": "remediation: terminal-tier (1080p->2160p, performance_2160) determinism report"},
+            {"path": "benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/RECORD.md",
+             "role": "remediation: terminal-tier configuration, fixture justification, envelope determination"},
+            {"path": "benchmarks/gate0/evidence/remediation-20260913/terminal_determinism/experiment_identity.json",
+             "role": "remediation: identity manifest for the terminal-tier run"},
         ],
         "R3_generation_tracing": [
             {"path": "tests/test_gate0_state_generation_trace.py",
@@ -83,6 +89,12 @@ def _requirement_artifacts() -> dict[str, list[dict[str, str]]]:
              "role": "rejection-rule contract tests"},
             {"path": "benchmarks/gate0/evidence/FFW-T0-5/negative_controls_report.json",
              "role": "live negative-control report on real frames"},
+            {"path": "benchmarks/gate0/run_sharpening_challenge.py",
+             "role": "remediation: fixed-parameter anti-sharpening challenge runner"},
+            {"path": "benchmarks/gate0/evidence/remediation-20260913/anti_sharpening_challenge/challenge_report.json",
+             "role": "remediation: live anti-sharpening false-positive challenge (terminal tier)"},
+            {"path": "benchmarks/gate0/evidence/remediation-20260913/anti_sharpening_challenge/RECORD.md",
+             "role": "remediation: challenge hypothesis, result, acceptance case"},
         ],
         "R6_audit": [
             {"path": "benchmarks/gate0/audit_bundle.py", "role": "this tool"},
@@ -182,10 +194,13 @@ def build_bundle(output_dir: Path) -> dict[str, Any]:
     review_path = output_dir / "independent_review.json"
     if review_path.is_file():
         independent_review = json.loads(review_path.read_text(encoding="utf-8"))
-        # Normalize: the index contract uses "status"; a recorded review's
-        # verdict IS its status.
+        # The index contract uses "status"; a recorded review's internal
+        # outcome is its status until a genuinely independent audit replaces
+        # it. The classification fields travel verbatim.
         independent_review.setdefault(
-            "status", independent_review.get("verdict", "pending")
+            "status",
+            independent_review.get("internal_verification_outcome")
+            or independent_review.get("verdict", "pending"),
         )
         independent_review["report"] = independent_review.get(
             "report", "INDEPENDENT_REVIEW.md"
@@ -250,6 +265,26 @@ def write_checklist(bundle: dict[str, Any], output_dir: Path) -> None:
         "    --reference-dir <refs> --baseline-dir <bases> \\",
         "    --report /tmp/negative.json",
         "",
+        "# Remediation Task B: terminal-tier determinism (1080p -> 2160p,",
+        "# performance_2160 native graph; see the RECORD.md for the exact",
+        "# env_overrides) — verdict must be byte_identical or metric_stable",
+        "python3 -c \"from pathlib import Path; import json; \\",
+        "  from benchmarks.gate0.determinism_probe import run_determinism; \\",
+        "  r = run_determinism(player_path=Path('<player>'), \\",
+        "    input_media=Path('benchmarks/video_corpus/clips/bbb_branches_1920x1080_medium_crf23.mp4'), \\",
+        "    output_dir=Path('/tmp/rem-t0b'), runs=3, frames=6, warmup=2, \\",
+        "    timeout_s=300, env_overrides={'TFORGE_FSR4_FORCE_VIEWPORT': '3840x2160', \\",
+        "    'TFORGE_FSR4_FORCE_SCALE': '2.0'}); \\",
+        "    print(r['verification']['verdict'])\"",
+        "",
+        "# Remediation Task C: anti-sharpening adversarial challenge — the",
+        "# naive detail-match signal must prefer the unsharp candidate while",
+        "# the evaluator rejects it via unsupported detail; the legitimate",
+        "# blend candidate must be accepted",
+        "python3 -m benchmarks.gate0.run_sharpening_challenge \\",
+        "    --reference <lanczos_3840x2160.ppm> --baseline <bilinear_3840x2160.ppm> \\",
+        "    --report /tmp/challenge.json",
+        "",
         "# Contract tests (all Gate-0 suites)",
         "python3 -m pytest tests/test_gate0_*.py -q",
         "```",
@@ -268,12 +303,14 @@ def write_checklist(bundle: dict[str, Any], output_dir: Path) -> None:
     lines.append("## Independent review")
     lines.append("")
     review = bundle["independent_review"]
-    lines.append(f"Status: {review.get('status', 'unknown')}")
-    if review.get("verdict"):
-        lines.append(f"Verdict: {review['verdict']}")
-    for key in ("reviewer", "date_utc", "note"):
-        if review.get(key):
-            lines.append(f"{key.capitalize()}: {review[key]}")
+    lines.append(f"Review class: {review.get('review_class', 'unclassified')}")
+    if review.get("classification_note"):
+        lines.append(f"Classification: {review['classification_note']}")
+    lines.append(f"Internal verification outcome: {review.get('status', 'unknown')}")
+    lines.append(f"FINAL INDEPENDENT AUDIT: {review.get('final_independent_audit', 'PENDING')}")
+    lines.append(f"SOL GATE-0 ADJUDICATION: {review.get('sol_gate0_adjudication', 'PENDING')}")
+    if review.get("date_utc"):
+        lines.append(f"Date: {review['date_utc']}")
     if review.get("report"):
         lines.append(f"Report: {review['report']}")
     (output_dir / "AUDIT_CHECKLIST.md").write_text("\n".join(lines), encoding="utf-8")
