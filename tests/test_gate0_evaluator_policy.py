@@ -62,19 +62,25 @@ class MetricSemanticsTests(unittest.TestCase):
 class PhaseSanityTests(unittest.TestCase):
     def test_metric_distinguishes_aligned_from_shifted_content(self) -> None:
         reference = _gray_frame(8, 8, 40)
-        baseline = _gray_frame(8, 8, 42)
         other_phase = _gray_frame(8, 8, 90)
-        result = phase_sanity([reference, other_phase], baseline)
+        baseline = _gray_frame(8, 8, 42)
+        other_baseline = _gray_frame(8, 8, 92)
+        result = phase_sanity([reference, other_phase], [baseline, other_baseline])
         self.assertEqual(result["verdict"], "phase_sensitive")
 
-    def test_flat_confusion_is_reported_as_phase_blind(self) -> None:
+    def test_static_confusion_is_reported_as_phase_blind(self) -> None:
         """When shifted content is indistinguishable from aligned content the
         evaluator must say so instead of silently adjudicating."""
         reference = _gray_frame(8, 8, 40)
         other_phase = _gray_frame(8, 8, 40)  # static content: no phase cue
         baseline = _gray_frame(8, 8, 41)
-        result = phase_sanity([reference, other_phase], baseline)
+        other_baseline = _gray_frame(8, 8, 41)
+        result = phase_sanity([reference, other_phase], [baseline, other_baseline])
         self.assertEqual(result["verdict"], "phase_blind")
+
+    def test_mismatched_frame_lists_are_inconclusive(self) -> None:
+        result = phase_sanity([_gray_frame(8, 8, 40)], [])
+        self.assertEqual(result["verdict"], "inconclusive")
 
 
 class AdjudicationTests(unittest.TestCase):

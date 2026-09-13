@@ -1,0 +1,532 @@
+{
+  "schema": "temporal_forge.gate0.evaluator.v1",
+  "generated_utc": "2026-09-13T13:04:42Z",
+  "stride": 2,
+  "phase_sanity": {
+    "verdict": "phase_sensitive",
+    "aligned_mean_mae": 0.7539024991426612,
+    "shifted_mean_mae": 5.195896026234568,
+    "aligned_mae": [
+      0.7263673482510288,
+      0.7446862139917696,
+      0.7489438657407408,
+      0.7518296682098765,
+      0.7713551311728395,
+      0.7802327674897119
+    ],
+    "shifted_mae": [
+      4.305724022633745,
+      4.39305491255144,
+      4.388395383230453,
+      3.99372845936214,
+      4.492401298868312,
+      9.602072080761317
+    ],
+    "stride": 2
+  },
+  "controls": [
+    {
+      "frame_index": 0,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_01.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_01.ppm",
+      "control": "wrong_phase",
+      "candidate": "/tmp/tforge-gate0/t0-5/refs/reference_02.ppm",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 4.2009 is not better than baseline MAE 0.7264 by the required margin"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": false,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 4.200945859053498,
+        "baseline_mae": 0.7263673482510288,
+        "reference_detail_energy": 1.5468029661385836,
+        "candidate_detail_energy": 1.5682964436129936,
+        "detail_ratio": 1.013895420389622,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 0,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_01.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_01.ppm",
+      "control": "unsupported_detail",
+      "candidate": "constructed:unsupported_detail",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 9.0236 is not better than baseline MAE 0.7264 by the required margin",
+        "unsupported detail: candidate detail energy 35.0595 exceeds reference 1.5468 (ratio 22.666 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 9.023585390946502,
+        "baseline_mae": 0.7263673482510288,
+        "reference_detail_energy": 1.5468029661385836,
+        "candidate_detail_energy": 35.059541382198915,
+        "detail_ratio": 22.66580951142151,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 0,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_01.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_01.ppm",
+      "control": "sharpening_only",
+      "candidate": "constructed:sharpening_only",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 0.7967 is not better than baseline MAE 0.7264 by the required margin",
+        "unsupported detail: candidate detail energy 1.8338 exceeds reference 1.5468 (ratio 1.186 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 0.7967345036008231,
+        "baseline_mae": 0.7263673482510288,
+        "reference_detail_energy": 1.5468029661385836,
+        "candidate_detail_energy": 1.8338134381632072,
+        "detail_ratio": 1.1855507639354432,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 1,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_02.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_02.ppm",
+      "control": "wrong_phase",
+      "candidate": "/tmp/tforge-gate0/t0-5/refs/reference_03.ppm",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 4.2669 is not better than baseline MAE 0.7447 by the required margin"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": false,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 4.2669068287037035,
+        "baseline_mae": 0.7446862139917696,
+        "reference_detail_energy": 1.5682964436129936,
+        "candidate_detail_energy": 1.5726918694295426,
+        "detail_ratio": 1.00280267537075,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 1,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_02.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_02.ppm",
+      "control": "unsupported_detail",
+      "candidate": "constructed:unsupported_detail",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 9.0401 is not better than baseline MAE 0.7447 by the required margin",
+        "unsupported detail: candidate detail energy 35.0965 exceeds reference 1.5683 (ratio 22.379 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 9.040085519547326,
+        "baseline_mae": 0.7446862139917696,
+        "reference_detail_energy": 1.5682964436129936,
+        "candidate_detail_energy": 35.09650977653361,
+        "detail_ratio": 22.378747283057876,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 1,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_02.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_02.ppm",
+      "control": "sharpening_only",
+      "candidate": "constructed:sharpening_only",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 0.8168 is not better than baseline MAE 0.7447 by the required margin",
+        "unsupported detail: candidate detail energy 1.8431 exceeds reference 1.5683 (ratio 1.175 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 0.816840920781893,
+        "baseline_mae": 0.7446862139917696,
+        "reference_detail_energy": 1.5682964436129936,
+        "candidate_detail_energy": 1.843091810617507,
+        "detail_ratio": 1.175219020691935,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 2,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_03.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_03.ppm",
+      "control": "wrong_phase",
+      "candidate": "/tmp/tforge-gate0/t0-5/refs/reference_04.ppm",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 4.2652 is not better than baseline MAE 0.7489 by the required margin"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": false,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 4.26521412037037,
+        "baseline_mae": 0.7489438657407408,
+        "reference_detail_energy": 1.5726918694295426,
+        "candidate_detail_energy": 1.5736224151239793,
+        "detail_ratio": 1.000591689772501,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 2,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_03.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_03.ppm",
+      "control": "unsupported_detail",
+      "candidate": "constructed:unsupported_detail",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 9.0520 is not better than baseline MAE 0.7489 by the required margin",
+        "unsupported detail: candidate detail energy 35.1745 exceeds reference 1.5727 (ratio 22.366 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 9.051972415123457,
+        "baseline_mae": 0.7489438657407408,
+        "reference_detail_energy": 1.5726918694295426,
+        "candidate_detail_energy": 35.17451697713876,
+        "detail_ratio": 22.365803283447693,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 2,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_03.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_03.ppm",
+      "control": "sharpening_only",
+      "candidate": "constructed:sharpening_only",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 0.8207 is not better than baseline MAE 0.7489 by the required margin",
+        "unsupported detail: candidate detail energy 1.8599 exceeds reference 1.5727 (ratio 1.183 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 0.8206783693415638,
+        "baseline_mae": 0.7489438657407408,
+        "reference_detail_energy": 1.5726918694295426,
+        "candidate_detail_energy": 1.859917082768267,
+        "detail_ratio": 1.182632859571474,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 3,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_04.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_04.ppm",
+      "control": "wrong_phase",
+      "candidate": "/tmp/tforge-gate0/t0-5/refs/reference_05.ppm",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 3.8702 is not better than baseline MAE 0.7518 by the required margin"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": false,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 3.8701774691358026,
+        "baseline_mae": 0.7518296682098765,
+        "reference_detail_energy": 1.5736224151239793,
+        "candidate_detail_energy": 1.6086600722382043,
+        "detail_ratio": 1.0222656062709075,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 3,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_04.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_04.ppm",
+      "control": "unsupported_detail",
+      "candidate": "constructed:unsupported_detail",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 9.0581 is not better than baseline MAE 0.7518 by the required margin",
+        "unsupported detail: candidate detail energy 35.1989 exceeds reference 1.5736 (ratio 22.368 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 9.058124356995885,
+        "baseline_mae": 0.7518296682098765,
+        "reference_detail_energy": 1.5736224151239793,
+        "candidate_detail_energy": 35.198860129889475,
+        "detail_ratio": 22.368046992465025,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 3,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_04.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_04.ppm",
+      "control": "sharpening_only",
+      "candidate": "constructed:sharpening_only",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 0.8246 is not better than baseline MAE 0.7518 by the required margin",
+        "unsupported detail: candidate detail energy 1.8600 exceeds reference 1.5736 (ratio 1.182 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 0.8246170910493827,
+        "baseline_mae": 0.7518296682098765,
+        "reference_detail_energy": 1.5736224151239793,
+        "candidate_detail_energy": 1.8600099438770674,
+        "detail_ratio": 1.1819925326435599,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 4,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_05.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_05.ppm",
+      "control": "wrong_phase",
+      "candidate": "/tmp/tforge-gate0/t0-5/refs/reference_06.ppm",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 4.3516 is not better than baseline MAE 0.7714 by the required margin"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": false,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 4.351614261831275,
+        "baseline_mae": 0.7713551311728395,
+        "reference_detail_energy": 1.6086600722382043,
+        "candidate_detail_energy": 1.6194899990520428,
+        "detail_ratio": 1.0067322655673119,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 4,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_05.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_05.ppm",
+      "control": "unsupported_detail",
+      "candidate": "constructed:unsupported_detail",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 9.0719 is not better than baseline MAE 0.7714 by the required margin",
+        "unsupported detail: candidate detail energy 35.2504 exceeds reference 1.6087 (ratio 21.913 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 9.071853780864197,
+        "baseline_mae": 0.7713551311728395,
+        "reference_detail_energy": 1.6086600722382043,
+        "candidate_detail_energy": 35.25041932594443,
+        "detail_ratio": 21.912907477649313,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 4,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_05.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_05.ppm",
+      "control": "sharpening_only",
+      "candidate": "constructed:sharpening_only",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 0.8442 is not better than baseline MAE 0.7714 by the required margin",
+        "unsupported detail: candidate detail energy 1.8948 exceeds reference 1.6087 (ratio 1.178 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 0.8441576646090535,
+        "baseline_mae": 0.7713551311728395,
+        "reference_detail_energy": 1.6086600722382043,
+        "candidate_detail_energy": 1.8948193174321581,
+        "detail_ratio": 1.1778867084055906,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 5,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_06.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_06.ppm",
+      "control": "wrong_phase",
+      "candidate": "/tmp/tforge-gate0/t0-5/refs/reference_05.ppm",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 4.3516 is not better than baseline MAE 0.7802 by the required margin"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": false,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 4.351614261831275,
+        "baseline_mae": 0.7802327674897119,
+        "reference_detail_energy": 1.6194899990520428,
+        "candidate_detail_energy": 1.6086600722382043,
+        "detail_ratio": 0.9933127547436676,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 5,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_06.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_06.ppm",
+      "control": "unsupported_detail",
+      "candidate": "constructed:unsupported_detail",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 9.0840 is not better than baseline MAE 0.7802 by the required margin",
+        "unsupported detail: candidate detail energy 35.2727 exceeds reference 1.6195 (ratio 21.780 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 9.08404095936214,
+        "baseline_mae": 0.7802327674897119,
+        "reference_detail_energy": 1.6194899990520428,
+        "candidate_detail_energy": 35.27273114194014,
+        "detail_ratio": 21.780147554221877,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    },
+    {
+      "frame_index": 5,
+      "reference": "/tmp/tforge-gate0/t0-5/refs/reference_06.ppm",
+      "baseline": "/tmp/tforge-gate0/t0-5/bases/baseline_06.ppm",
+      "control": "sharpening_only",
+      "candidate": "constructed:sharpening_only",
+      "verdict": "reject",
+      "rejected": true,
+      "reasons": [
+        "fidelity: candidate MAE 0.8550 is not better than baseline MAE 0.7802 by the required margin",
+        "unsupported detail: candidate detail energy 1.8935 exceeds reference 1.6195 (ratio 1.169 > 1.050)"
+      ],
+      "rule_outcomes": {
+        "fidelity_win": false,
+        "unsupported_detail": true,
+        "sharpening_only": false
+      },
+      "metrics": {
+        "candidate_mae": 0.8549980709876543,
+        "baseline_mae": 0.7802327674897119,
+        "reference_detail_energy": 1.6194899990520428,
+        "candidate_detail_energy": 1.8934728313545535,
+        "detail_ratio": 1.1691784651111674,
+        "stride": 2,
+        "hf_tolerance": 0.05,
+        "fidelity_win_margin": 0.05
+      }
+    }
+  ],
+  "summary": {
+    "total": 18,
+    "rejected": 18,
+    "accepted": 0
+  }
+}
