@@ -2,17 +2,18 @@
 
 **Campaign branch:** `forge-final-word-campaign`
 **State date:** 2026-09-13
-**Current checkpoint:** FFW-CP0 — baseline freeze
+**Current checkpoint:** FFW-CP10 — campaign execution complete
 
 ## Current gate and task
 
-CP0 is complete. The accepted Gate-0 baseline is frozen locally from the
-remote `forge-final-word-gate0` branch at commit
-`5a23a82bb6bc3d14a53423706c9f28c9dbced60f`.
+CP0 and Gate 1A are complete. The accepted Gate-0 baseline was frozen from
+the remote `forge-final-word-gate0` branch at commit
+`5a23a82bb6bc3d14a53423706c9f28c9dbced60f`. Gate 1A established the
+Forge-to-generated-pack provenance chain but found no version-matched AMD
+reference runtime. The campaign therefore terminates with:
 
-The next authorized task is Gate 1A: lock the strongest defensible FSR4
-provenance chain and identify the version-matched AMD reference target. No
-Gate-1 experiment has started in this checkpoint.
+**LUNA EXECUTION CONCLUSION**
+**TEMPORAL FORGE FSR4 RESEARCH CONCLUDED**
 
 ## Baseline and evidence
 
@@ -26,22 +27,18 @@ Gate-1 experiment has started in this checkpoint.
 
 ## Unlocked and prohibited work
 
-Unlocked after CP0: Gate 1A provenance lock, limited to repository/source,
-binary, model, shader, version, and reference-runtime identification.
-
-Still prohibited: Gate 1B parity capture until provenance and an oracle target
-are recorded; GT-A/GT-B/GT-C; reconstruction changes; broad reverse
-engineering; rescue paths; UI work; and unrelated cleanup/refactoring.
+No further campaign work is unlocked. Gate 1B parity capture, GT-A/GT-B/GT-C,
+reconstruction changes, broad reverse engineering, rescue paths, UI work, and
+unrelated cleanup/refactoring remain prohibited.
 
 ## Hypotheses and conditional branches
 
-No new campaign hypothesis has been tested. No conditional branch has
-triggered. Gate-0 killed or limited hypotheses remain recorded in the Gate-0
-plan and evidence records; none is resurrected here.
+No conditional branch triggered. Gate-0 killed or limited hypotheses remain
+recorded in the Gate-0 plan and evidence records; none was resurrected.
 
 ## Blockers and next action
 
-No CP0 blocker. Next action: inspect the current repository's FSR4 provenance
-and available reference-runtime evidence, then record a bounded Gate 1A
-decision or the authorized terminal conclusion if a credible match cannot be
-established.
+Terminal condition: no credible version-matched AMD reference runtime was
+available within bounded Gate 1A scope. See
+`docs/reports/20260913_FFW_GATE1A_PROVENANCE.md`. Stop; do not invent a
+parity oracle or rescue campaign.

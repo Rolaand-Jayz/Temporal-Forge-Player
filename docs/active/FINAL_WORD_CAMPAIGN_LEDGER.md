@@ -20,3 +20,24 @@ Append-only material experiment and checkpoint ledger.
 - **Verdict:** CP0 complete; baseline accepted for bounded campaign execution.
 - **Resulting action:** Unlock Gate 1A provenance lock only.
 - **Status:** active checkpoint; no experiment performed.
+
+## FFW-CP2 / FFW-CP10 — provenance terminal result and campaign completion
+
+- **Experiment/checkpoint ID:** FFW-CP2, finalized by FFW-CP10
+- **Experiment/hypothesis:** A credible version-matched AMD FSR4 runtime and
+  public-boundary parity oracle can be locked from the available environment.
+- **Commit:** `6b28ae1abe7ab5d7ccdfcdcebf1985014aeb175e` baseline; final package
+  commit recorded when this entry is committed.
+- **Configuration:** Gate 1A provenance inventory only; no player launch,
+  parity capture, reconstruction change, or Gate-1B experiment.
+- **Evidence:** `docs/reports/20260913_FFW_GATE1A_PROVENANCE.md`, `PROVENANCE.md`,
+  Gate-0 audit bundle, and local Steam-prefix DLL inventory.
+- **Result:** Forge and generated native-pack provenance is identifiable. The
+  only local AMD DLL family is identical at SHA-256
+  `4e7dc37aebea3a90e3d3cc43e24cb2b54176b2535315f20dbe63b3b7cfc56b1e` and
+  contains `4.0.1` strings; it is not a 4.1.x oracle. The RE source reports
+  runtime equivalence as unvalidated.
+- **Verdict:** Terminal failure of the parity prerequisite.
+- **Resulting action:** `TEMPORAL FORGE FSR4 RESEARCH CONCLUDED`.
+- **Status:** killed/terminal; no parity, GT, temporal, performance, or rescue
+  work performed.
