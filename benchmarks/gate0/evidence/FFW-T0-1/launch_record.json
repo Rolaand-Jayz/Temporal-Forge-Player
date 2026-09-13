@@ -1,0 +1,60 @@
+{
+  "task": "FFW-T0-1",
+  "description": "Experiment identity spine live validation",
+  "date_utc": "2026-09-13",
+  "player": "/tmp/temporal-forge-integrated-build/temporal_forge_player",
+  "player_sha256": null,
+  "launch": {
+    "frames_requested": 4,
+    "timeout_s": 90,
+    "termination": "harness timeout guard (player does not self-exit; run_temporal_quality.sh convention)"
+  },
+  "dumps": {
+    "temporal_forge_fsr4_0000.ppm": "ff30ed49aa56999e463ffbfe49b3ce26a0327909f316bfc607f5092866647c26",
+    "temporal_forge_fsr4_0001.ppm": "29c8fbb5e2d419f06feec27bfba146f8fcc41458474c91e3a1036f0f3eb26151",
+    "temporal_forge_fsr4_0002.ppm": "f8736874d94a6d7b7c02dc61a09f98ee82385799bdb1e0147f81b2ae3e198bed",
+    "temporal_forge_fsr4_0003.ppm": "d93e8b74ca5502be8f7ae151a48799b941184980cea78e45c60c0e6717a17a3b"
+  },
+  "environment_facts": [
+    "VAAPI hardware decode init failed in this session; decoder fell back to software decode (h264).",
+    "FSR4 native INT8 graph (ultraperf_1080) initialized and dispatched on AMD Radeon RX 7900 GRE (RADV NAVI31), driver 26.2.2.",
+    "Player launched from repository working directory so resources/fsr4 native packs resolve."
+  ],
+  "artifacts": {
+    "experiment_identity.json": "full identity manifest incl. fail-closed runtime-trace cross-check (passed)",
+    "runtime_trace.json": "player runtime pipeline trace temporal_forge.runtime_pipeline.v1",
+    "player.log": "trimmed player log",
+    "dumps/*": "not retained in git; SHA-256 recorded above (4 x temporal_forge_fsr4_00xx.ppm, 6.0 MB each)"
+  },
+  "uncertainties": [
+    "Generic v4.1 weight blob (quality.bin) is not installed on this host; generic FP16 fallback path cannot be asset-identity-verified here. Native INT8 packs (production path) are fully hashed.",
+    "git dirty=True because the Gate-0 tooling files themselves are untracked at capture time; manifest records the dirty path list."
+  ],
+  "player_log_tail": [
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: starting decode threads",
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: opened '/mnt/workdrive/ZCodeProject/temporal_forge_player/tests/sample.mp4', playing=true",
+    "[2026-09-13 07:14:03] INFO  ?:0: Temporal Forge Player: ready",
+    "[h264 @ 0x55b4d4361340] A hardware frames or device context is required for hardware accelerated decoding.",
+    "[h264 @ 0x55b4d4361340] Failed setup for format vaapi: hwaccel initialisation returned error.",
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: FSR4 pass decoded 640x360 -> model 1280x720 -> 1920x1080",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: generic pipeline cache loaded (386812 bytes)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: prepass pipeline created (7256 words SPIR-V)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: conv pipelines created (dw 6305 words, pw scalar 3451 words, pw coop 5907 words, fp16 coop 3866 words, pw direct 2976 words, spatial direct 3354 words, upscale coop 3281 words, downscale coop 2622 words)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: scatter pipeline created (799 words)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: postpass pipeline created (21697 words)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: SPD pipeline created (954 words)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: native INT8 pipeline cache loaded (2777892 bytes)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: initialized on AMD Radeon RX 7900 GRE (RADV NAVI31) (all 6 pipelines: prepass+conv+scatter+postpass+spd)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: native 14-pass INT8 graph loaded (quality_1080)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: resources allocated src=1280x720 out=1920x1080 (scratch=20250KB accum=4KB feat=4KB)",
+    "[2026-09-13 07:14:03] INFO  ?:0: Fsr4Harness: native INT8 graph quality active for 1920x1080",
+    "[2026-09-13 07:14:03] INFO  ?:0: GpuImageUploader: EASU RGBA8 format features optimal=0x1dd83",
+    "[2026-09-13 07:14:03] INFO  ?:0: GpuImageUploader: allocated source 640x360 -> model 1280x720 -> output 1920x1080",
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: FSR4 path ready decoded 640x360 -> model 1280x720 -> 1920x1080",
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: FSR4 progressive chain passes=1",
+    "[2026-09-13 07:14:03] INFO  GpuImageUploader.cpp:1805: GpuImageUploader: source_model_resampler=gpu_scale_aware_bicubic 640x360->1280x720",
+    "[2026-09-13 07:14:03] INFO  GpuImageUploader.cpp:1109: GpuImageUploader: source_model_resampler=gpu_scale_aware_bicubic 640x360->1280x720",
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: FSR4 frame pipelineCPU=2.073ms dispatchCPU(all 1 passes)=2.029ms GPU(all 1 passes)=1.854ms",
+    "[2026-09-13 07:14:03] INFO  ?:0: PlaybackEngine: FSR4 frame pipelineCPU=1.784ms dispatchCPU(all 1 passes)=1.741ms GPU(all 1 passes)=1.578ms"
+  ]
+}
