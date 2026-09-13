@@ -56,6 +56,11 @@ def run_player(
 ) -> dict[str, Any]:
     """Launch the player once under a fully recorded environment.
 
+    The player is polled and terminated as soon as the complete dump sequence
+    and runtime trace exist — playback is realtime-paced, so waiting for the
+    full capture timeout would idle for minutes after the capture completed.
+    The timeout remains a hard guard against a stalled player.
+
     Returns a record with the exit status, dumped-output inventory (SHA-256
     per file), the runtime-trace path, and the exact environment used. A
     timeout is a recorded failure: the player process is terminated and the
@@ -69,8 +74,10 @@ def run_player(
         raise FileNotFoundError(f"input media missing: {input_media}")
 
     dumps_dir = output_dir / "dumps"
+    events_dir = output_dir / "events"
     config_home = output_dir / "config"
     dumps_dir.mkdir(parents=True, exist_ok=True)
+    events_dir.mkdir(parents=True, exist_ok=True)
     (config_home / "temporal-forge-player").mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True, exist_ok=True)
 
@@ -80,6 +87,10 @@ def run_player(
     env["TFORGE_FSR4_DUMP_SEQUENCE"] = str(frames)
     env["TFORGE_FSR4_DUMP_SEQUENCE_WARMUP"] = str(warmup)
     env["TFORGE_FSR4_DUMP_SEQUENCE_DIR"] = str(dumps_dir)
+    # Every Gate-0 capture carries the per-frame state-generation trace so
+    # producer identity and reset generations are always auditable (R3).
+    env["TFORGE_FSR4_DUMP_EVENT_TRACE"] = "1"
+    env["TFORGE_FSR4_DUMP_EVENT_DIR"] = str(events_dir)
     env["TFORGE_RUNTIME_TRACE_PATH"] = str(output_dir / "runtime_trace.json")
     env["TFORGE_EXPERIMENT_ID"] = run_id
     env.update(_git_provenance())
@@ -90,23 +101,48 @@ def run_player(
         env.update(env_overrides)
 
     log_path = output_dir / "player.log"
+    runtime_trace = output_dir / "runtime_trace.json"
+
+    def capture_complete() -> bool:
+        dumped = sum(1 for _ in dumps_dir.glob("temporal_forge_fsr4_*.ppm"))
+        return dumped >= frames and runtime_trace.is_file()
+
+    def terminate(process: subprocess.Popen) -> None:
+        process.terminate()
+        try:
+            process.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.wait()
+
     started = time.time()
     timed_out = False
+    terminated_after_capture = False
+    exit_code: int | None = None
     with open(log_path, "w", encoding="utf-8") as log:
-        try:
-            completed = subprocess.run(
-                [str(player_path), str(input_media)],
-                cwd=str(REPO_ROOT),
-                env=env,
-                stdout=log,
-                stderr=subprocess.STDOUT,
-                timeout=timeout_s,
-                check=False,
-            )
-            exit_code: int | None = completed.returncode
-        except subprocess.TimeoutExpired:
-            timed_out = True
-            exit_code = None
+        process = subprocess.Popen(
+            [str(player_path), str(input_media)],
+            cwd=str(REPO_ROOT),
+            env=env,
+            stdout=log,
+            stderr=subprocess.STDOUT,
+        )
+        while True:
+            code = process.poll()
+            if code is not None:
+                exit_code = code
+                break
+            elapsed = time.time() - started
+            if elapsed >= timeout_s:
+                timed_out = True
+                terminate(process)
+                break
+            if capture_complete():
+                terminated_after_capture = True
+                terminate(process)
+                exit_code = process.returncode
+                break
+            time.sleep(0.5)
     elapsed_s = time.time() - started
 
     record: dict[str, Any] = {
@@ -116,6 +152,7 @@ def run_player(
         "output_dir": str(output_dir),
         "exit_code": exit_code,
         "timed_out": timed_out,
+        "terminated_after_capture": terminated_after_capture,
         "timeout_s": timeout_s,
         "elapsed_s": round(elapsed_s, 3),
         "frames_requested": frames,

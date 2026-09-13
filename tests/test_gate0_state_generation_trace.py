@@ -68,6 +68,15 @@ class StateGenerationTraceContractTests(unittest.TestCase):
         self.assertIn('+ablation:', source)
         self.assertIn("+dense_replay", source)
 
+    def test_runtime_trace_reports_effective_default_jitter_as_off(self) -> None:
+        """Gate-0 R4 defect fix: unset/unknown jitter mode is Off in behavior,
+        so the runtime trace must not report jitter_enabled=true for it."""
+        source = PLAYBACK.read_text(encoding="utf-8")
+        writer = source[source.index("writeRuntimePipelineTrace"):]
+        self.assertIn("effectiveJitterMode", writer)
+        self.assertIn('effectiveJitterMode = "off"', writer)
+        self.assertIn('"requested_jitter_mode"', writer)
+
     def test_event_trace_call_site_passes_generation_values(self) -> None:
         source = PLAYBACK.read_text(encoding="utf-8")
         call_index = source.rindex("dumpEventTraceFrame(")
