@@ -238,7 +238,7 @@ especially `primary_capture_index.json`, `capture_identity.json`, and
 `fixture_manifest.json`. Raw frame payloads remain outside Git with their
 hashes recorded in the index.
 
-### Primary evaluation — metrics recorded; interpretation pending CP-C
+### CP-C — primary evaluation complete; confirmation skipped
 
 The frozen evaluator completed all 64 cells. The current aggregate means are:
 
@@ -249,8 +249,34 @@ The frozen evaluator completed all 64 cells. The current aggregate means are:
 | M3 Forge pre-sprint default | 27.2653 | 0.873217 | 0.442507 | 0.009236 |
 | M4 Forge current-composition control | 26.9863 | 0.863540 | 0.351128 | 0.009966 |
 
-These are recorded measurements only; the verdict and confirmation decision
-are reserved for CP-C and CP-E. The committed evaluation artifact must include
-the per-cell metrics, R1/R2 comparison, causal residual metrics against M2,
-and temporal diagnostics. No visual artifact claim is made here without a
+The committed evaluation package contains the 64 per-cell metric JSON files,
+`primary_metrics.csv`, `primary_evaluation.json`, and
+`primary_interpretation.json`. The R1 high-frequency-correlation comparison
+against M2 is:
+
+| Class | M2 baseline | M3 Forge default | M3 delta | M4 current composition | M4 delta |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| S1 | 0.464745 | 0.439715 | -5.39% | 0.366283 | -21.19% |
+| S2 | 0.551084 | 0.529424 | -3.93% | 0.442442 | -19.71% |
+| S3 | 0.789226 | 0.770379 | -2.39% | 0.658287 | -16.59% |
+| S4 | 0.279316 | 0.267091 | -4.38% | 0.183700 | -34.23% |
+
+Neither Forge arm reaches the `+10%` R1 survival target on any structural
+class (`0/4` for M3 and `0/4` for M4). Relative to M2, M3 loses `0.2682 dB`
+PSNR and `0.009082` SSIM in the global mean and increases registered temporal
+error by `0.004439`; M4 loses `0.5472 dB` PSNR and `0.018759` SSIM and
+increases temporal error by `0.005169`.
+
+The causal R1 residual comparison against M2 is also negative for both Forge
+arms:
+
+| Method | Residual correlation | Signed projection | Phase agreement | Residual magnitude ratio |
+| --- | ---: | ---: | ---: | ---: |
+| M3 | -0.064007 | -0.007675 | 0.469044 | 0.149649 |
+| M4 | -0.074770 | -0.018572 | 0.470161 | 0.294606 |
+
+The R1/R2 contrast does not provide a Forge advantage over M2. The primary
+matrix therefore contains no credible, repeatable signal requiring a bounded
+confirmation subset; confirmation is skipped and CP-D is not required. This
+is a numeric conclusion only. No visual artifact claim is made here without a
 separate inspected-artifact record.

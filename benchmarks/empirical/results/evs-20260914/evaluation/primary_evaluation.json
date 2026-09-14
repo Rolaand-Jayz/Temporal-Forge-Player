@@ -1,0 +1,63 @@
+{
+  "campaign_id": "evs-20260914",
+  "cells_evaluated": 64,
+  "confirmation_recommendation": "undecided",
+  "interpretation_status": "metrics-recorded-no-verdict",
+  "methods": {
+    "M1": {
+      "cells": 16,
+      "mean_hf_correlation": 0.48937876988611356,
+      "mean_psnr_db": 29.72635020860003,
+      "mean_registered_temporal_error": 0.004605498172168154,
+      "mean_ssim": 0.8870355477556586
+    },
+    "M2": {
+      "cells": 16,
+      "mean_hf_correlation": 0.462123488389201,
+      "mean_psnr_db": 27.53347649754359,
+      "mean_registered_temporal_error": 0.004797410560318635,
+      "mean_ssim": 0.8822983056306839
+    },
+    "M3": {
+      "cells": 16,
+      "mean_hf_correlation": 0.4425073977580803,
+      "mean_psnr_db": 27.265292945442916,
+      "mean_registered_temporal_error": 0.009236370645729559,
+      "mean_ssim": 0.8732165456749499
+    },
+    "M4": {
+      "cells": 16,
+      "mean_hf_correlation": 0.35112809965921177,
+      "mean_psnr_db": 26.986291688682243,
+      "mean_registered_temporal_error": 0.009966133504349273,
+      "mean_ssim": 0.8635396882891655
+    }
+  },
+  "r1_vs_r2": {
+    "R1_M3": {
+      "mean_hf_correlation": 0.5016523157656231,
+      "mean_residual_correlation": -0.0640068091217961,
+      "mean_residual_phase_agreement": 0.46904367581009865,
+      "mean_residual_projection": -0.007675239196487382
+    },
+    "R1_M4": {
+      "mean_hf_correlation": 0.41267793339527814,
+      "mean_residual_correlation": -0.07476955817188957,
+      "mean_residual_phase_agreement": 0.47016106452792883,
+      "mean_residual_projection": -0.018572420062810124
+    },
+    "R2_M3": {
+      "mean_hf_correlation": 0.3833624797505374,
+      "mean_residual_correlation": -0.053191149426079616,
+      "mean_residual_phase_agreement": 0.4653846784494817,
+      "mean_residual_projection": -0.004040241590942628
+    },
+    "R2_M4": {
+      "mean_hf_correlation": 0.2895782659231455,
+      "mean_residual_correlation": -0.04697891613369056,
+      "mean_residual_phase_agreement": 0.47328041726723313,
+      "mean_residual_projection": -0.009919998755151482
+    }
+  },
+  "schema": "temporal_forge.empirical_viability.primary_evaluation.v1"
+}
