@@ -1,6 +1,6 @@
 # Empirical viability sprint
 
-**Status:** ACTIVE — PRIMARY CAPTURE COMPLETE; PRIMARY EVALUATION RECORDED
+**Status:** COMPLETE — CP-E VERDICT RECORDED
 
 **Authority:** This is the sole active Temporal Forge research authority.
 
@@ -280,3 +280,47 @@ matrix therefore contains no credible, repeatable signal requiring a bounded
 confirmation subset; confirmation is skipped and CP-D is not required. This
 is a numeric conclusion only. No visual artifact claim is made here without a
 separate inspected-artifact record.
+
+### Temporal and visual artifact review
+
+A delegated read-only artifact review inspected all eight frames for `SEQ-A`
+across `S1_R1`, `S1_R2`, `S2_R1`, `S2_R2`, `S3_R1`, `S3_R2`, `S4_R1`, and
+`S4_R2`, comparing GT, M1, M2, M3, and M4. `SEQ-B` was not covered by the
+visual pass; that limitation is preserved in
+[`visual_review.md`](../../benchmarks/empirical/results/evs-20260914/visual_review.md).
+
+The review found visible softness/lower contrast in M2–M4 versus GT/M1 for
+thin geometry and text, with the strongest artifact in S3 repeating texture:
+reduced lattice contrast and a changing broad diagonal envelope producing
+periodic crawling/phase modulation. It found no clear ghost trails, history
+persistence, edge drift, or unstable large-scale detail in the inspected
+SEQ-A set. These observations are bounded to the inspected artifacts and are
+not generalized to unreviewed SEQ-B frames.
+
+The liveness record shows 16 complete traces per Forge method, 128 events per
+method, complete frame and transition indices, one expected forced reset per
+cell, zero detector scene-cut events, and no ghost cause beyond the expected
+initial forced reset. M2 had history/recurrent disabled and jitter off; M3/M4
+had history/recurrent enabled with synthetic Halton-23 upload jitter, matching
+their frozen method identities. M3/M4 registered temporal errors were
+`0.009236` and `0.009966`, versus `0.004797` for M2. See
+[`temporal_liveness_summary.json`](../../benchmarks/empirical/results/evs-20260914/temporal_liveness_summary.json).
+
+### CP-E — empirical viability verdict
+
+**Verdict: EMPIRICAL FAILURE**
+
+The existing Forge reconstruction path does not meet the frozen survival
+target. Both Forge arms lose to the strongest spatial baseline on HF
+correlation in all four R1 structural classes, neither reaches the required
+`+10%` relative recovery on any class, both have worse global fidelity and
+registered temporal error, and the causal R1 residual correlations and signed
+projections are negative. The bounded visual review adds softness and periodic
+crawling/phase modulation evidence for S3 rather than support for recovered
+structure. No confirmation subset is run, no CP-D is created, and no
+reconstruction-quality change is retained.
+
+The final evidence package is under
+[`benchmarks/empirical/results/evs-20260914/`](../../benchmarks/empirical/results/evs-20260914/).
+This sprint stops here. No AMD parity/oracle work, additional FSR research,
+or follow-on empirical campaign begins under this authority.

@@ -26,8 +26,9 @@ this map.
   [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md).
 - Current FSR input and motion contracts: [`reference/motion/`](reference/motion/).
 - Active research: [`active/EMPIRICAL_VIABILITY_SPRINT.md`](active/EMPIRICAL_VIABILITY_SPRINT.md)
-  is the sole current research authority. Detailed experiment execution has
-  not begun.
+  is the sole current research authority. Detailed experiment execution and
+  its checkpoint evidence are recorded there and under the linked EVS result
+  package.
 - Completed quality, portability, and remediation plans are historical under
   [`archive/plans/`](archive/plans/); they do not direct current execution.
 - Detailed measurements: benchmark manifests and artifacts, not copied tables

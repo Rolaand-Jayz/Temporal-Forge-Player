@@ -1,0 +1,136 @@
+{
+  "campaign_id": "evs-20260914",
+  "capture_commit": "626641100df48157417e10de1e27e23b14d3df0a",
+  "methods": {
+    "M2": {
+      "cells": 16,
+      "detector_scene_cut_events": 0,
+      "events": 128,
+      "forced_reset_events": 16,
+      "frame_indices_complete": true,
+      "ghost_cause_values": [
+        "forced_reset",
+        "none"
+      ],
+      "jitter_applied_events": 0,
+      "numeric_metrics": {
+        "edge_variance": 0.012075717357220128,
+        "periodicity": 0.7001856572692624,
+        "registered_temporal_error": 0.004797410560318635,
+        "static_flicker": 0.004797410560318635
+      },
+      "pts_delta_ms_values": [
+        125
+      ],
+      "reset_cause_values": [
+        "forced_reset",
+        "none"
+      ],
+      "runtime_trace_state": {
+        "history_enabled": [
+          false
+        ],
+        "jitter_mode": [
+          "off"
+        ],
+        "recurrent_enabled": [
+          false
+        ]
+      },
+      "schema_values": [
+        "temporal_forge.event_trace.v1"
+      ],
+      "traces": 16,
+      "transition_indices_complete": true
+    },
+    "M3": {
+      "cells": 16,
+      "detector_scene_cut_events": 0,
+      "events": 128,
+      "forced_reset_events": 16,
+      "frame_indices_complete": true,
+      "ghost_cause_values": [
+        "forced_reset",
+        "none"
+      ],
+      "jitter_applied_events": 128,
+      "numeric_metrics": {
+        "edge_variance": 0.010702152592784842,
+        "periodicity": 0.6960566881798288,
+        "registered_temporal_error": 0.009236370645729559,
+        "static_flicker": 0.009236370645729559
+      },
+      "pts_delta_ms_values": [
+        125
+      ],
+      "reset_cause_values": [
+        "forced_reset",
+        "none"
+      ],
+      "runtime_trace_state": {
+        "history_enabled": [
+          true
+        ],
+        "jitter_mode": [
+          "synthetic_upload"
+        ],
+        "recurrent_enabled": [
+          true
+        ]
+      },
+      "schema_values": [
+        "temporal_forge.event_trace.v1"
+      ],
+      "traces": 16,
+      "transition_indices_complete": true
+    },
+    "M4": {
+      "cells": 16,
+      "detector_scene_cut_events": 0,
+      "events": 128,
+      "forced_reset_events": 16,
+      "frame_indices_complete": true,
+      "ghost_cause_values": [
+        "forced_reset",
+        "none"
+      ],
+      "jitter_applied_events": 128,
+      "numeric_metrics": {
+        "edge_variance": 0.009891841700664372,
+        "periodicity": 0.5097690932332565,
+        "registered_temporal_error": 0.009966133504349273,
+        "static_flicker": 0.009966133504349273
+      },
+      "pts_delta_ms_values": [
+        125
+      ],
+      "reset_cause_values": [
+        "forced_reset",
+        "none"
+      ],
+      "runtime_trace_state": {
+        "history_enabled": [
+          true
+        ],
+        "jitter_mode": [
+          "synthetic_upload"
+        ],
+        "recurrent_enabled": [
+          true
+        ]
+      },
+      "schema_values": [
+        "temporal_forge.event_trace.v1"
+      ],
+      "traces": 16,
+      "transition_indices_complete": true
+    }
+  },
+  "schema": "temporal_forge.empirical_viability.temporal_liveness_summary.v1",
+  "visual_review": {
+    "status": "delegated read-only review complete",
+    "scope": "all eight SEQ-A frames for S1_R1, S1_R2, S2_R1, S2_R2, S3_R1, S3_R2, S4_R1, and S4_R2; SEQ-B not reviewed",
+    "artifact_report": "visual_review.md",
+    "visual_claims_in_this_file": false
+  }
+}
