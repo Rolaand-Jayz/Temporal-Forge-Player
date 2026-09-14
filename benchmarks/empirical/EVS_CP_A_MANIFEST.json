@@ -1,0 +1,1157 @@
+{
+  "baseline_parent_commit": "b8bbb86b4bbeff32e50427e64c3c257369b0b693",
+  "branch": "empirical-viability-sprint",
+  "campaign_id": "evs-20260914",
+  "dirty_at_freeze": true,
+  "dirty_paths_at_freeze": [
+    "benchmarks/empirical/evs_capture.py",
+    "benchmarks/empirical/evs_evaluate.py",
+    "benchmarks/empirical/evs_fixture.py",
+    "benchmarks/empirical/evs_manifest.py",
+    "docs/active/EMPIRICAL_VIABILITY_SPRINT.md",
+    "tests/test_evs_contract.py"
+  ],
+  "excluded": [
+    "AMD parity/oracle investigation",
+    "DLL or FidelityFX SDK archaeology",
+    "historical Final Word campaign authority and ledgers",
+    "new reconstruction tuning, weights, topology, or filters",
+    "same-session independent-review artifacts as active authority"
+  ],
+  "fixture": {
+    "classes": {
+      "S1": {
+        "description": "subpixel diagonals, crossings, and narrow rings",
+        "generator": "thin_geometry_v1",
+        "name": "thin-geometry"
+      },
+      "S2": {
+        "description": "small glyphs, strokes, and high-contrast counters",
+        "generator": "fine_text_glyphs_v1",
+        "name": "fine-text-glyphs"
+      },
+      "S3": {
+        "description": "phase-sensitive periodic bands and checker texture",
+        "generator": "repeating_texture_v1",
+        "name": "repeating-texture"
+      },
+      "S4": {
+        "description": "multi-scale stochastic detail with soft natural forms",
+        "generator": "natural_detail_v1",
+        "name": "natural-detail"
+      }
+    },
+    "color_format": "8-bit RGB PNG source; FFV1 yuv444p input media",
+    "decimation": [
+      3,
+      3
+    ],
+    "frame_count": 8,
+    "frame_rate": 8,
+    "hr_dimensions": [
+      1920,
+      1080
+    ],
+    "lr_dimensions": [
+      640,
+      360
+    ],
+    "output_dimensions": [
+      1920,
+      1080
+    ],
+    "regimes": {
+      "R1": {
+        "name": "phase-rich-known-fractional-motion",
+        "prefilter": {
+          "kind": "gaussian",
+          "sigma": 0.7
+        },
+        "purpose": "retain complementary recoverable high frequency"
+      },
+      "R2": {
+        "name": "strong-prefilter-suppression-control",
+        "prefilter": {
+          "kind": "gaussian",
+          "sigma": 2.2
+        },
+        "purpose": "suppress complementary recoverable high frequency before decimation"
+      }
+    },
+    "seed": 20260914,
+    "sequences": {
+      "SEQ-A": {
+        "phase_origin_hr_pixels": [
+          0.11,
+          0.07
+        ],
+        "velocity_hr_pixels_per_frame": [
+          0.37,
+          0.23
+        ]
+      },
+      "SEQ-B": {
+        "phase_origin_hr_pixels": [
+          0.43,
+          0.29
+        ],
+        "velocity_hr_pixels_per_frame": [
+          0.19,
+          0.41
+        ]
+      }
+    }
+  },
+  "fixture_identity": {
+    "manifest_path": "EVS_FIXTURE_ROOT/fixture_manifest.json",
+    "manifest_sha256": "6ac763a76ff093d09645559366ee4b3bc213ff95be4c10464fa3fdda5bd6453e",
+    "media": {
+      "S1_R1_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S1_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S1_R1_SEQ-A.mkv",
+        "input_media_sha256": "3d224fa17923f29214b7b77407d1ee31396c4aa6bde003ca83497c7e9d598c8f",
+        "lr_combined_sha256": "b46b0b57af8d6ff0305b9409a429c26d5c59dc8b9ec4ba2bb03001e39826d468",
+        "lr_frame_paths": [
+          "lr/S1/R1/SEQ-A/frame_0000.png",
+          "lr/S1/R1/SEQ-A/frame_0001.png",
+          "lr/S1/R1/SEQ-A/frame_0002.png",
+          "lr/S1/R1/SEQ-A/frame_0003.png",
+          "lr/S1/R1/SEQ-A/frame_0004.png",
+          "lr/S1/R1/SEQ-A/frame_0005.png",
+          "lr/S1/R1/SEQ-A/frame_0006.png",
+          "lr/S1/R1/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-A",
+        "structural_class": "S1"
+      },
+      "S1_R1_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S1_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S1_R1_SEQ-B.mkv",
+        "input_media_sha256": "57e2c46f21936c7a19fdef076bf8b6a828e69672a7989ea27969cc034f251623",
+        "lr_combined_sha256": "c34ae74db145e05c96ff2aefec16958f5a125dfb5b646f30d4a6f1a4790f7728",
+        "lr_frame_paths": [
+          "lr/S1/R1/SEQ-B/frame_0000.png",
+          "lr/S1/R1/SEQ-B/frame_0001.png",
+          "lr/S1/R1/SEQ-B/frame_0002.png",
+          "lr/S1/R1/SEQ-B/frame_0003.png",
+          "lr/S1/R1/SEQ-B/frame_0004.png",
+          "lr/S1/R1/SEQ-B/frame_0005.png",
+          "lr/S1/R1/SEQ-B/frame_0006.png",
+          "lr/S1/R1/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-B",
+        "structural_class": "S1"
+      },
+      "S1_R2_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S1_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S1_R2_SEQ-A.mkv",
+        "input_media_sha256": "876def3d3f43e205b62d59f5fbb83b72c00483f3c912018851aac12da502ad73",
+        "lr_combined_sha256": "b54a9dd63885eebbd90866e9e655b4d4caf2c2db7818ab13995c582a5139320c",
+        "lr_frame_paths": [
+          "lr/S1/R2/SEQ-A/frame_0000.png",
+          "lr/S1/R2/SEQ-A/frame_0001.png",
+          "lr/S1/R2/SEQ-A/frame_0002.png",
+          "lr/S1/R2/SEQ-A/frame_0003.png",
+          "lr/S1/R2/SEQ-A/frame_0004.png",
+          "lr/S1/R2/SEQ-A/frame_0005.png",
+          "lr/S1/R2/SEQ-A/frame_0006.png",
+          "lr/S1/R2/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-A",
+        "structural_class": "S1"
+      },
+      "S1_R2_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S1_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S1_R2_SEQ-B.mkv",
+        "input_media_sha256": "eddcf7e75cb0e06e493a5a2194ef36d0bd8caa95683c8fb1dda4098665e5560b",
+        "lr_combined_sha256": "e324e214d4c3b1f9167ed1a50610fcf121d98aa804f48dc113edf0700d9fa86e",
+        "lr_frame_paths": [
+          "lr/S1/R2/SEQ-B/frame_0000.png",
+          "lr/S1/R2/SEQ-B/frame_0001.png",
+          "lr/S1/R2/SEQ-B/frame_0002.png",
+          "lr/S1/R2/SEQ-B/frame_0003.png",
+          "lr/S1/R2/SEQ-B/frame_0004.png",
+          "lr/S1/R2/SEQ-B/frame_0005.png",
+          "lr/S1/R2/SEQ-B/frame_0006.png",
+          "lr/S1/R2/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-B",
+        "structural_class": "S1"
+      },
+      "S1_seq-a": {
+        "combined_sha256": "1801488f46ebecbfb2cf606aadcedef9e3e2ae1782c8efb7c7b9c9242af03121",
+        "frame_paths": [
+          "gt/S1/SEQ-A/frame_0000.png",
+          "gt/S1/SEQ-A/frame_0001.png",
+          "gt/S1/SEQ-A/frame_0002.png",
+          "gt/S1/SEQ-A/frame_0003.png",
+          "gt/S1/SEQ-A/frame_0004.png",
+          "gt/S1/SEQ-A/frame_0005.png",
+          "gt/S1/SEQ-A/frame_0006.png",
+          "gt/S1/SEQ-A/frame_0007.png"
+        ],
+        "sequence": "SEQ-A",
+        "structural_class": "S1"
+      },
+      "S1_seq-b": {
+        "combined_sha256": "343c4dfda76cf13eb19cfaf01c81074d8b0b943dae42d11549f137619be54e38",
+        "frame_paths": [
+          "gt/S1/SEQ-B/frame_0000.png",
+          "gt/S1/SEQ-B/frame_0001.png",
+          "gt/S1/SEQ-B/frame_0002.png",
+          "gt/S1/SEQ-B/frame_0003.png",
+          "gt/S1/SEQ-B/frame_0004.png",
+          "gt/S1/SEQ-B/frame_0005.png",
+          "gt/S1/SEQ-B/frame_0006.png",
+          "gt/S1/SEQ-B/frame_0007.png"
+        ],
+        "sequence": "SEQ-B",
+        "structural_class": "S1"
+      },
+      "S2_R1_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S2_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S2_R1_SEQ-A.mkv",
+        "input_media_sha256": "eee6d743f63c0bdfb1b9723bbe5435e3900e880a818aeb897c33e85537a970ec",
+        "lr_combined_sha256": "9b20ce4a3a5c3f7d6f404954cbde338b1dcb8ee316a475e5129b63dee311e72a",
+        "lr_frame_paths": [
+          "lr/S2/R1/SEQ-A/frame_0000.png",
+          "lr/S2/R1/SEQ-A/frame_0001.png",
+          "lr/S2/R1/SEQ-A/frame_0002.png",
+          "lr/S2/R1/SEQ-A/frame_0003.png",
+          "lr/S2/R1/SEQ-A/frame_0004.png",
+          "lr/S2/R1/SEQ-A/frame_0005.png",
+          "lr/S2/R1/SEQ-A/frame_0006.png",
+          "lr/S2/R1/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-A",
+        "structural_class": "S2"
+      },
+      "S2_R1_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S2_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S2_R1_SEQ-B.mkv",
+        "input_media_sha256": "373c7aa09d83cd35d2feec72e1f2ba846d5c4687aa5e188769e77add1e75b4f5",
+        "lr_combined_sha256": "7667b81a8a4c259a15ee8a6eeba5443177ef07c389f046f39875988d46e8009f",
+        "lr_frame_paths": [
+          "lr/S2/R1/SEQ-B/frame_0000.png",
+          "lr/S2/R1/SEQ-B/frame_0001.png",
+          "lr/S2/R1/SEQ-B/frame_0002.png",
+          "lr/S2/R1/SEQ-B/frame_0003.png",
+          "lr/S2/R1/SEQ-B/frame_0004.png",
+          "lr/S2/R1/SEQ-B/frame_0005.png",
+          "lr/S2/R1/SEQ-B/frame_0006.png",
+          "lr/S2/R1/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-B",
+        "structural_class": "S2"
+      },
+      "S2_R2_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S2_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S2_R2_SEQ-A.mkv",
+        "input_media_sha256": "ff5a1370e2bfe89cb8696d03c95fe7f5a0bf3848f83ef8079c0426f0ad42a2c5",
+        "lr_combined_sha256": "f6fdd61d8fc530c888f4672790a45319c4df697e4c6f7d6d67f0df70564424d1",
+        "lr_frame_paths": [
+          "lr/S2/R2/SEQ-A/frame_0000.png",
+          "lr/S2/R2/SEQ-A/frame_0001.png",
+          "lr/S2/R2/SEQ-A/frame_0002.png",
+          "lr/S2/R2/SEQ-A/frame_0003.png",
+          "lr/S2/R2/SEQ-A/frame_0004.png",
+          "lr/S2/R2/SEQ-A/frame_0005.png",
+          "lr/S2/R2/SEQ-A/frame_0006.png",
+          "lr/S2/R2/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-A",
+        "structural_class": "S2"
+      },
+      "S2_R2_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S2_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S2_R2_SEQ-B.mkv",
+        "input_media_sha256": "df56bcf1ac6cfc3556e822a56a70e59097d062486aa5cb0a1ce0e7856007e6e8",
+        "lr_combined_sha256": "bdfa9f669eec13d70317a64922fba961cd35a043f4ad21d6237f85d1b3a03e5b",
+        "lr_frame_paths": [
+          "lr/S2/R2/SEQ-B/frame_0000.png",
+          "lr/S2/R2/SEQ-B/frame_0001.png",
+          "lr/S2/R2/SEQ-B/frame_0002.png",
+          "lr/S2/R2/SEQ-B/frame_0003.png",
+          "lr/S2/R2/SEQ-B/frame_0004.png",
+          "lr/S2/R2/SEQ-B/frame_0005.png",
+          "lr/S2/R2/SEQ-B/frame_0006.png",
+          "lr/S2/R2/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-B",
+        "structural_class": "S2"
+      },
+      "S2_seq-a": {
+        "combined_sha256": "ed33e919e2aa83bb3eab03b64eac3b3af93426287d0eda8533a4a0234f114280",
+        "frame_paths": [
+          "gt/S2/SEQ-A/frame_0000.png",
+          "gt/S2/SEQ-A/frame_0001.png",
+          "gt/S2/SEQ-A/frame_0002.png",
+          "gt/S2/SEQ-A/frame_0003.png",
+          "gt/S2/SEQ-A/frame_0004.png",
+          "gt/S2/SEQ-A/frame_0005.png",
+          "gt/S2/SEQ-A/frame_0006.png",
+          "gt/S2/SEQ-A/frame_0007.png"
+        ],
+        "sequence": "SEQ-A",
+        "structural_class": "S2"
+      },
+      "S2_seq-b": {
+        "combined_sha256": "da90de9fd1f93de2b4a2147b2c68a6cf61eaa5287a159d1ee30ff6a922cbc5f1",
+        "frame_paths": [
+          "gt/S2/SEQ-B/frame_0000.png",
+          "gt/S2/SEQ-B/frame_0001.png",
+          "gt/S2/SEQ-B/frame_0002.png",
+          "gt/S2/SEQ-B/frame_0003.png",
+          "gt/S2/SEQ-B/frame_0004.png",
+          "gt/S2/SEQ-B/frame_0005.png",
+          "gt/S2/SEQ-B/frame_0006.png",
+          "gt/S2/SEQ-B/frame_0007.png"
+        ],
+        "sequence": "SEQ-B",
+        "structural_class": "S2"
+      },
+      "S3_R1_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S3_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S3_R1_SEQ-A.mkv",
+        "input_media_sha256": "03fdda96851367cc79e2c42a5702446a5f96492a0e1cf16b7e6b7a316a67f172",
+        "lr_combined_sha256": "0b189079aedd4281beefdba5a30b7aca6fdd8fd953205f2dde100aa2742b5309",
+        "lr_frame_paths": [
+          "lr/S3/R1/SEQ-A/frame_0000.png",
+          "lr/S3/R1/SEQ-A/frame_0001.png",
+          "lr/S3/R1/SEQ-A/frame_0002.png",
+          "lr/S3/R1/SEQ-A/frame_0003.png",
+          "lr/S3/R1/SEQ-A/frame_0004.png",
+          "lr/S3/R1/SEQ-A/frame_0005.png",
+          "lr/S3/R1/SEQ-A/frame_0006.png",
+          "lr/S3/R1/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-A",
+        "structural_class": "S3"
+      },
+      "S3_R1_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S3_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S3_R1_SEQ-B.mkv",
+        "input_media_sha256": "36b122b516c07c0ca1bf6f88a654227aa36cb4ec60b0a77a73fd92fc2559ef30",
+        "lr_combined_sha256": "ad65df1a606ac8f9f4338a0202f39557bd0a14e287cf85c6a0f9ba754b574d1a",
+        "lr_frame_paths": [
+          "lr/S3/R1/SEQ-B/frame_0000.png",
+          "lr/S3/R1/SEQ-B/frame_0001.png",
+          "lr/S3/R1/SEQ-B/frame_0002.png",
+          "lr/S3/R1/SEQ-B/frame_0003.png",
+          "lr/S3/R1/SEQ-B/frame_0004.png",
+          "lr/S3/R1/SEQ-B/frame_0005.png",
+          "lr/S3/R1/SEQ-B/frame_0006.png",
+          "lr/S3/R1/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-B",
+        "structural_class": "S3"
+      },
+      "S3_R2_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S3_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S3_R2_SEQ-A.mkv",
+        "input_media_sha256": "e913a8be42b048f983df6ff4aa7722b9a3c0122fe897fbf8ee065883e75dfb41",
+        "lr_combined_sha256": "b7ac93e8f03f01ebd7277e174e9c0cd998a13d0facf998e5c77896615b42dc9c",
+        "lr_frame_paths": [
+          "lr/S3/R2/SEQ-A/frame_0000.png",
+          "lr/S3/R2/SEQ-A/frame_0001.png",
+          "lr/S3/R2/SEQ-A/frame_0002.png",
+          "lr/S3/R2/SEQ-A/frame_0003.png",
+          "lr/S3/R2/SEQ-A/frame_0004.png",
+          "lr/S3/R2/SEQ-A/frame_0005.png",
+          "lr/S3/R2/SEQ-A/frame_0006.png",
+          "lr/S3/R2/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-A",
+        "structural_class": "S3"
+      },
+      "S3_R2_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S3_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S3_R2_SEQ-B.mkv",
+        "input_media_sha256": "507d0f3a3261b9b18ea844b27a668167dca2e11249f9e86ce65648fae1127cb8",
+        "lr_combined_sha256": "77c5bc2160f80f4742886927678d1af6adf66d8c495600e347cd80b7527b7100",
+        "lr_frame_paths": [
+          "lr/S3/R2/SEQ-B/frame_0000.png",
+          "lr/S3/R2/SEQ-B/frame_0001.png",
+          "lr/S3/R2/SEQ-B/frame_0002.png",
+          "lr/S3/R2/SEQ-B/frame_0003.png",
+          "lr/S3/R2/SEQ-B/frame_0004.png",
+          "lr/S3/R2/SEQ-B/frame_0005.png",
+          "lr/S3/R2/SEQ-B/frame_0006.png",
+          "lr/S3/R2/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-B",
+        "structural_class": "S3"
+      },
+      "S3_seq-a": {
+        "combined_sha256": "4ac18a4427ca2c26e148331b79cf27726c59c3c92db25446b99f0ffa5936b880",
+        "frame_paths": [
+          "gt/S3/SEQ-A/frame_0000.png",
+          "gt/S3/SEQ-A/frame_0001.png",
+          "gt/S3/SEQ-A/frame_0002.png",
+          "gt/S3/SEQ-A/frame_0003.png",
+          "gt/S3/SEQ-A/frame_0004.png",
+          "gt/S3/SEQ-A/frame_0005.png",
+          "gt/S3/SEQ-A/frame_0006.png",
+          "gt/S3/SEQ-A/frame_0007.png"
+        ],
+        "sequence": "SEQ-A",
+        "structural_class": "S3"
+      },
+      "S3_seq-b": {
+        "combined_sha256": "395c66ea88f5c56a92eee1d03de0cd74b39bde6b458d2cd62912290d2cef0782",
+        "frame_paths": [
+          "gt/S3/SEQ-B/frame_0000.png",
+          "gt/S3/SEQ-B/frame_0001.png",
+          "gt/S3/SEQ-B/frame_0002.png",
+          "gt/S3/SEQ-B/frame_0003.png",
+          "gt/S3/SEQ-B/frame_0004.png",
+          "gt/S3/SEQ-B/frame_0005.png",
+          "gt/S3/SEQ-B/frame_0006.png",
+          "gt/S3/SEQ-B/frame_0007.png"
+        ],
+        "sequence": "SEQ-B",
+        "structural_class": "S3"
+      },
+      "S4_R1_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S4_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S4_R1_SEQ-A.mkv",
+        "input_media_sha256": "9520208f7ad373c356e5f523812fbf05d8fd8c06fee0bdff367009a8c91b9dda",
+        "lr_combined_sha256": "6a9f19a4ce6ce9b2f7dee6ddb8d56dfb1359f2c30b60f788632d14550a30e79c",
+        "lr_frame_paths": [
+          "lr/S4/R1/SEQ-A/frame_0000.png",
+          "lr/S4/R1/SEQ-A/frame_0001.png",
+          "lr/S4/R1/SEQ-A/frame_0002.png",
+          "lr/S4/R1/SEQ-A/frame_0003.png",
+          "lr/S4/R1/SEQ-A/frame_0004.png",
+          "lr/S4/R1/SEQ-A/frame_0005.png",
+          "lr/S4/R1/SEQ-A/frame_0006.png",
+          "lr/S4/R1/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-A",
+        "structural_class": "S4"
+      },
+      "S4_R1_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S4_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S4_R1_SEQ-B.mkv",
+        "input_media_sha256": "994ace5b06a546cb74239dbaf7c677ae9f1e989ce94344db61d0619339bdb39f",
+        "lr_combined_sha256": "0e598f0ebb0304cdaaf2e4e45ec2fc388ae09e637979a7e4606b8eebb7544f5d",
+        "lr_frame_paths": [
+          "lr/S4/R1/SEQ-B/frame_0000.png",
+          "lr/S4/R1/SEQ-B/frame_0001.png",
+          "lr/S4/R1/SEQ-B/frame_0002.png",
+          "lr/S4/R1/SEQ-B/frame_0003.png",
+          "lr/S4/R1/SEQ-B/frame_0004.png",
+          "lr/S4/R1/SEQ-B/frame_0005.png",
+          "lr/S4/R1/SEQ-B/frame_0006.png",
+          "lr/S4/R1/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R1",
+        "sequence": "SEQ-B",
+        "structural_class": "S4"
+      },
+      "S4_R2_seq-a": {
+        "frame_count": 8,
+        "gt_sequence_key": "S4_seq-a",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S4_R2_SEQ-A.mkv",
+        "input_media_sha256": "0dfdf8048c9c3b82e03bf80ae33651da640846406180a696813662428051ff7a",
+        "lr_combined_sha256": "9d762c75669b3033d3c95321a6d71c5f39d22c871ee4530f8407c8be56d3f614",
+        "lr_frame_paths": [
+          "lr/S4/R2/SEQ-A/frame_0000.png",
+          "lr/S4/R2/SEQ-A/frame_0001.png",
+          "lr/S4/R2/SEQ-A/frame_0002.png",
+          "lr/S4/R2/SEQ-A/frame_0003.png",
+          "lr/S4/R2/SEQ-A/frame_0004.png",
+          "lr/S4/R2/SEQ-A/frame_0005.png",
+          "lr/S4/R2/SEQ-A/frame_0006.png",
+          "lr/S4/R2/SEQ-A/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-A",
+        "structural_class": "S4"
+      },
+      "S4_R2_seq-b": {
+        "frame_count": 8,
+        "gt_sequence_key": "S4_seq-b",
+        "input_media_dimensions": [
+          640,
+          360
+        ],
+        "input_media_relative": "media/S4_R2_SEQ-B.mkv",
+        "input_media_sha256": "5bacbd823b04a91380fc346df9e63dd89dc1d5caabba3e861d3dadcb0077a8e9",
+        "lr_combined_sha256": "c332d19d99c37eb945359b78e693ec3a0b48cb8d7d1d9eb91f91de797fb1c7e4",
+        "lr_frame_paths": [
+          "lr/S4/R2/SEQ-B/frame_0000.png",
+          "lr/S4/R2/SEQ-B/frame_0001.png",
+          "lr/S4/R2/SEQ-B/frame_0002.png",
+          "lr/S4/R2/SEQ-B/frame_0003.png",
+          "lr/S4/R2/SEQ-B/frame_0004.png",
+          "lr/S4/R2/SEQ-B/frame_0005.png",
+          "lr/S4/R2/SEQ-B/frame_0006.png",
+          "lr/S4/R2/SEQ-B/frame_0007.png"
+        ],
+        "regime": "R2",
+        "sequence": "SEQ-B",
+        "structural_class": "S4"
+      },
+      "S4_seq-a": {
+        "combined_sha256": "48e674ecc2ee97a97cd18e99cbb5df64f100826d47df80267c2e05b257d5d6dc",
+        "frame_paths": [
+          "gt/S4/SEQ-A/frame_0000.png",
+          "gt/S4/SEQ-A/frame_0001.png",
+          "gt/S4/SEQ-A/frame_0002.png",
+          "gt/S4/SEQ-A/frame_0003.png",
+          "gt/S4/SEQ-A/frame_0004.png",
+          "gt/S4/SEQ-A/frame_0005.png",
+          "gt/S4/SEQ-A/frame_0006.png",
+          "gt/S4/SEQ-A/frame_0007.png"
+        ],
+        "sequence": "SEQ-A",
+        "structural_class": "S4"
+      },
+      "S4_seq-b": {
+        "combined_sha256": "a2e022b2dd4b44ef6ade2f6eba59337b0d1ec476acaa560afcdc2620544e6f31",
+        "frame_paths": [
+          "gt/S4/SEQ-B/frame_0000.png",
+          "gt/S4/SEQ-B/frame_0001.png",
+          "gt/S4/SEQ-B/frame_0002.png",
+          "gt/S4/SEQ-B/frame_0003.png",
+          "gt/S4/SEQ-B/frame_0004.png",
+          "gt/S4/SEQ-B/frame_0005.png",
+          "gt/S4/SEQ-B/frame_0006.png",
+          "gt/S4/SEQ-B/frame_0007.png"
+        ],
+        "sequence": "SEQ-B",
+        "structural_class": "S4"
+      }
+    }
+  },
+  "limits": {
+    "confirmation_cells_max": 16,
+    "primary_cells": 64,
+    "total_cells_max": 80
+  },
+  "matrix": [
+    {
+      "cell_id": "S1_R1_M1_seq-a",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M1_seq-b",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M2_seq-a",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M2_seq-b",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M3_seq-a",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M3_seq-b",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M4_seq-a",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R1_M4_seq-b",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M1_seq-a",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M1_seq-b",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M2_seq-a",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M2_seq-b",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M3_seq-a",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M3_seq-b",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M4_seq-a",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S1_R2_M4_seq-b",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S1"
+    },
+    {
+      "cell_id": "S2_R1_M1_seq-a",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M1_seq-b",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M2_seq-a",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M2_seq-b",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M3_seq-a",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M3_seq-b",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M4_seq-a",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R1_M4_seq-b",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M1_seq-a",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M1_seq-b",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M2_seq-a",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M2_seq-b",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M3_seq-a",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M3_seq-b",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M4_seq-a",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S2_R2_M4_seq-b",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S2"
+    },
+    {
+      "cell_id": "S3_R1_M1_seq-a",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M1_seq-b",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M2_seq-a",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M2_seq-b",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M3_seq-a",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M3_seq-b",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M4_seq-a",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R1_M4_seq-b",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M1_seq-a",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M1_seq-b",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M2_seq-a",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M2_seq-b",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M3_seq-a",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M3_seq-b",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M4_seq-a",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S3_R2_M4_seq-b",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S3"
+    },
+    {
+      "cell_id": "S4_R1_M1_seq-a",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M1_seq-b",
+      "method": "M1",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M2_seq-a",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M2_seq-b",
+      "method": "M2",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M3_seq-a",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M3_seq-b",
+      "method": "M3",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M4_seq-a",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R1_M4_seq-b",
+      "method": "M4",
+      "regime": "R1",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M1_seq-a",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M1_seq-b",
+      "method": "M1",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M2_seq-a",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M2_seq-b",
+      "method": "M2",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M3_seq-a",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M3_seq-b",
+      "method": "M3",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M4_seq-a",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-A",
+      "structural_class": "S4"
+    },
+    {
+      "cell_id": "S4_R2_M4_seq-b",
+      "method": "M4",
+      "regime": "R2",
+      "sequence": "SEQ-B",
+      "structural_class": "S4"
+    }
+  ],
+  "methods": {
+    "M1": {
+      "config": {
+        "path": null,
+        "sha256": null
+      },
+      "config_path": null,
+      "description": "Lanczos3 resize of the decoded low-resolution input",
+      "environment": {},
+      "filter": "lanczos",
+      "kind": "external_ffmpeg_spatial",
+      "name": "lanczos3-external-spatial"
+    },
+    "M2": {
+      "config": {
+        "path": "benchmarks/quality_sweeps/stage_a/base_only_bilinear.json",
+        "sha256": "91800f566018a55bea418d840d4e6ddfcab7d96d7cf9862e789e1cb6e7ebed8c"
+      },
+      "config_path": "benchmarks/quality_sweeps/stage_a/base_only_bilinear.json",
+      "description": "strongest existing deterministic spatial baseline",
+      "environment": {
+        "TFORGE_BENCHMARK_PRESET": "Quality",
+        "TFORGE_DISABLE_HW_DECODE": "1",
+        "TFORGE_FSR4_DISABLE_CAS": "1",
+        "TFORGE_FSR4_DISABLE_COLOR_HISTORY": "1",
+        "TFORGE_FSR4_DISABLE_NATIVE_INT8": "1",
+        "TFORGE_FSR4_DISABLE_RECURRENT": "1",
+        "TFORGE_FSR4_FORCE_SCALE": "1.50",
+        "TFORGE_FSR4_FORCE_VIEWPORT": "1920x1080",
+        "TFORGE_FSR4_JITTER_MODE": "off",
+        "TFORGE_FSR4_RE_ROOT": "<RE_ROOT>"
+      },
+      "evidence": "docs/reports/M6_RECAPTURE_REPORT_20260901.md",
+      "kind": "player_quality_lab_spatial",
+      "name": "base-only-bilinear"
+    },
+    "M3": {
+      "config": {
+        "path": "benchmarks/quality_sweeps/stage_h_temporal_tiny/current_control.json",
+        "sha256": "762d8f39d8c329d096718a878ca1756620d2eda40a8b3cb7dd13cf23b6dd81c9"
+      },
+      "config_path": "benchmarks/quality_sweeps/stage_h_temporal_tiny/current_control.json",
+      "description": "frozen pre-sprint Forge path with Quality Lab disabled",
+      "environment": {
+        "TFORGE_BENCHMARK_PRESET": "Quality",
+        "TFORGE_DISABLE_HW_DECODE": "1",
+        "TFORGE_FSR4_DISABLE_CAS": "1",
+        "TFORGE_FSR4_DISABLE_NATIVE_INT8": "1",
+        "TFORGE_FSR4_ENABLE_COLOR_HISTORY": "1",
+        "TFORGE_FSR4_ENABLE_RECURRENT": "1",
+        "TFORGE_FSR4_FORCE_SCALE": "1.50",
+        "TFORGE_FSR4_FORCE_VIEWPORT": "1920x1080",
+        "TFORGE_FSR4_JITTER_MODE": "synthetic",
+        "TFORGE_FSR4_JITTER_SEQUENCE": "halton23",
+        "TFORGE_FSR4_RE_ROOT": "<RE_ROOT>"
+      },
+      "evidence": "benchmarks/quality_sweeps/swarm/agent_clean_native_default/measured_results.json",
+      "kind": "player_forge_fsr4",
+      "name": "pre-sprint-forge-default"
+    },
+    "M4": {
+      "config": {
+        "path": "benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json",
+        "sha256": "7af810baa4445304dd87b517e720a63d2419d8507336d7641b63c2795c30153f"
+      },
+      "config_path": "benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json",
+      "description": "existing justified explicit current-composition control",
+      "environment": {
+        "TFORGE_BENCHMARK_PRESET": "Quality",
+        "TFORGE_DISABLE_HW_DECODE": "1",
+        "TFORGE_FSR4_DISABLE_CAS": "1",
+        "TFORGE_FSR4_DISABLE_NATIVE_INT8": "1",
+        "TFORGE_FSR4_ENABLE_COLOR_HISTORY": "1",
+        "TFORGE_FSR4_ENABLE_RECURRENT": "1",
+        "TFORGE_FSR4_FORCE_SCALE": "1.50",
+        "TFORGE_FSR4_FORCE_VIEWPORT": "1920x1080",
+        "TFORGE_FSR4_JITTER_MODE": "synthetic",
+        "TFORGE_FSR4_JITTER_SEQUENCE": "halton23",
+        "TFORGE_FSR4_RE_ROOT": "<RE_ROOT>"
+      },
+      "evidence": "benchmarks/quality_sweeps/swarm/agent_composition_audit/README.md",
+      "kind": "player_forge_fsr4",
+      "name": "existing-current-composition"
+    }
+  },
+  "schema": "temporal_forge.empirical_viability.contract.v1",
+  "status": "frozen-before-capture"
+}
