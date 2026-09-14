@@ -1,6 +1,6 @@
 # Empirical viability sprint
 
-**Status:** ACTIVE — EXPERIMENT CONTRACT FROZEN BEFORE CAPTURE
+**Status:** ACTIVE — PRIMARY CAPTURE COMPLETE; PRIMARY EVALUATION RECORDED
 
 **Authority:** This is the sole active Temporal Forge research authority.
 
@@ -203,3 +203,54 @@ The active document is updated at each checkpoint with measurements,
 observations, rejected hypotheses, conclusions, and links to the committed
 artifacts. No experiment is considered complete without its required
 validation and provenance.
+
+## Execution record
+
+### CP-A — frozen contract
+
+The frozen contract was committed and pushed as
+`626641100df48157417e10de1e27e23b14d3df0a`
+(`EVS-CP-A: freeze empirical viability experiment`). No player capture had
+started at this checkpoint. The commit changed only the active authority,
+experiment tooling, the machine-readable contract, and contract tests; it did
+not change reconstruction behavior or runtime defaults.
+
+### CP-B — primary capture complete
+
+The host Vulkan rerun completed all 64 primary cells: 64 complete, 0 failed,
+16 cells per method, and eight output frames per cell. All 64 cell identities
+verified; all 48 Forge cells had matching runtime traces and passed the binary,
+commit, configuration, and run-identity cross-checks. The capture used the
+CP-A commit, `build-fast/temporal_forge_player` SHA
+`2e77637b009671b89b75f5ce64ec014bf857958404c0b967b3c2fdd48d13c27a`, and
+the committed fixture manifest SHA
+`6ac763a76ff093d09645559366ee4b3bc213ff95be4c10464fa3fdda5bd6453e`.
+
+A sandbox preflight attempted the same 64 cells but produced 48 `SIGABRT`
+Vulkan-startup failures because that context exposed neither `/dev/dri` nor
+`/dev/kfd`. Those failures are recorded as an environment anomaly, not as
+image-quality evidence. The successful host rerun used a separate output root
+and did not reuse failed cells.
+
+The compact capture evidence is committed under
+[`benchmarks/empirical/results/evs-20260914/`](../../benchmarks/empirical/results/evs-20260914/),
+especially `primary_capture_index.json`, `capture_identity.json`, and
+`fixture_manifest.json`. Raw frame payloads remain outside Git with their
+hashes recorded in the index.
+
+### Primary evaluation — metrics recorded; interpretation pending CP-C
+
+The frozen evaluator completed all 64 cells. The current aggregate means are:
+
+| Method | Mean PSNR (dB) | Mean SSIM | Mean HF correlation | Mean registered temporal error |
+| --- | ---: | ---: | ---: | ---: |
+| M1 Lanczos3 | 29.7264 | 0.887036 | 0.489379 | 0.004605 |
+| M2 base-only bilinear | 27.5335 | 0.882298 | 0.462123 | 0.004797 |
+| M3 Forge pre-sprint default | 27.2653 | 0.873217 | 0.442507 | 0.009236 |
+| M4 Forge current-composition control | 26.9863 | 0.863540 | 0.351128 | 0.009966 |
+
+These are recorded measurements only; the verdict and confirmation decision
+are reserved for CP-C and CP-E. The committed evaluation artifact must include
+the per-cell metrics, R1/R2 comparison, causal residual metrics against M2,
+and temporal diagnostics. No visual artifact claim is made here without a
+separate inspected-artifact record.

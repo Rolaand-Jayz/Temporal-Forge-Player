@@ -1,0 +1,128 @@
+{
+  "binary": {
+    "path": "build-fast/temporal_forge_player",
+    "sha256": "2e77637b009671b89b75f5ce64ec014bf857958404c0b967b3c2fdd48d13c27a",
+    "size_bytes": 3232424
+  },
+  "git": {
+    "diff_content_sha256": null,
+    "dirty": false,
+    "dirty_paths": [],
+    "head": "626641100df48157417e10de1e27e23b14d3df0a"
+  },
+  "host": {
+    "cpu_model": "AMD Ryzen 7 7800X3D 8-Core Processor",
+    "kernel": "7.2.5-1-cachyos",
+    "machine": "x86_64",
+    "platform": "Linux-7.2.5-1-cachyos-x86_64-with-glibc2.44",
+    "vulkan_api_version": "1.4.354",
+    "vulkan_device_name": "AMD Radeon RX 7900 GRE (RADV NAVI31)",
+    "vulkan_driver_version": "26.2.2"
+  },
+  "model_assets": {
+    "generic_weight_blob": {
+      "blob_name": "quality.bin",
+      "found": true,
+      "path": "EVS_FSR4_RE_ROOT/extracted/v410_initializers/quality.bin",
+      "searched": [
+        "EVS_FSR4_RE_ROOT/extracted/v410_initializers/quality.bin"
+      ],
+      "sha256": "ce1bd5f19d4fc14f857c5fc810def7f45d5a935a62aa2ca5b5a59829a1d6c868",
+      "size_bytes": 131072
+    },
+    "native_packs": {
+      "native_2160": {
+        "combined_sha256": "4723ac511187916b3eead88ad7b9fcfaf7df27961a1e5aaf4d0b33b00cef3d19",
+        "file_count": 16,
+        "path": "resources/fsr4/native_i8/native_2160"
+      },
+      "performance_2160": {
+        "combined_sha256": "57dbb4a2f20a93dd1fc25a24e0e6fa223f60ca85e3f4ecd529f9c2a9559bbccf",
+        "file_count": 16,
+        "path": "resources/fsr4/native_i8/performance_2160"
+      },
+      "performance_4320": {
+        "combined_sha256": "2f336941e0a4990f4d7d2d54f40332a467aa7732fc9227f7440d236b34f0e011",
+        "file_count": 175,
+        "path": "resources/fsr4/native_i8/performance_4320"
+      },
+      "performance_4x3_1440": {
+        "combined_sha256": "733936983f8154016d1748ec3114323c1f58f94680f57b14718a37e70f27ce3a",
+        "file_count": 174,
+        "path": "resources/fsr4/native_i8/performance_4x3_1440"
+      },
+      "performance_4x3_2880": {
+        "combined_sha256": "f712ca727b799bf2d4f391e4ea739f1ae70fe936d39101a92d639986ff1b019d",
+        "file_count": 174,
+        "path": "resources/fsr4/native_i8/performance_4x3_2880"
+      },
+      "quality_1080": {
+        "combined_sha256": "f25b6bd251741214962ac2d3d624384c40c356e75756556c904c53184c805692",
+        "file_count": 16,
+        "path": "resources/fsr4/native_i8/quality_1080"
+      },
+      "quality_2160": {
+        "combined_sha256": "123343ab13fa9e0f99cb3a8d67543bbc98d5a93b818141b9e0f31156c63f2822",
+        "file_count": 16,
+        "path": "resources/fsr4/native_i8/quality_2160"
+      },
+      "quality_4x3_1440": {
+        "combined_sha256": "c897c7c468bc03b19b317a5244e2b2a4a113432af848337e6fdcbfb67165af68",
+        "file_count": 174,
+        "path": "resources/fsr4/native_i8/quality_4x3_1440"
+      },
+      "quality_4x3_2880": {
+        "combined_sha256": "06ec84b3e7ea27d5d603d7f4aaff98f255d83989108b6722cb60e923d94315ee",
+        "file_count": 174,
+        "path": "resources/fsr4/native_i8/quality_4x3_2880"
+      },
+      "ultraperf_1080": {
+        "combined_sha256": "72d9d55a88ff2c07154115b85633256eb851f267c68f5dc20ec3b0bcd2c2cf67",
+        "file_count": 15,
+        "path": "resources/fsr4/native_i8/ultraperf_1080"
+      },
+      "ultraperf_2160": {
+        "combined_sha256": "4ee36c2314814d951d69494aa15cdf1011e5b9f8b6a319d56b0226eed0679fa2",
+        "file_count": 16,
+        "path": "resources/fsr4/native_i8/ultraperf_2160"
+      },
+      "ultraperf_4x3_1440": {
+        "combined_sha256": "3765aa98b7ad79f86ecf78044d98fac66ca1c63e584fd209ac2f0019a463b6cb",
+        "file_count": 174,
+        "path": "resources/fsr4/native_i8/ultraperf_4x3_1440"
+      },
+      "ultraperf_4x3_2880": {
+        "combined_sha256": "339521b5d9a934128bb9e4265a643a323bb9e209125ad49aef1895f3de912de7",
+        "file_count": 174,
+        "path": "resources/fsr4/native_i8/ultraperf_4x3_2880"
+      }
+    },
+    "native_packs_root": "resources/fsr4/native_i8"
+  },
+  "schema": "temporal_forge.empirical_viability.shared_identity.v1",
+  "shaders": {
+    "shaders/fsr1/fsr1_easu.comp": "0c6a66dbdb65978c1d0454f31294fe65969eed074cf2233c24f541a5936b9549",
+    "shaders/fsr4/bicubic_prefilter.comp": "e17950d6e2975accda6cbf7e2992c07b8b597f5118ccdfff56a0ebf71b4b9b7d",
+    "shaders/fsr4/codec_motion_expand.comp": "d0b83fe397c2645d6501654417a2da582157674a469c0579608a508de0486fbd",
+    "shaders/fsr4/conv_downscale_fp16_coop.comp": "50f89bac1126bd386fa6a967872d845a2419f165dde2e5ea03eccadb0ef176bc",
+    "shaders/fsr4/conv_downscale_fp16_direct.comp": "b0e11eff1436422e0d6fcd2217652efc0d1edae2072ec49bd7160cc49305fa99",
+    "shaders/fsr4/conv_dw_dot4.comp": "d714343a76adc7ecbc228c95cdf567b56313751effabf1f234a433b551aeba79",
+    "shaders/fsr4/conv_fp16_coop.comp": "6b133104df440f8c2c8085dbc846b1d09ae6de42995255362c5bdfa7a392f4fc",
+    "shaders/fsr4/conv_pw_coop.comp": "dbc1483d3d459e2bc624984c2de774772046b2275ae65f3f2aa258570b3d0073",
+    "shaders/fsr4/conv_pw_dot4.comp": "d9b6ebcb8fabc00f5e2d56383a0a0f744a79337c4b885c37095abc090122f002",
+    "shaders/fsr4/conv_pw_fp16_direct.comp": "55c1e22150e42f26b32ee1844e19cdf7baf4866d413eb8a950085ce269086370",
+    "shaders/fsr4/conv_spatial_fp16_direct.comp": "e6e92f9decf2a7504461994857a8369605535406a59a9dc91d90059ef800ce55",
+    "shaders/fsr4/conv_upscale_fp16_coop.comp": "f74124c53509c539037c71b3cc68d00ab907a28d8b0713301ec8fedff43c34e7",
+    "shaders/fsr4/conv_upscale_fp16_scalar_final.comp": "034977aec47228cbce617616809d4f1ff2689941c79c68b652e61bcac7319469",
+    "shaders/fsr4/downscale_rgb10.comp": "49a2f53fabefe522a372297c0f979c9021467b807733a9d1b216b3d9e29fd278",
+    "shaders/fsr4/drm_yuv_to_fsr_input.comp": "9bf53c36bf00b993f883766ce0dd006cabb2c7ca163f438d95d4a2c046f01890",
+    "shaders/fsr4/easu.comp": "6e893d78fc94b175084f7f80023afde19af97f1c5a1a64e48ca6c9751b6302a9",
+    "shaders/fsr4/postpass_composite.comp": "c2dc616b495a0b231e80b1a5de92c28a88ab3944d7a08e9496c1be86d9f46dcc",
+    "shaders/fsr4/prepass_pq_eotf.comp": "3dad5a9097f94754e00c0af02836e86d17a3c360144bc2602cfdb4d2eaabf7a5",
+    "shaders/fsr4/residual_add.comp": "85e77124ec7251baae202f80a5a4521703298f60469774e89cb67eea87870b2e",
+    "shaders/fsr4/residual_block_16_int8_coop.comp": "5c6d1f956a1f5870972528fb00224861baa43c3efaab42e3d856e707dba6f5e8",
+    "shaders/fsr4/scatter.comp": "e449ffa5fce7d8cfb64ed8e85e10f2cab6f3b39e2d298d77aa94619b070e0eb2",
+    "shaders/fsr4/spd.comp": "2466ff63a74ec99a2ede82159e4725f210a2826e30a22d6edd37f3ef10552dee",
+    "shaders/fsr4/yuv_to_fsr_input.comp": "6767cb28ed03a3987c5357cd689711cf8d28dfd8580c43c5625d0aef8f2e8c07"
+  }
+}
