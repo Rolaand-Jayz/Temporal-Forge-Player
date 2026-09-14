@@ -74,9 +74,9 @@ The player already functions well enough for this phase. UI and product polish a
 
 Read and follow:
 
-`docs/active/QUALITY_CAMPAIGN.md`
+`docs/active/EMPIRICAL_VIABILITY_SPRINT.md`
 
-The execution plan is authoritative for the current quality campaign.
+The execution plan is authoritative for the current empirical viability sprint.
 
 ## Working rules
 

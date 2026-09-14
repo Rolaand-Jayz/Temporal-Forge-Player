@@ -1,14 +1,12 @@
 # Temporal Forge current state
 
 **Status:** CURRENT
-**As of:** 2026-09-09
-**Source:** branch `portability/clean-clone-remediation` (portability
-remediation worktree)
+**As of:** 2026-09-13
+**Source:** branch `empirical-viability-sprint` (research-surface reset)
 
 This is a concise snapshot of what is true now. It is not an experiment
 journal; active work is described in
-[`../active/QUALITY_CAMPAIGN.md`](../active/QUALITY_CAMPAIGN.md) and
-[`../active/PORTABILITY_REMEDIATION_20260909.md`](../active/PORTABILITY_REMEDIATION_20260909.md).
+[`../active/EMPIRICAL_VIABILITY_SPRINT.md`](../active/EMPIRICAL_VIABILITY_SPRINT.md).
 
 ## Project
 
@@ -17,19 +15,13 @@ one-input-frame to one-output-frame relationship and performs temporal
 reconstruction without frame generation, interpolation, or cadence conversion.
 Runtime requires Vulkan 1.3.
 
-## Quality campaign line
+## Research-surface reset
 
-The quality-focused campaign closed its lattice fix (FP16 resolve) and
-completed the motion-campaign evidence. The authoritative record remains
-[`../active/QUALITY_CAMPAIGN.md`](../active/QUALITY_CAMPAIGN.md) with
-measurements in `benchmarks/quality_sweeps/`.
-
-## Portability remediation (in flight)
-
-A clean-clone portability audit found public documentation contradicting the
-executable. Remediation (this campaign) is correcting documentation, label
-consistency, and clean-machine build/test behavior on branch
-`portability/clean-clone-remediation`.
+The current active research campaign is the empirical viability sprint. Its
+purpose is empirical viability testing with reproducible measurements. AMD
+parity/oracle work is deferred, and detailed experiment execution has not yet
+begun. Historical quality, portability, and Final Word campaign material is
+preserved under `docs/archive/` and the Final Word archive branch.
 
 ## Backend default (truth)
 
@@ -50,9 +42,8 @@ fallback. See
 - Current code, intended architecture, and dated evidence are not
   interchangeable. When they diverge, the active plan and audit must name the
   divergence.
-- The quality campaign is not complete merely because the harness or runner
-  exists. Required coverage, provenance, measurements, and validation remain
-  the completion gate.
+- The empirical viability sprint is not complete merely because instrumentation
+  exists. Required measurements and validation remain future work.
 
 The worktree may contain untracked capture-generated evidence while the
 quality campaign runs; that evidence is outside this documentation snapshot.
