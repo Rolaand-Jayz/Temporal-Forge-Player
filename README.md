@@ -93,7 +93,7 @@ Useful entry points include:
 - [`docs/README.md`](docs/README.md) — documentation authority map
 - [`docs/FSR4_RE_STATUS.md`](docs/FSR4_RE_STATUS.md) — dated FSR 4.1 RE reconstruction status/history
 - [`benchmarks/quality_sweeps/`](benchmarks/quality_sweeps/) — current quality and causal experiment tooling/evidence
-- [`docs/active/PORTABILITY_REMEDIATION_20260909.md`](docs/active/PORTABILITY_REMEDIATION_20260909.md) — clean-clone portability/remediation qualification record
+- [`docs/active/EMPIRICAL_VIABILITY_SPRINT.md`](docs/active/EMPIRICAL_VIABILITY_SPRINT.md) — current empirical research authority; detailed execution has not started
 - [`PROVENANCE.md`](PROVENANCE.md) — artifact provenance and unresolved-rights records
 
 ## Requirements

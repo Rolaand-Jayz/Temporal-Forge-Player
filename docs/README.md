@@ -7,8 +7,8 @@ This is the documentation entry point. The governing structure is defined by
 |---|---|
 | What is true now? | [`current/STATE.md`](current/STATE.md) |
 | How does the current system work? | [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md), [`reference/environment.md`](reference/environment.md) (the `TFORGE_*` environment contract) |
-| What is being worked on now? | [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md) (the single active quality authority) and [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md) |
-| Where is the campaign progress log and historical gate record? | [`active/progress-state.md`](active/progress-state.md) (supporting record, not an authority) |
+| What is being worked on now? | [`active/EMPIRICAL_VIABILITY_SPRINT.md`](active/EMPIRICAL_VIABILITY_SPRINT.md) (the single active research authority) |
+| Where are completed campaign plans and status records? | [`archive/plans/`](archive/plans/) |
 | Why did the design change? | [`decisions/TECHNICAL_HISTORY.md`](decisions/TECHNICAL_HISTORY.md) |
 | What did a dated campaign find? | [`reports/`](reports/) (e.g. the review adjudication of 2026-09-06, [`reports/QUALITY_LAB_REVIEW_ADJUDICATION_20260906.md`](reports/QUALITY_LAB_REVIEW_ADJUDICATION_20260906.md)) and the benchmark READMEs |
 | Where is exploratory research? | [`research/`](research/) |
@@ -25,14 +25,11 @@ this map.
 - Current architecture and durable implementation invariants:
   [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md).
 - Current FSR input and motion contracts: [`reference/motion/`](reference/motion/).
-- Active quality work: [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md)
-  is the single canonical active quality authority.
-- Active portability/reproducibility remediation:
-  [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md).
-- [`active/progress-state.md`](active/progress-state.md) is a supporting
-  orchestration/progress log for the quality workstream. It records what was
-  done and when; it does not direct current execution. Where it and the
-  active plan disagree, the active plan governs.
+- Active research: [`active/EMPIRICAL_VIABILITY_SPRINT.md`](active/EMPIRICAL_VIABILITY_SPRINT.md)
+  is the sole current research authority. Detailed experiment execution has
+  not begun.
+- Completed quality, portability, and remediation plans are historical under
+  [`archive/plans/`](archive/plans/); they do not direct current execution.
 - Detailed measurements: benchmark manifests and artifacts, not copied tables
   in narrative documents.
 - Completed plans, dated reports, and research are historical or exploratory

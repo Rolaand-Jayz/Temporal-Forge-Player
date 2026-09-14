@@ -765,9 +765,8 @@ The initial cleanup must explicitly inspect:
 
 - `current/STATE.md`
 - `reference/ARCHITECTURE.md` and current contracts;
-- `active/QUALITY_CAMPAIGN.md` as the single active quality authority, with
-  `active/progress-state.md` classified as a supporting progress log rather
-  than a second active authority;
+- `active/EMPIRICAL_VIABILITY_SPRINT.md` as the single active research
+  authority;
 - `decisions/TECHNICAL_HISTORY.md`
 - `reports/` and `reports/audits/`
 - `research/`
