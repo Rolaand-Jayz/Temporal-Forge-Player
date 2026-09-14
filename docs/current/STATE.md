@@ -1,8 +1,8 @@
 # Temporal Forge current state
 
-**Status:** CURRENT
-**As of:** 2026-09-13
-**Source:** branch `empirical-viability-sprint` (research-surface reset)
+**Status:** CURRENT — EMPIRICAL VIABILITY SPRINT COMPLETE (EMPIRICAL FAILURE)
+**As of:** 2026-09-14
+**Source:** branch `empirical-viability-sprint` (CP-E verdict)
 
 This is a concise snapshot of what is true now. It is not an experiment
 journal; active work is described in
@@ -18,9 +18,12 @@ Runtime requires Vulkan 1.3.
 ## Research-surface reset
 
 The current active research campaign is the empirical viability sprint. Its
-purpose is empirical viability testing with reproducible measurements. AMD
-parity/oracle work is deferred, and detailed experiment execution has not yet
-begun. Historical quality, portability, and Final Word campaign material is
+purpose is empirical viability testing with reproducible measurements. The
+frozen 64-cell primary capture and evaluation are complete. No confirmation
+subset was justified by the primary result. The CP-E verdict is
+**EMPIRICAL FAILURE**: the Forge arms did not beat the strongest spatial
+baseline under the contract. AMD parity/oracle work remains deferred.
+Historical quality, portability, and Final Word campaign material is
 preserved under `docs/archive/` and the Final Word archive branch.
 
 ## Backend default (truth)
@@ -42,8 +45,10 @@ fallback. See
 - Current code, intended architecture, and dated evidence are not
   interchangeable. When they diverge, the active plan and audit must name the
   divergence.
-- The empirical viability sprint is not complete merely because instrumentation
-  exists. Required measurements and validation remain future work.
+- The empirical viability sprint's primary evidence is committed under
+  [`../../benchmarks/empirical/results/evs-20260914/`](../../benchmarks/empirical/results/evs-20260914/);
+  the active authority records the checkpoint history, bounded visual review,
+  and final verdict. No reconstruction-quality change was made.
 
 The worktree may contain untracked capture-generated evidence while the
 quality campaign runs; that evidence is outside this documentation snapshot.

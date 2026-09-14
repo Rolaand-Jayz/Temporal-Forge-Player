@@ -825,5 +825,6 @@
     "M3": 0,
     "M4": 0
   },
-  "visual_review_status": "pending delegated Flash-worker report; no visual artifact claim is made by this numeric interpretation."
+  "final_verdict": "EMPIRICAL FAILURE",
+  "visual_review_status": "delegated read-only review complete for SEQ-A; SEQ-B not visually reviewed"
 }
