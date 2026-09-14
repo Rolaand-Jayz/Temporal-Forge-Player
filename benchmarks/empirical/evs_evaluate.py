@@ -1,9 +1,11 @@
 """Evaluate the empirical viability primary matrix.
 
-The evaluator is deliberately metric-first.  It records the causal residual
-comparison against M2 and temporal diagnostics, but it does not choose the
-campaign verdict automatically.  Interpretation is written into the active
-authority after the complete evidence has been reviewed.
+The evaluator is deliberately metric-first. It selects the strongest frozen
+deterministic spatial comparator from the measured matrix, then records the
+causal residual comparison against that comparator and temporal diagnostics.
+It does not choose the campaign verdict automatically; interpretation is
+written into the active authority after the complete evidence has been
+reviewed.
 """
 
 from __future__ import annotations
@@ -23,7 +25,17 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from benchmarks.empirical.evs_manifest import FRAME_COUNT, HR_HEIGHT, HR_WIDTH, SEQUENCES
+from benchmarks.empirical.evs_manifest import FRAME_COUNT, HR_HEIGHT, HR_WIDTH, METHODS, SEQUENCES
+
+
+DETERMINISTIC_SPATIAL_KINDS = frozenset({"external_ffmpeg_spatial", "player_quality_lab_spatial"})
+BASELINE_METRIC_DIRECTIONS = {
+    "mean_psnr_db": "higher",
+    "mean_ssim": "higher",
+    "mean_hf_correlation": "higher",
+    "mean_registered_temporal_error": "lower",
+}
+BASELINE_EPSILON = 1.0e-12
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -151,6 +163,83 @@ def residual_metrics(candidate: np.ndarray, baseline: np.ndarray, reference: np.
     }
 
 
+def select_strongest_spatial_baseline(
+    metric_rows: list[dict[str, Any]],
+    method_specs: dict[str, dict[str, Any]] | None = None,
+) -> tuple[str, dict[str, Any]]:
+    """Select the unique Pareto-dominant frozen deterministic spatial method.
+
+    The baseline is selected only after every method has been evaluated against
+    ground truth. A method must be no worse on all frozen aggregate fidelity
+    criteria and strictly better on at least one. This makes the choice
+    reproducible without assigning arbitrary weights to unlike metrics.
+    """
+
+    specs = method_specs or METHODS
+    candidates = sorted(
+        method_id
+        for method_id, method in specs.items()
+        if method.get("kind") in DETERMINISTIC_SPATIAL_KINDS
+    )
+    if len(candidates) < 2:
+        raise RuntimeError(
+            "baseline selection requires at least two frozen deterministic spatial methods; "
+            f"found {candidates}"
+        )
+
+    aggregates: dict[str, dict[str, float]] = {}
+    for method_id in candidates:
+        rows = [row for row in metric_rows if row["method"] == method_id]
+        if not rows:
+            raise RuntimeError(f"baseline candidate {method_id} has no evaluated rows")
+        aggregates[method_id] = {
+            metric: float(np.mean([float(row[metric]) for row in rows]))
+            for metric in BASELINE_METRIC_DIRECTIONS
+        }
+
+    def at_least(left: float, right: float, direction: str) -> bool:
+        if direction == "higher":
+            return left >= right - BASELINE_EPSILON
+        return left <= right + BASELINE_EPSILON
+
+    def strictly_better(left: float, right: float, direction: str) -> bool:
+        if direction == "higher":
+            return left > right + BASELINE_EPSILON
+        return left < right - BASELINE_EPSILON
+
+    def dominates(left: str, right: str) -> bool:
+        left_values = aggregates[left]
+        right_values = aggregates[right]
+        return all(
+            at_least(left_values[metric], right_values[metric], direction)
+            for metric, direction in BASELINE_METRIC_DIRECTIONS.items()
+        ) and any(
+            strictly_better(left_values[metric], right_values[metric], direction)
+            for metric, direction in BASELINE_METRIC_DIRECTIONS.items()
+        )
+
+    dominators = {
+        method_id: [other for other in candidates if other != method_id and dominates(other, method_id)]
+        for method_id in candidates
+    }
+    winners = [method_id for method_id in candidates if not dominators[method_id]]
+    if len(winners) != 1:
+        raise RuntimeError(
+            "frozen deterministic spatial baseline is not uniquely selected: "
+            f"candidates={candidates}, dominators={dominators}, aggregates={aggregates}"
+        )
+
+    selected = winners[0]
+    return selected, {
+        "rule": "unique_pareto_dominant_deterministic_spatial_method",
+        "metric_directions": BASELINE_METRIC_DIRECTIONS,
+        "candidate_methods": candidates,
+        "aggregates": aggregates,
+        "dominators": dominators,
+        "selected_method": selected,
+    }
+
+
 def warp_forward(previous: np.ndarray, dx: float, dy: float) -> np.ndarray:
     matrix = np.array([[1.0, 0.0, dx], [0.0, 1.0, dy]], dtype=np.float32)
     return cv2.warpAffine(
@@ -265,8 +354,7 @@ def main() -> int:
     if len(cells) != 64:
         raise SystemExit("evaluation requires the complete 64-cell primary matrix")
     args.output_root.mkdir(parents=True, exist_ok=True)
-    metric_rows: list[dict[str, Any]] = []
-    cell_metrics: dict[str, dict[str, Any]] = {}
+    evaluated_cells: list[tuple[dict[str, Any], dict[str, Any], Path, dict[str, Any], list[np.ndarray]]] = []
     outputs_by_key: dict[tuple[str, str, str, str], list[np.ndarray]] = {}
     for index, cell in enumerate(cells, start=1):
         cell_dir = args.capture_root / "cells" / cell["cell_id"]
@@ -276,31 +364,43 @@ def main() -> int:
         record = read_json(cell_path)
         if record.get("status") != "complete" or not record.get("identity", {}).get("verified"):
             raise SystemExit(f"cell is incomplete or identity is not verified: {cell['cell_id']}")
+        metrics, outputs = evaluate_cell(record, cell_dir, None)
         key = (cell["structural_class"], cell["regime"], cell["sequence"], cell["method"])
-        if cell["method"] == "M2":
-            metrics, outputs = evaluate_cell(record, cell_dir, None)
-            outputs_by_key[(cell["structural_class"], cell["regime"], cell["sequence"], "M2")] = outputs
-        else:
-            baseline = outputs_by_key.get((cell["structural_class"], cell["regime"], cell["sequence"], "M2"))
+        outputs_by_key[key] = outputs
+        evaluated_cells.append((cell, record, cell_dir, metrics, outputs))
+        print(f"[{index:02d}/64] evaluated {cell['cell_id']}", flush=True)
+
+    preliminary_rows = [
+        {
+            "cell_id": cell["cell_id"],
+            **cell,
+            **metrics["aggregate"],
+            "mean_psnr_db": metrics["aggregate"]["psnr_db"],
+            "mean_ssim": metrics["aggregate"]["ssim"],
+            "mean_hf_correlation": metrics["aggregate"]["high_frequency_residual_correlation"],
+            "mean_registered_temporal_error": metrics["aggregate"]["registered_temporal_error"],
+        }
+        for cell, _record, _cell_dir, metrics, _outputs in evaluated_cells
+    ]
+    baseline_method, baseline_selection = select_strongest_spatial_baseline(
+        preliminary_rows, method_specs=manifest.get("methods", METHODS)
+    )
+
+    metric_rows: list[dict[str, Any]] = []
+    for cell, record, cell_dir, metrics, _outputs in evaluated_cells:
+        if cell["method"] != baseline_method:
+            baseline_key = (cell["structural_class"], cell["regime"], cell["sequence"], baseline_method)
+            baseline = outputs_by_key.get(baseline_key)
             if baseline is None:
-                # Matrix order is deterministic but keep evaluation robust if a
-                # future manifest changes ordering: evaluate M2 on demand.
-                baseline_record = next(
-                    read_json(args.capture_root / "cells" / candidate["cell_id"] / "cell.json")
-                    for candidate in cells
-                    if candidate["structural_class"] == cell["structural_class"]
-                    and candidate["regime"] == cell["regime"]
-                    and candidate["sequence"] == cell["sequence"]
-                    and candidate["method"] == "M2"
-                )
-                _, baseline = evaluate_cell(
-                    baseline_record,
-                    args.capture_root / "cells" / baseline_record["cell"]["cell_id"],
-                    None,
-                )
-                outputs_by_key[(cell["structural_class"], cell["regime"], cell["sequence"], "M2")] = baseline
-            metrics, outputs = evaluate_cell(record, cell_dir, baseline)
-        cell_metrics[cell["cell_id"]] = metrics
+                raise RuntimeError(f"missing selected baseline output for {cell['cell_id']}: {baseline_key}")
+            references = [load_rgb(Path(path)) for path in record["fixture"]["ground_truth_frames"]]
+            outputs = [load_rgb(path) for path in output_paths(record, cell_dir)]
+            residual_rows = [
+                residual_metrics(output, base, reference)
+                for output, base, reference in zip(outputs, baseline, references)
+            ]
+            for key in residual_rows[0]:
+                metrics["aggregate"][key] = float(np.mean([row[key] for row in residual_rows]))
         metric_rows.append(
             {
                 "cell_id": cell["cell_id"],
@@ -308,28 +408,37 @@ def main() -> int:
                 **metrics["aggregate"],
             }
         )
+        metrics["baseline_method"] = baseline_method
         (args.output_root / f"{cell['cell_id']}.json").write_text(
             json.dumps(metrics, indent=2, sort_keys=True) + "\n", encoding="utf-8"
         )
-        print(f"[{index:02d}/64] evaluated {cell['cell_id']}", flush=True)
 
     csv_path = args.output_root / "primary_metrics.csv"
-    fieldnames = list(metric_rows[0])
+    identity_fields = ["cell_id", "method", "regime", "sequence", "structural_class"]
+    fieldnames = identity_fields + sorted(
+        {key for row in metric_rows for key in row if key not in identity_fields}
+    )
     with csv_path.open("w", newline="", encoding="utf-8") as handle:
         writer = csv.DictWriter(handle, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(metric_rows)
 
     summary: dict[str, Any] = {
-        "schema": "temporal_forge.empirical_viability.primary_evaluation.v1",
+        "schema": "temporal_forge.empirical_viability.primary_evaluation.v2",
         "campaign_id": manifest["campaign_id"],
         "cells_evaluated": len(metric_rows),
+        "baseline_method": baseline_method,
+        "baseline_selection": baseline_selection,
         "methods": {},
         "r1_vs_r2": {},
+        "r1_vs_baseline": {},
+        "r1_residual_by_class": {},
+        "residual_comparison": {},
         "confirmation_recommendation": "undecided",
-        "interpretation_status": "metrics-recorded-no-verdict",
+        "interpretation_status": "corrected-metrics-recorded-no-verdict",
     }
-    for method in ("M1", "M2", "M3", "M4"):
+    method_ids = sorted(manifest.get("methods", METHODS))
+    for method in method_ids:
         method_rows = [row for row in metric_rows if row["method"] == method]
         summary["methods"][method] = {
             "cells": len(method_rows),
@@ -339,13 +448,83 @@ def main() -> int:
             "mean_registered_temporal_error": float(np.mean([row["registered_temporal_error"] for row in method_rows])),
         }
     for regime in ("R1", "R2"):
-        for method in ("M3", "M4"):
+        for method in method_ids:
             rows = [row for row in metric_rows if row["regime"] == regime and row["method"] == method]
-            summary["r1_vs_r2"][f"{regime}_{method}"] = {
-                "mean_residual_correlation": float(np.mean([row["candidate_residual_correlation"] for row in rows])),
-                "mean_residual_phase_agreement": float(np.mean([row["candidate_residual_phase_agreement"] for row in rows])),
-                "mean_residual_projection": float(np.mean([row["candidate_residual_signed_projection"] for row in rows])),
+            entry: dict[str, Any] = {
+                "cells": len(rows),
                 "mean_hf_correlation": float(np.mean([row["high_frequency_residual_correlation"] for row in rows])),
+            }
+            residual_fields = {
+                "mean_residual_correlation": "candidate_residual_correlation",
+                "mean_residual_phase_agreement": "candidate_residual_phase_agreement",
+                "mean_residual_projection": "candidate_residual_signed_projection",
+                "mean_residual_magnitude_ratio": "candidate_residual_magnitude_ratio",
+            }
+            if rows and all(field in rows[0] for field in residual_fields.values()):
+                entry.update(
+                    {
+                        output_key: float(np.mean([row[input_key] for row in rows]))
+                        for output_key, input_key in residual_fields.items()
+                    }
+                )
+            summary["r1_vs_r2"][f"{regime}_{method}"] = entry
+
+            if regime == "R1" and method != baseline_method:
+                summary["residual_comparison"][method] = entry
+
+    for structural_class in sorted({row["structural_class"] for row in metric_rows}):
+        baseline_rows = [
+            row
+            for row in metric_rows
+            if row["structural_class"] == structural_class
+            and row["regime"] == "R1"
+            and row["method"] == baseline_method
+        ]
+        for method in method_ids:
+            if method == baseline_method:
+                continue
+            candidate_rows = [
+                row
+                for row in metric_rows
+                if row["structural_class"] == structural_class
+                and row["regime"] == "R1"
+                and row["method"] == method
+            ]
+            baseline_hf = float(np.mean([row["high_frequency_residual_correlation"] for row in baseline_rows]))
+            candidate_hf = float(np.mean([row["high_frequency_residual_correlation"] for row in candidate_rows]))
+            summary["r1_vs_baseline"][f"{structural_class}_{method}"] = {
+                "baseline_method": baseline_method,
+                "baseline_hf_correlation": baseline_hf,
+                "candidate_hf_correlation": candidate_hf,
+                "absolute_delta": candidate_hf - baseline_hf,
+                "relative_delta_percent": (candidate_hf / baseline_hf - 1.0) * 100.0,
+                "meets_plus_10_percent_target": candidate_hf >= baseline_hf * 1.10,
+                "baseline_psnr_db": float(np.mean([row["psnr_db"] for row in baseline_rows])),
+                "candidate_psnr_db": float(np.mean([row["psnr_db"] for row in candidate_rows])),
+                "baseline_ssim": float(np.mean([row["ssim"] for row in baseline_rows])),
+                "candidate_ssim": float(np.mean([row["ssim"] for row in candidate_rows])),
+                "baseline_registered_temporal_error": float(
+                    np.mean([row["registered_temporal_error"] for row in baseline_rows])
+                ),
+                "candidate_registered_temporal_error": float(
+                    np.mean([row["registered_temporal_error"] for row in candidate_rows])
+                ),
+            }
+            residual_fields = {
+                "mean_gt_residual_mean_abs": "gt_residual_mean_abs",
+                "mean_candidate_residual_mean_abs": "candidate_residual_mean_abs",
+                "mean_residual_magnitude_ratio": "candidate_residual_magnitude_ratio",
+                "mean_residual_correlation": "candidate_residual_correlation",
+                "mean_residual_phase_agreement": "candidate_residual_phase_agreement",
+                "mean_residual_projection": "candidate_residual_signed_projection",
+            }
+            summary["r1_residual_by_class"][f"{structural_class}_{method}"] = {
+                "baseline_method": baseline_method,
+                "cells": len(candidate_rows),
+                **{
+                    output_key: float(np.mean([row[input_key] for row in candidate_rows]))
+                    for output_key, input_key in residual_fields.items()
+                },
             }
     (args.output_root / "primary_evaluation.json").write_text(
         json.dumps(summary, indent=2, sort_keys=True) + "\n", encoding="utf-8"

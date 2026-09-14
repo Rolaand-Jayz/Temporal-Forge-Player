@@ -1,8 +1,8 @@
 # Temporal Forge current state
 
-**Status:** CURRENT — EMPIRICAL VIABILITY SPRINT COMPLETE (EMPIRICAL FAILURE)
+**Status:** CURRENT — EMPIRICAL VIABILITY VERDICT REPAIR IN PROGRESS
 **As of:** 2026-09-14
-**Source:** branch `empirical-viability-sprint` (CP-E verdict)
+**Source:** branch `empirical-viability-sprint` (Repair-A; CP-E verdict suspended)
 
 This is a concise snapshot of what is true now. It is not an experiment
 journal; active work is described in
@@ -19,10 +19,13 @@ Runtime requires Vulkan 1.3.
 
 The current active research campaign is the empirical viability sprint. Its
 purpose is empirical viability testing with reproducible measurements. The
-frozen 64-cell primary capture and evaluation are complete. No confirmation
-subset was justified by the primary result. The CP-E verdict is
-**EMPIRICAL FAILURE**: the Forge arms did not beat the strongest spatial
-baseline under the contract. AMD parity/oracle work remains deferred.
+frozen 64-cell primary capture is complete. The original CP-E verdict is
+suspended because its causal residual evaluation used M2 before selecting the
+strongest measured deterministic spatial comparator. Repair-A re-evaluated the
+same captures with M1 selected by aggregate dominance; its provisional result
+is **EMPIRICAL FAILURE**. Independent artifact publication and adjudication
+remain before the repaired verdict is final. AMD parity/oracle work remains
+deferred.
 Historical quality, portability, and Final Word campaign material is
 preserved under `docs/archive/` and the Final Word archive branch.
 
@@ -46,9 +49,10 @@ fallback. See
   interchangeable. When they diverge, the active plan and audit must name the
   divergence.
 - The empirical viability sprint's primary evidence is committed under
-  [`../../benchmarks/empirical/results/evs-20260914/`](../../benchmarks/empirical/results/evs-20260914/);
-  the active authority records the checkpoint history, bounded visual review,
-  and final verdict. No reconstruction-quality change was made.
+[`../../benchmarks/empirical/results/evs-20260914/`](../../benchmarks/empirical/results/evs-20260914/);
+the active authority records the checkpoint history, bounded visual review, and
+Repair-A corrected evaluation. The original CP-E interpretation is historical
+until Repair-C. No reconstruction-quality change was made.
 
 The worktree may contain untracked capture-generated evidence while the
 quality campaign runs; that evidence is outside this documentation snapshot.

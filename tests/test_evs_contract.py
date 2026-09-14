@@ -1,5 +1,6 @@
 import unittest
 
+from benchmarks.empirical.evs_evaluate import select_strongest_spatial_baseline
 from benchmarks.empirical.evs_manifest import METHODS, REGIMES, SEQUENCES, STRUCTURAL_CLASSES, build_manifest, matrix
 
 
@@ -29,6 +30,59 @@ class EmpiricalViabilityContractTests(unittest.TestCase):
         manifest = build_manifest()
         self.assertEqual(manifest["methods"]["M1"]["kind"], "external_ffmpeg_spatial")
         self.assertIn("base_only_bilinear", manifest["methods"]["M2"]["config"]["path"])
+
+    def test_baseline_selection_uses_measured_spatial_dominance(self):
+        rows = [
+            {
+                "method": "M1",
+                "mean_psnr_db": 30.0,
+                "mean_ssim": 0.90,
+                "mean_hf_correlation": 0.60,
+                "mean_registered_temporal_error": 0.004,
+            },
+            {
+                "method": "M2",
+                "mean_psnr_db": 28.0,
+                "mean_ssim": 0.88,
+                "mean_hf_correlation": 0.55,
+                "mean_registered_temporal_error": 0.005,
+            },
+        ]
+        selected, evidence = select_strongest_spatial_baseline(
+            rows,
+            method_specs={
+                "M1": {"kind": "external_ffmpeg_spatial"},
+                "M2": {"kind": "player_quality_lab_spatial"},
+            },
+        )
+        self.assertEqual(selected, "M1")
+        self.assertEqual(evidence["selected_method"], "M1")
+
+    def test_baseline_selection_does_not_hard_code_m1_or_m2(self):
+        rows = [
+            {
+                "method": "M1",
+                "mean_psnr_db": 28.0,
+                "mean_ssim": 0.88,
+                "mean_hf_correlation": 0.55,
+                "mean_registered_temporal_error": 0.005,
+            },
+            {
+                "method": "M2",
+                "mean_psnr_db": 30.0,
+                "mean_ssim": 0.90,
+                "mean_hf_correlation": 0.60,
+                "mean_registered_temporal_error": 0.004,
+            },
+        ]
+        selected, _evidence = select_strongest_spatial_baseline(
+            rows,
+            method_specs={
+                "M1": {"kind": "external_ffmpeg_spatial"},
+                "M2": {"kind": "player_quality_lab_spatial"},
+            },
+        )
+        self.assertEqual(selected, "M2")
 
 
 if __name__ == "__main__":
