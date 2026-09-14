@@ -1,6 +1,6 @@
 # Empirical viability sprint
 
-**Status:** COMPLETE — CP-E VERDICT RECORDED
+**Status:** REPAIR-A COMPLETE — CP-E VERDICT SUSPENDED PENDING INDEPENDENT ADJUDICATION
 
 **Authority:** This is the sole active Temporal Forge research authority.
 
@@ -12,6 +12,13 @@
 path provides repeatable, supported high-frequency recovery beyond the strongest
 existing deterministic spatial baseline, under a controlled pair of sampling
 regimes.
+
+The original CP-E interpretation is suspended because its causal residual
+metrics used M2 before selecting the strongest frozen deterministic spatial
+comparator. The existing 64-cell capture dataset is retained; Repair-A
+recomputes only the baseline-dependent metrics with the measured M1 comparator.
+The repaired interpretation is provisional until the evidence package is
+independently reviewable and adjudicated.
 
 AMD parity/oracle work, DLL or SDK archaeology, provenance hunting, and the
 historical Final Word campaign are out of scope. The Final Word material is
@@ -72,9 +79,11 @@ observed.
 ### Reconstruction methods
 
 `M1` is a deterministic Lanczos3 image-space resize of the decoded low-
-resolution input. `M2` is the strongest existing deterministic spatial
-baseline supported by the matched spatial record in
-`docs/reports/M6_RECAPTURE_REPORT_20260901.md`: explicit base-only bilinear.
+resolution input. `M2` is the recorded explicit base-only bilinear spatial
+control from the matched spatial record in
+`docs/reports/M6_RECAPTURE_REPORT_20260901.md`. The strongest spatial
+comparator is selected after the complete matrix is evaluated using the
+aggregate criteria recorded in Repair-A; it is not fixed by method name.
 `M3` is the pre-sprint default Forge path with the existing Quality Lab
 configuration disabled. `M4` is the existing explicit current-composition
 control (`learnedStrength=0.55`, `residualStrength=1.0`, Catmull-Rom base,
@@ -238,7 +247,12 @@ especially `primary_capture_index.json`, `capture_identity.json`, and
 `fixture_manifest.json`. Raw frame payloads remain outside Git with their
 hashes recorded in the index.
 
-### CP-C — primary evaluation complete; confirmation skipped
+### Superseded CP-C record — historical baseline interpretation
+
+The CP-C tables below are retained as the terminal historical evaluation, but
+their causal residual and confirmation interpretation is superseded. They used
+M2 as the residual baseline before measured comparator selection. Use the
+corrected Repair-A package below for current authority.
 
 The frozen evaluator completed all 64 cells. The current aggregate means are:
 
@@ -306,9 +320,10 @@ their frozen method identities. M3/M4 registered temporal errors were
 `0.009236` and `0.009966`, versus `0.004797` for M2. See
 [`temporal_liveness_summary.json`](../../benchmarks/empirical/results/evs-20260914/temporal_liveness_summary.json).
 
-### CP-E — empirical viability verdict
+### Superseded CP-E record — verdict suspended pending repair
 
-**Verdict: EMPIRICAL FAILURE**
+The CP-E verdict below is suspended. It was recorded from the superseded M2
+baseline interpretation and is not the current repaired verdict.
 
 The existing Forge reconstruction path does not meet the frozen survival
 target. Both Forge arms lose to the strongest spatial baseline on HF
@@ -324,3 +339,34 @@ The final evidence package is under
 [`benchmarks/empirical/results/evs-20260914/`](../../benchmarks/empirical/results/evs-20260914/).
 This sprint stops here. No AMD parity/oracle work, additional FSR research,
 or follow-on empirical campaign begins under this authority.
+
+## Repair status
+
+### REPAIR-A — corrected strongest-spatial residual evaluation
+
+Repair-A re-evaluated all 64 existing primary cells from the original host
+capture root. No capture was rerun and no reconstruction behavior changed. The
+evaluator now selects the unique Pareto-dominant deterministic spatial method
+using aggregate PSNR, SSIM, high-frequency correlation, and registered
+temporal error. The measured comparator is `M1` Lanczos3:
+
+| Method | Mean PSNR (dB) | Mean SSIM | Mean HF correlation | Mean registered temporal error |
+| --- | ---: | ---: | ---: | ---: |
+| M1 Lanczos3 | 29.7264 | 0.887036 | 0.489379 | 0.004605 |
+| M2 base-only bilinear | 27.5335 | 0.882298 | 0.462123 | 0.004797 |
+
+Against M1, the corrected R1 causal residual aggregates are M3 correlation
+`-0.039283`, phase agreement `0.482495`, signed projection `-0.050779`, and
+magnitude ratio `0.586122`; M4 is `-0.061383`, `0.476026`, `-0.063168`, and
+`0.718903`. M3 has positive residual correlation and projection in only one of
+four R1 classes; M4 has none. Neither Forge arm reaches the frozen `+10%`
+target on any R1 class. The corrected R1/R2 rollups, class-level values, and
+all 64 per-cell metrics are in
+[`evaluation/repair-a/primary_evaluation.json`](../../benchmarks/empirical/results/evs-20260914/evaluation/repair-a/primary_evaluation.json)
+and its sibling files; the provisional adjudication is in
+[`evaluation/repair_a_interpretation.json`](../../benchmarks/empirical/results/evs-20260914/evaluation/repair_a_interpretation.json).
+
+The provisional repaired verdict is **EMPIRICAL FAILURE**. This is not yet the
+final independent adjudication: Repair-B must publish the immutable,
+independently reviewable artifact package, then Repair-C records the repaired
+verdict and stops for external review.

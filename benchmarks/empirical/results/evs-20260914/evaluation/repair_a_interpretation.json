@@ -1,0 +1,75 @@
+{
+  "schema": "temporal_forge.empirical_viability.repair_a_interpretation.v1",
+  "repair_status": "provisional-repaired-verdict-awaiting-independent-adjudication",
+  "repair_base_commit": "82654a32f4f65ed940e46a4a5a1f810b87b39025",
+  "capture_commit": "626641100df48157417e10de1e27e23b14d3df0a",
+  "corrected_evaluation": "evaluation/repair-a/primary_evaluation.json",
+  "baseline": {
+    "selected_method": "M1",
+    "selection_rule": "unique Pareto-dominant deterministic spatial method",
+    "reason": "M1 dominates M2 on aggregate PSNR, SSIM, high-frequency correlation, and registered temporal error."
+  },
+  "survival_adjudication": {
+    "target": "at least 10% ground-truth-correlated R1 high-frequency recovery over the selected spatial baseline on at least 3 of 4 structural classes",
+    "M3_classes_meeting_target": 0,
+    "M4_classes_meeting_target": 0,
+    "supported": false
+  },
+  "hybrid_signal_adjudication": {
+    "supported": false,
+    "criteria": {
+      "positive_ground_truth_correlated_residual": false,
+      "correct_phase_or_signed_projection": false,
+      "repeatable_across_multiple_R1_classes": false,
+      "stronger_R1_than_R2_with_positive_signal": false,
+      "plausible_extracted_residual_benefit": false
+    },
+    "R1_aggregate_residuals_against_M1": {
+      "M3": {
+        "correlation": -0.039283037544859595,
+        "phase_agreement": 0.48249520268291235,
+        "signed_projection": -0.05077860881675633,
+        "magnitude_ratio": 0.5861221567029133
+      },
+      "M4": {
+        "correlation": -0.06138277951625072,
+        "phase_agreement": 0.47602630918845534,
+        "signed_projection": -0.0631680689048153,
+        "magnitude_ratio": 0.7189030068693683
+      }
+    },
+    "R2_aggregate_residuals_against_M1": {
+      "M3": {
+        "correlation": -0.1535093164445712,
+        "phase_agreement": 0.4141581791918725,
+        "signed_projection": -0.05941468845151121,
+        "magnitude_ratio": 0.23179846501443535
+      },
+      "M4": {
+        "correlation": -0.1324466627557365,
+        "phase_agreement": 0.4179534097202122,
+        "signed_projection": -0.06723295925212369,
+        "magnitude_ratio": 0.30758773582056165
+      }
+    },
+    "class_level_positive_residual_correlation_counts": {
+      "M3": "1/4 (S2 only)",
+      "M4": "0/4"
+    },
+    "class_level_positive_signed_projection_counts": {
+      "M3": "1/4 (S2 only)",
+      "M4": "0/4"
+    }
+  },
+  "confirmation": {
+    "run": false,
+    "reason": "The corrected primary matrix contains no repeatable survival or hybrid signal requiring confirmation."
+  },
+  "provisional_repaired_verdict": "EMPIRICAL FAILURE",
+  "scope_guard": {
+    "new_captures": false,
+    "reconstruction_behavior_changed": false,
+    "new_fsr_oracle_research": false,
+    "terminal_commit_rewritten": false
+  }
+}

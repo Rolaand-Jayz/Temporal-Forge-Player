@@ -1,0 +1,448 @@
+{
+  "baseline_method": "M1",
+  "baseline_selection": {
+    "aggregates": {
+      "M1": {
+        "mean_hf_correlation": 0.48937876988611356,
+        "mean_psnr_db": 29.72635020860003,
+        "mean_registered_temporal_error": 0.004605498172168154,
+        "mean_ssim": 0.8870355477556586
+      },
+      "M2": {
+        "mean_hf_correlation": 0.462123488389201,
+        "mean_psnr_db": 27.53347649754359,
+        "mean_registered_temporal_error": 0.004797410560318635,
+        "mean_ssim": 0.8822983056306839
+      }
+    },
+    "candidate_methods": [
+      "M1",
+      "M2"
+    ],
+    "dominators": {
+      "M1": [],
+      "M2": [
+        "M1"
+      ]
+    },
+    "metric_directions": {
+      "mean_hf_correlation": "higher",
+      "mean_psnr_db": "higher",
+      "mean_registered_temporal_error": "lower",
+      "mean_ssim": "higher"
+    },
+    "rule": "unique_pareto_dominant_deterministic_spatial_method",
+    "selected_method": "M1"
+  },
+  "campaign_id": "evs-20260914",
+  "cells_evaluated": 64,
+  "confirmation_recommendation": "undecided",
+  "interpretation_status": "corrected-metrics-recorded-no-verdict",
+  "methods": {
+    "M1": {
+      "cells": 16,
+      "mean_hf_correlation": 0.48937876988611356,
+      "mean_psnr_db": 29.72635020860003,
+      "mean_registered_temporal_error": 0.004605498172168154,
+      "mean_ssim": 0.8870355477556586
+    },
+    "M2": {
+      "cells": 16,
+      "mean_hf_correlation": 0.462123488389201,
+      "mean_psnr_db": 27.53347649754359,
+      "mean_registered_temporal_error": 0.004797410560318635,
+      "mean_ssim": 0.8822983056306839
+    },
+    "M3": {
+      "cells": 16,
+      "mean_hf_correlation": 0.4425073977580803,
+      "mean_psnr_db": 27.265292945442916,
+      "mean_registered_temporal_error": 0.009236370645729559,
+      "mean_ssim": 0.8732165456749499
+    },
+    "M4": {
+      "cells": 16,
+      "mean_hf_correlation": 0.35112809965921177,
+      "mean_psnr_db": 26.986291688682243,
+      "mean_registered_temporal_error": 0.009966133504349273,
+      "mean_ssim": 0.8635396882891655
+    }
+  },
+  "r1_residual_by_class": {
+    "S1_M2": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.0010239672410534695,
+      "mean_gt_residual_mean_abs": 0.002995485469000414,
+      "mean_residual_correlation": 0.055581868608839693,
+      "mean_residual_magnitude_ratio": 0.3456938620656729,
+      "mean_residual_phase_agreement": 0.5878496393561363,
+      "mean_residual_projection": 0.007996259140782058
+    },
+    "S1_M3": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.001110274351958651,
+      "mean_gt_residual_mean_abs": 0.002995485469000414,
+      "mean_residual_correlation": -0.004122734765752399,
+      "mean_residual_magnitude_ratio": 0.3749097902327776,
+      "mean_residual_phase_agreement": 0.5510489270091057,
+      "mean_residual_projection": -0.0011348815896781161
+    },
+    "S1_M4": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.0013020727783441544,
+      "mean_gt_residual_mean_abs": 0.002995485469000414,
+      "mean_residual_correlation": -0.043380548091248784,
+      "mean_residual_magnitude_ratio": 0.44002856500446796,
+      "mean_residual_phase_agreement": 0.5361481420695782,
+      "mean_residual_projection": -0.009591601643478498
+    },
+    "S2_M2": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.0013914047740399837,
+      "mean_gt_residual_mean_abs": 0.006641584564931691,
+      "mean_residual_correlation": 0.10878419678843342,
+      "mean_residual_magnitude_ratio": 0.21151414327323437,
+      "mean_residual_phase_agreement": 0.5451909303665161,
+      "mean_residual_projection": 0.018192102026659995
+    },
+    "S2_M3": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.001542461701319553,
+      "mean_gt_residual_mean_abs": 0.006641584564931691,
+      "mean_residual_correlation": 0.03148683038052584,
+      "mean_residual_magnitude_ratio": 0.23452477902173996,
+      "mean_residual_phase_agreement": 0.5172482505440712,
+      "mean_residual_projection": 0.005105193061808677
+    },
+    "S2_M4": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.002050101145869121,
+      "mean_gt_residual_mean_abs": 0.006641584564931691,
+      "mean_residual_correlation": -0.02558716998333318,
+      "mean_residual_magnitude_ratio": 0.31199293956160545,
+      "mean_residual_phase_agreement": 0.4996033385396004,
+      "mean_residual_projection": -0.008193391764507396
+    },
+    "S3_M2": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.007871548412367702,
+      "mean_gt_residual_mean_abs": 0.005265093321213499,
+      "mean_residual_correlation": -0.18423588072571234,
+      "mean_residual_magnitude_ratio": 1.5018730834126472,
+      "mean_residual_phase_agreement": 0.3638476226478815,
+      "mean_residual_projection": -0.19896975811570883
+    },
+    "S3_M3": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.00837988342391327,
+      "mean_gt_residual_mean_abs": 0.005265093321213499,
+      "mean_residual_correlation": -0.17810328948070536,
+      "mean_residual_magnitude_ratio": 1.5996205508708954,
+      "mean_residual_phase_agreement": 0.3641431387513876,
+      "mean_residual_projection": -0.20608909893780947
+    },
+    "S3_M4": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.010073771234601736,
+      "mean_gt_residual_mean_abs": 0.005265093321213499,
+      "mean_residual_correlation": -0.16262037209482616,
+      "mean_residual_magnitude_ratio": 1.9229082837700844,
+      "mean_residual_phase_agreement": 0.37625484727323055,
+      "mean_residual_projection": -0.23129104357212782
+    },
+    "S4_M2": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.0021441787685034797,
+      "mean_gt_residual_mean_abs": 0.01817924511851743,
+      "mean_residual_correlation": 0.00518644326487889,
+      "mean_residual_magnitude_ratio": 0.12288106512278318,
+      "mean_residual_phase_agreement": 0.5040954537689686,
+      "mean_residual_projection": 0.0006259356159716845
+    },
+    "S4_M3": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.002363614403293468,
+      "mean_gt_residual_mean_abs": 0.01817924511851743,
+      "mean_residual_correlation": -0.006392956313506452,
+      "mean_residual_magnitude_ratio": 0.13543350668624043,
+      "mean_residual_phase_agreement": 0.4975404944270849,
+      "mean_residual_projection": -0.000995647801346422
+    },
+    "S4_M4": {
+      "baseline_method": "M1",
+      "cells": 2,
+      "mean_candidate_residual_mean_abs": 0.003502546882373281,
+      "mean_gt_residual_mean_abs": 0.01817924511851743,
+      "mean_residual_correlation": -0.013943027895594758,
+      "mean_residual_magnitude_ratio": 0.20068223914131522,
+      "mean_residual_phase_agreement": 0.4920989088714123,
+      "mean_residual_projection": -0.0035962386391474865
+    }
+  },
+  "r1_vs_baseline": {
+    "S1_M2": {
+      "absolute_delta": 0.035499266810282426,
+      "baseline_hf_correlation": 0.4292458066334556,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 32.0980023531755,
+      "baseline_registered_temporal_error": 0.001519108099663364,
+      "baseline_ssim": 0.9780003055930138,
+      "candidate_hf_correlation": 0.464745073443738,
+      "candidate_psnr_db": 31.595597951004365,
+      "candidate_registered_temporal_error": 0.0014584136827449712,
+      "candidate_ssim": 0.9776951819658279,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": 8.270148772960795
+    },
+    "S1_M3": {
+      "absolute_delta": 0.010469511219651173,
+      "baseline_hf_correlation": 0.4292458066334556,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 32.0980023531755,
+      "baseline_registered_temporal_error": 0.001519108099663364,
+      "baseline_ssim": 0.9780003055930138,
+      "candidate_hf_correlation": 0.43971531785310675,
+      "candidate_psnr_db": 31.34989551437355,
+      "candidate_registered_temporal_error": 0.002097712546986129,
+      "candidate_ssim": 0.9760952293872833,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": 2.4390479901860385
+    },
+    "S1_M4": {
+      "absolute_delta": -0.06296330408061546,
+      "baseline_hf_correlation": 0.4292458066334556,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 32.0980023531755,
+      "baseline_registered_temporal_error": 0.001519108099663364,
+      "baseline_ssim": 0.9780003055930138,
+      "candidate_hf_correlation": 0.3662825025528401,
+      "candidate_psnr_db": 31.113858634784073,
+      "candidate_registered_temporal_error": 0.002284471003804356,
+      "candidate_ssim": 0.9739833064377308,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -14.668356244276948
+    },
+    "S2_M2": {
+      "absolute_delta": 0.030327174356534092,
+      "baseline_hf_correlation": 0.5207565814570267,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 28.04770477697884,
+      "baseline_registered_temporal_error": 0.002769328803489251,
+      "baseline_ssim": 0.9571840241551399,
+      "candidate_hf_correlation": 0.5510837558135608,
+      "candidate_psnr_db": 27.579106057492844,
+      "candidate_registered_temporal_error": 0.0024794552757936928,
+      "candidate_ssim": 0.9588559083640575,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": 5.8236756742817475
+    },
+    "S2_M3": {
+      "absolute_delta": 0.008666975901551077,
+      "baseline_hf_correlation": 0.5207565814570267,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 28.04770477697884,
+      "baseline_registered_temporal_error": 0.002769328803489251,
+      "baseline_ssim": 0.9571840241551399,
+      "candidate_hf_correlation": 0.5294235573585778,
+      "candidate_psnr_db": 27.068739996111944,
+      "candidate_registered_temporal_error": 0.004838191039328064,
+      "candidate_ssim": 0.9540593735873699,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": 1.6643046310239162
+    },
+    "S2_M4": {
+      "absolute_delta": -0.07831475862919396,
+      "baseline_hf_correlation": 0.5207565814570267,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 28.04770477697884,
+      "baseline_registered_temporal_error": 0.002769328803489251,
+      "baseline_ssim": 0.9571840241551399,
+      "candidate_hf_correlation": 0.4424418228278328,
+      "candidate_psnr_db": 26.63803053450662,
+      "candidate_registered_temporal_error": 0.005351923605693238,
+      "candidate_ssim": 0.9492181576788425,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -15.038649806417581
+    },
+    "S3_M2": {
+      "absolute_delta": -0.1284795559855879,
+      "baseline_hf_correlation": 0.9177058673341134,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 34.66696490858479,
+      "baseline_registered_temporal_error": 0.0039006645092740655,
+      "baseline_ssim": 0.9882315285503864,
+      "candidate_hf_correlation": 0.7892263113485255,
+      "candidate_psnr_db": 23.782868484852372,
+      "candidate_registered_temporal_error": 0.005239793931001,
+      "candidate_ssim": 0.9763361848890781,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -14.000080042946017
+    },
+    "S3_M3": {
+      "absolute_delta": -0.14732687871006012,
+      "baseline_hf_correlation": 0.9177058673341134,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 34.66696490858479,
+      "baseline_registered_temporal_error": 0.0039006645092740655,
+      "baseline_ssim": 0.9882315285503864,
+      "candidate_hf_correlation": 0.7703789886240533,
+      "candidate_psnr_db": 23.346041681715285,
+      "candidate_registered_temporal_error": 0.02126901423824685,
+      "candidate_ssim": 0.9581808410584927,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -16.053823338629925
+    },
+    "S3_M4": {
+      "absolute_delta": -0.2594185296567535,
+      "baseline_hf_correlation": 0.9177058673341134,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 34.66696490858479,
+      "baseline_registered_temporal_error": 0.0039006645092740655,
+      "baseline_ssim": 0.9882315285503864,
+      "candidate_hf_correlation": 0.6582873376773599,
+      "candidate_psnr_db": 22.906664305460385,
+      "candidate_registered_temporal_error": 0.02325259561517409,
+      "candidate_ssim": 0.9377971850335598,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -28.268156376764864
+    },
+    "S4_M2": {
+      "absolute_delta": -0.016956787199937207,
+      "baseline_hf_correlation": 0.2962726692589067,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 32.04305254238667,
+      "baseline_registered_temporal_error": 0.010666449088603258,
+      "baseline_ssim": 0.7190880514681339,
+      "candidate_hf_correlation": 0.2793158820589695,
+      "candidate_psnr_db": 30.853117893799084,
+      "candidate_registered_temporal_error": 0.010610109361420785,
+      "candidate_ssim": 0.7095338739454746,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -5.723372068828603
+    },
+    "S4_M3": {
+      "absolute_delta": -0.029181270032152262,
+      "baseline_hf_correlation": 0.2962726692589067,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 32.04305254238667,
+      "baseline_registered_temporal_error": 0.010666449088603258,
+      "baseline_ssim": 0.7190880514681339,
+      "candidate_hf_correlation": 0.26709139922675446,
+      "candidate_psnr_db": 30.635408091429987,
+      "candidate_registered_temporal_error": 0.013336814873452698,
+      "candidate_ssim": 0.699612807482481,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -9.84946404443784
+    },
+    "S4_M4": {
+      "absolute_delta": -0.11257259873582703,
+      "baseline_hf_correlation": 0.2962726692589067,
+      "baseline_method": "M1",
+      "baseline_psnr_db": 32.04305254238667,
+      "baseline_registered_temporal_error": 0.010666449088603258,
+      "baseline_ssim": 0.7190880514681339,
+      "candidate_hf_correlation": 0.18370007052307968,
+      "candidate_psnr_db": 30.297171377934394,
+      "candidate_registered_temporal_error": 0.014069847729323164,
+      "candidate_ssim": 0.6875990778207779,
+      "meets_plus_10_percent_target": false,
+      "relative_delta_percent": -37.99628194440443
+    }
+  },
+  "r1_vs_r2": {
+    "R1_M1": {
+      "cells": 8,
+      "mean_hf_correlation": 0.5409952311708757
+    },
+    "R1_M2": {
+      "cells": 8,
+      "mean_hf_correlation": 0.5210927556661984,
+      "mean_residual_correlation": -0.003670843015890088,
+      "mean_residual_magnitude_ratio": 0.5454905384685844,
+      "mean_residual_phase_agreement": 0.5002459115348756,
+      "mean_residual_projection": -0.04303886533307377
+    },
+    "R1_M3": {
+      "cells": 8,
+      "mean_hf_correlation": 0.5016523157656231,
+      "mean_residual_correlation": -0.039283037544859595,
+      "mean_residual_magnitude_ratio": 0.5861221567029133,
+      "mean_residual_phase_agreement": 0.48249520268291235,
+      "mean_residual_projection": -0.05077860881675633
+    },
+    "R1_M4": {
+      "cells": 8,
+      "mean_hf_correlation": 0.41267793339527814,
+      "mean_residual_correlation": -0.06138277951625072,
+      "mean_residual_magnitude_ratio": 0.7189030068693683,
+      "mean_residual_phase_agreement": 0.47602630918845534,
+      "mean_residual_projection": -0.0631680689048153
+    },
+    "R2_M1": {
+      "cells": 8,
+      "mean_hf_correlation": 0.43776230860135146
+    },
+    "R2_M2": {
+      "cells": 8,
+      "mean_hf_correlation": 0.40315422111220345,
+      "mean_residual_correlation": -0.11895194375147863,
+      "mean_residual_magnitude_ratio": 0.2141065060859546,
+      "mean_residual_phase_agreement": 0.4358166109304875,
+      "mean_residual_projection": -0.05273969233781628
+    },
+    "R2_M3": {
+      "cells": 8,
+      "mean_hf_correlation": 0.3833624797505374,
+      "mean_residual_correlation": -0.1535093164445712,
+      "mean_residual_magnitude_ratio": 0.23179846501443535,
+      "mean_residual_phase_agreement": 0.4141581791918725,
+      "mean_residual_projection": -0.05941468845151121
+    },
+    "R2_M4": {
+      "cells": 8,
+      "mean_hf_correlation": 0.2895782659231455,
+      "mean_residual_correlation": -0.1324466627557365,
+      "mean_residual_magnitude_ratio": 0.30758773582056165,
+      "mean_residual_phase_agreement": 0.4179534097202122,
+      "mean_residual_projection": -0.06723295925212369
+    }
+  },
+  "residual_comparison": {
+    "M2": {
+      "cells": 8,
+      "mean_hf_correlation": 0.5210927556661984,
+      "mean_residual_correlation": -0.003670843015890088,
+      "mean_residual_magnitude_ratio": 0.5454905384685844,
+      "mean_residual_phase_agreement": 0.5002459115348756,
+      "mean_residual_projection": -0.04303886533307377
+    },
+    "M3": {
+      "cells": 8,
+      "mean_hf_correlation": 0.5016523157656231,
+      "mean_residual_correlation": -0.039283037544859595,
+      "mean_residual_magnitude_ratio": 0.5861221567029133,
+      "mean_residual_phase_agreement": 0.48249520268291235,
+      "mean_residual_projection": -0.05077860881675633
+    },
+    "M4": {
+      "cells": 8,
+      "mean_hf_correlation": 0.41267793339527814,
+      "mean_residual_correlation": -0.06138277951625072,
+      "mean_residual_magnitude_ratio": 0.7189030068693683,
+      "mean_residual_phase_agreement": 0.47602630918845534,
+      "mean_residual_projection": -0.0631680689048153
+    }
+  },
+  "schema": "temporal_forge.empirical_viability.primary_evaluation.v2"
+}
