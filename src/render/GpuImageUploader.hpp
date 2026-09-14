@@ -139,6 +139,13 @@ struct GpuImageUploader {
   VkImageView reactiveView() const { return reactive_.view; }
   VkImageView tcMaskView() const { return tcMask_.view; }
   VkImageView exposureView() const { return exposure_.view; }
+  // Trace-only epoch incremented on every actual (re)allocation. A per-frame
+  // record of this value proves which resource generation each consumed frame
+  // belonged to; a frame traced against a stale generation indicates mismatched
+  // state after a render-size change or reopen.
+  [[nodiscard]] std::uint64_t allocationGeneration() const {
+    return allocationGeneration_;
+  }
 
   // --- output images (written by postpass, read by readback) ---
   VkImageView outputView() const { return output_.view; }
@@ -391,6 +398,7 @@ private:
   uint32_t srcW_ = 0, srcH_ = 0;
   uint32_t modelW_ = 0, modelH_ = 0;
   uint32_t outW_ = 0, outH_ = 0;
+  std::uint64_t allocationGeneration_ = 0;
   bool frameUploadBatch_ = false;
   // True while cmd_ is between vkBeginCommandBuffer and vkEndCommandBuffer.
   // Nested upload stages share that recording instead of resetting earlier
