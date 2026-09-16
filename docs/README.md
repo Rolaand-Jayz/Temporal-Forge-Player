@@ -1,39 +1,38 @@
 # Temporal Forge documentation
 
-This is the documentation entry point. The governing structure is defined by
-[`DOCUMENTATION_SYSTEM.md`](DOCUMENTATION_SYSTEM.md).
+This is the documentation entry point. The FSR-centered research line is **closed as of 2026-09-15**.
+
+The governing historical structure is defined by [`DOCUMENTATION_SYSTEM.md`](DOCUMENTATION_SYSTEM.md). The closure set is authoritative for the end-state and for interpretation of formerly active plans.
 
 | Need | Start here |
 |---|---|
 | What is true now? | [`current/STATE.md`](current/STATE.md) |
-| How does the current system work? | [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md), [`reference/environment.md`](reference/environment.md) (the `TFORGE_*` environment contract) |
-| What is being worked on now? | [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md) (the single active quality authority) and [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md) |
-| Where is the campaign progress log and historical gate record? | [`active/progress-state.md`](active/progress-state.md) (supporting record, not an authority) |
-| Why did the design change? | [`decisions/TECHNICAL_HISTORY.md`](decisions/TECHNICAL_HISTORY.md) |
-| What did a dated campaign find? | [`reports/`](reports/) (e.g. the review adjudication of 2026-09-06, [`reports/QUALITY_LAB_REVIEW_ADJUDICATION_20260906.md`](reports/QUALITY_LAB_REVIEW_ADJUDICATION_20260906.md)) and the benchmark READMEs |
+| Why was the FSR era closed? | [`closure/FSR41_FINAL_ADJUDICATION_20260915.md`](closure/FSR41_FINAL_ADJUDICATION_20260915.md) |
+| What evaluation standard governs the closure? | [`closure/EVALUATION_STANDARD.md`](closure/EVALUATION_STANDARD.md) |
+| What claims survived or failed? | [`closure/CLAIM_EVIDENCE_LEDGER.md`](closure/CLAIM_EVIDENCE_LEDGER.md) |
+| What remains unresolved? | [`closure/LIMITATIONS_AND_OPEN_QUESTIONS.md`](closure/LIMITATIONS_AND_OPEN_QUESTIONS.md) |
+| How does the historical player work? | [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md), [`reference/environment.md`](reference/environment.md) |
+| Why did the design change over time? | [`decisions/TECHNICAL_HISTORY.md`](decisions/TECHNICAL_HISTORY.md) |
+| What did dated campaigns find? | [`reports/`](reports/) and benchmark READMEs |
 | Where is exploratory research? | [`research/`](research/) |
-| Where are completed plans and old prompts? | [`archive/`](archive/) |
-| Where is detailed measurement evidence? | [`../benchmarks/quality_sweeps/`](../benchmarks/quality_sweeps/) |
+| Where are completed/superseded plans and progress records? | [`archive/`](archive/) |
+| Where is detailed measurement evidence? | [`../benchmarks/quality_sweeps/`](../benchmarks/quality_sweeps/) and [`../benchmarks/video_corpus/`](../benchmarks/video_corpus/) |
 
-Root-level [`README.md`](../README.md) describes the product. Root-level
-[`AGENTS.md`](../AGENTS.md) contains operating instructions and points back to
-this map.
+Root-level [`README.md`](../README.md) describes the repository publicly. Root-level [`AGENTS.md`](../AGENTS.md) freezes agent authority for the historical line.
 
 ## Authority map
 
-- Current state: [`current/STATE.md`](current/STATE.md).
-- Current architecture and durable implementation invariants:
-  [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md).
-- Current FSR input and motion contracts: [`reference/motion/`](reference/motion/).
-- Active quality work: [`active/QUALITY_CAMPAIGN.md`](active/QUALITY_CAMPAIGN.md)
-  is the single canonical active quality authority.
-- Active portability/reproducibility remediation:
-  [`active/PORTABILITY_REMEDIATION_20260909.md`](active/PORTABILITY_REMEDIATION_20260909.md).
-- [`active/progress-state.md`](active/progress-state.md) is a supporting
-  orchestration/progress log for the quality workstream. It records what was
-  done and when; it does not direct current execution. Where it and the
-  active plan disagree, the active plan governs.
-- Detailed measurements: benchmark manifests and artifacts, not copied tables
-  in narrative documents.
-- Completed plans, dated reports, and research are historical or exploratory
-  unless they explicitly link a verified conclusion into a current document.
+1. **Current repository state:** [`current/STATE.md`](current/STATE.md).
+2. **FSR-era closure and evaluation:** [`closure/`](closure/).
+3. **Historical executable architecture:** [`reference/ARCHITECTURE.md`](reference/ARCHITECTURE.md) and related references.
+4. **Causal direction changes:** [`decisions/TECHNICAL_HISTORY.md`](decisions/TECHNICAL_HISTORY.md).
+5. **Primary experiment evidence:** benchmark manifests/artifacts plus dated reports.
+6. **Archived plans/progress:** historical context only; not executable authority.
+
+## Active work
+
+There is **no active FSR campaign in this repository**.
+
+The former quality, M6, motion-confidence, portability, and orchestration records have been retired from `docs/active/` into reports/archive during closure. Their original imperative language is historical and cannot reactivate the work.
+
+A future successor project may reuse evidence, algorithms, tests, tooling, datasets, or code from this repository when independently justified. It must not inherit FSR-specific architecture merely because it existed here.
