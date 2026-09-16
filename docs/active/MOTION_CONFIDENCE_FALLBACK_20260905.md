@@ -1,56 +1,17 @@
-# Motion confidence fallback correction
+# Motion confidence fallback correction — CLOSED TOMBSTONE
 
-Date: 2026-09-05
-Branch: `quality-lab-vibecoder`
+**Historical result:** correction implemented and validated  
+**Archived:** 2026-09-15
 
-## Change
+This completed correction is historical evidence, not an active experiment plan.
 
-`MotionEstimator::aggregateConfidence` now returns its caller-provided
-`emptyConfidence` when a nonempty motion list contains no valid, in-frame
-coverage. Previously this path returned a hard-coded `0.25`, bypassing the
-configured empty-motion policy and allowing malformed or entirely out-of-frame
-metadata to receive an unintended confidence value.
+The exact pre-closure record is preserved at:
 
-The contract is covered by `motion_estimator_tests`: an out-of-frame entry with
-an explicit fallback of `0.8` must return `0.8`.
+https://github.com/Rolaand-Jayz/Temporal-Forge-Player/blob/285a5788f89787bce0ca26f8e8e8ca312890723f/docs/active/MOTION_CONFIDENCE_FALLBACK_20260905.md
 
-## Validation
+The correction preserved caller-provided empty-motion confidence for malformed/out-of-frame metadata and did not claim a normal-path quality win. The tested alternative tuning paths remained rejected.
 
-- Fresh build directory: `build-competition`, configured from this worktree.
-- Binary SHA-256: `01fc924c620fc9d44102790795a21b947724b4ecd218e5a6a3ed158cb7ad4996`.
-- Full CTest: 20 runnable tests passed; one test skipped and four tests are
-  disabled by the project configuration.
-- Real Temporal Forge capture: `.candidate_capture/empty_confidence_fix_640x360`.
-- Input: `benchmarks/video_corpus/clips/tos_daylight_640x360_high_crf12.mp4`.
-- Reference: `benchmarks/video_corpus/references/tos_daylight_2160p_lossless.mkv`.
-- Output: 1920x1080, 8 captured frames, explicit current temporal config.
-- Capture metrics: FSR SSIM mean `0.825759`, minimum `0.815313`, temporal
-  delta absolute error `1.129259`; these match the valid-motion control.
+See:
 
-The committed binary was also run through the four-tier matrix with the same
-current temporal configuration and a forced 1920×1080 output:
-
-| Input | FSR SSIM mean | FSR SSIM min | Temporal delta absolute error |
-| --- | ---: | ---: | ---: |
-| 426×240 | 0.762697 | 0.750557 | 1.428889 |
-| 640×360 | 0.825759 | 0.815314 | 1.129256 |
-| 1280×720 | 0.946578 | 0.938178 | 0.342594 |
-| 1920×1080 | 0.916524 | 0.907679 | 0.413226 |
-
-The corresponding retained artifacts are under
-`.candidate_capture/final_matrix/`; each tier records the executable hash,
-input/reference hashes, commit, resolved configuration, and forwarded player
-environment.
-
-The unchanged valid-motion result is intentional: this correction is a
-fail-safe for invalid metadata and is not claimed as a spatial-quality win.
-It preserves the configured policy for the malformed-input case while avoiding
-a regression on the normal temporal path.
-
-## Rejected alternatives
-
-Resolution-specific learned-strength fallback, disabling the best-findings
-bundle, disabling the photometric history gate, current-frame correction weight
-sweeps, and motion-validation threshold sweeps were tested through the real
-pipeline. None produced a consistent quality/stability improvement across the
-available evidence, so none is promoted.
+- [`../archive/FSR_ERA_ACTIVE_RECORDS_20260915.md`](../archive/FSR_ERA_ACTIVE_RECORDS_20260915.md)
+- [`../closure/CLAIM_EVIDENCE_LEDGER.md`](../closure/CLAIM_EVIDENCE_LEDGER.md)
