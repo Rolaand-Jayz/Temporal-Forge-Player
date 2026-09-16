@@ -1,48 +1,65 @@
 # Temporal Forge Player
 
-> **Experimental research project · Flagship portfolio work**
+> **Closed FSR-era research project · Flagship portfolio work**
 
-Temporal Forge investigates adapting **AMD FSR 4.1 temporal reconstruction/upscaling to ordinary decoded video**. It is not frame interpolation or frame generation:
+**FSR-centered research closed: 2026-09-15.** This repository is preserved as the engineering and evidence record of Temporal Forge's attempt to adapt **AMD FSR 4.1 temporal reconstruction/upscaling to ordinary decoded video**. Future Temporal Forge work is intentionally moving to a custom temporal video-reconstruction architecture rather than continuing to treat FSR as the architectural center.
+
+Read the closure first:
+
+- [`docs/closure/FSR41_FINAL_ADJUDICATION_20260915.md`](docs/closure/FSR41_FINAL_ADJUDICATION_20260915.md)
+- [`docs/closure/CLAIM_EVIDENCE_LEDGER.md`](docs/closure/CLAIM_EVIDENCE_LEDGER.md)
+- [`docs/closure/LIMITATIONS_AND_OPEN_QUESTIONS.md`](docs/closure/LIMITATIONS_AND_OPEN_QUESTIONS.md)
+- [`docs/closure/EVALUATION_STANDARD.md`](docs/closure/EVALUATION_STANDARD.md)
+
+The closure does **not** claim that FSR 4.1 can never work for video. It records a narrower evidence-based decision: the accumulated results no longer justify keeping FSR-specific expected-input reconstruction as Temporal Forge's primary research architecture.
+
+## Historical research target
+
+The player preserves a strict same-cadence contract:
 
 `one decoded video frame → one reconstructed/upscaled displayed frame`
 
-The source frame count, timestamps, and cadence remain the contract. A high-refresh display may repeat a reconstructed frame; the player does not invent intermediate frames.
+The source frame count, timestamps, and cadence remain the contract. A high-refresh display may repeat a reconstructed frame; the historical player does not invent intermediate frames.
 
-**The FSR 4.1 designation is intentional.** Temporal Forge is not generically targeting FSR 4. The research target is the later FSR 4.1 generation and its substantial reconstruction-quality improvements; that distinction matters because FSR 4 already had source material available, while the FSR 4.1 work is the reverse-engineering-informed target being adapted here.
+The **FSR 4.1** designation is intentional. This research line targeted the later FSR 4.1 generation through a reverse-engineering-informed integration rather than treating the work as generic FSR4 support.
 
-## Why this is difficult
+## Why this was difficult
 
 A native game renderer can provide motion, jitter, reset/history context, exposure, reactive/composition signals, and other semantic inputs designed for temporal reconstruction. Finished video does not naturally preserve those signals in the same form.
 
-Temporal Forge therefore treats reconstruction quality as a research problem: determine what can be recovered or synthesized from video, what cannot be reconstructed reliably, and which inputs actually change temporal behavior.
+Temporal Forge therefore tested whether useful equivalents could be recovered or synthesized from video and whether increasingly plausible temporal inputs produced measurable reconstruction headroom.
 
-## Current status
+The final evidence found that temporal inputs do participate in output, but increasingly sophisticated motion did not produce a repeatable quality gain across the full multi-frame campaign. Strong spatial controls remained competitive or superior on important slices, and composition/pipeline semantics could dominate the result. That evidence drove the architectural pivot rather than an implementation failure.
 
-The player has an operational GPU-native pipeline with:
+## Final player state
 
-- **FSR 4.1 RE Experimental** — INT8 reconstruction and the proof-gated default temporal path on supported RDNA3 hardware when the required runtime/compiler assets are available
-- **FSR 3.1.5 (SDK) integration tier** — retained in source for future SDK integration, but compiled out of the redistributable clean-clone build
+The preserved player has an operational GPU-native pipeline with:
+
+- **FSR 4.1 RE Experimental** — INT8 reconstruction and the proof-gated temporal path on supported RDNA3 hardware when required runtime/compiler assets are available
+- **FSR 3.1.5 (SDK) integration tier** — retained in source but compiled out of the redistributable clean-clone build
 - **Spatial fallback** — always-available reliability path after Vulkan initialization when a temporal backend cannot run
 
-Backend selection attempts the **FSR 4.1 RE** path first when its proof gates are satisfied, then the SDK tier when compiled and available, then spatial fallback. Backend failure degrades to spatial scaling with a non-blocking warning instead of silently presenting an unavailable experimental path as successful.
+Backend failure degrades to spatial scaling with a non-blocking warning instead of silently presenting an unavailable experimental path as successful.
 
-The project remains experimental research and does not claim production readiness or parity with AMD's implementation. Meaningful current research may live on non-default branches; consult branch history and campaign documentation before treating experimental behavior as part of `main`.
-
-The remaining problem is reconstruction quality, not merely moving frames through a pipeline. Current work focuses on expected-input semantics, motion transfer, temporal history, jitter, exposure, masking, reset behavior, composition, and causal diagnostics.
+This project does not claim production readiness or parity with AMD's implementation.
 
 ## What this project demonstrates
 
 - Native C++23 / Vulkan / FFmpeg / Qt integration on Linux
 - GPU video processing and temporal reconstruction
 - FSR 4.1 reverse-engineering-informed interoperability research
-- Reproducible experiments with benchmark conditions and provenance
-- Explicit separation of measured facts, inferences, hypotheses, and unobserved behavior
-- Preservation of negative results when they explain system behavior
-- Independent review, adversarial challenge, remediation loops, and verification gates
+- reproducible experiment campaigns with binary/source/reference provenance
+- explicit separation of measured facts, observations, inferences, hypotheses, and unresolved behavior
+- preservation of negative results and invalidated evidence
+- causal ablation across motion, jitter, history, recurrent state, scaling, composition, and future-frame probes
+- human review capable of reopening a false-green automated quality gate
+- independent review, adversarial challenge, remediation loops, and verification gates
+- clean-clone portability and explicit licensing/provenance boundaries
+- an evidence-based architectural pivot when the inherited solution shape stopped being the strongest research path
 
-The methodology matured here from earlier AMD-first application and reverse-engineering work. Those projects are part of the lineage; they should not be read as though this formal process existed from the beginning.
+The methodology matured during the project. Earlier AMD-first application and reverse-engineering work is part of the lineage; it should not be read as though the final formal process existed from the beginning.
 
-## Core rule
+## Core historical rule
 
 ```text
 1 decoded input frame → 1 reconstructed/upscaled displayed output frame
@@ -59,8 +76,6 @@ source frame
   → final presentation scale to window
 ```
 
-The reconstruction target depends on source size and preset, not window size. Resizing the window changes only presentation scaling and should not recreate the temporal context or reset history.
-
 | Preset | Ratio |
 |---|---:|
 | NativeAA | 1.0x |
@@ -69,15 +84,17 @@ The reconstruction target depends on source size and preset, not window size. Re
 | Performance | 2.0x |
 | Ultra Performance | 3.0x |
 
+The supersampling campaign found that larger reconstruction grids were conditional rather than universal wins, so reconstruction target and final delivery size remain separate controls in the historical design.
+
 ## Clean-clone behavior
 
-The ordinary redistributable build does **not** require a locally installed AMD FidelityFX SDK. In this tree, the FSR 3.1.5 SDK tier remains source-visible but is not linked into the clean-clone build; its runtime path reports that the SDK is not linked and selection continues to an available backend.
+The ordinary redistributable build does **not** require a locally installed AMD FidelityFX SDK. The FSR 3.1.5 SDK tier remains source-visible but is not linked into the clean-clone build.
 
-The **FSR 4.1 RE** path has separate runtime/build asset requirements. Native INT8 packs are resolved from executable-relative or repository-relative locations, while generic weight blobs can be provisioned through the existing `TFORGE_FSR4_RE_ROOT` environment variable or the documented XDG data location. Missing or invalid assets produce diagnostics and fallback rather than a false-success path.
+The **FSR 4.1 RE** path has separate runtime/build asset requirements. Native INT8 packs are resolved from portable executable/repository locations, while generic weight blobs can be provisioned through `TFORGE_FSR4_RE_ROOT` or the documented XDG data location. Missing or invalid assets produce diagnostics and fallback rather than a false-success path.
 
 ### Git LFS review evidence
 
-Campaign review images under `review_harness/images/*.png` use Git LFS. They are **not required to build, run, or test** the player; a normal clone can build with the pointer files in place. To retrieve the review-image payloads:
+Campaign review images under `review_harness/images/*.png` use Git LFS. They are **not required to build, run, or test** the player.
 
 ```sh
 git lfs install
@@ -86,19 +103,21 @@ git lfs pull
 
 ## Documentation map
 
-Start with the repository's current-state and architecture documents, then descend into the active research campaign, benchmark evidence, technical decisions, and archived or superseded reports. Authoritative dated experiment documentation takes precedence when historical reports differ from the current implementation.
+Start with [`docs/README.md`](docs/README.md). The key historical/closure entry points are:
 
-Useful entry points include:
-
-- [`docs/README.md`](docs/README.md) — documentation authority map
-- [`docs/FSR4_RE_STATUS.md`](docs/FSR4_RE_STATUS.md) — dated FSR 4.1 RE reconstruction status/history
-- [`benchmarks/quality_sweeps/`](benchmarks/quality_sweeps/) — current quality and causal experiment tooling/evidence
-- [`docs/active/PORTABILITY_REMEDIATION_20260909.md`](docs/active/PORTABILITY_REMEDIATION_20260909.md) — clean-clone portability/remediation qualification record
+- [`docs/current/STATE.md`](docs/current/STATE.md) — current repository status
+- [`docs/closure/`](docs/closure/) — final FSR-era adjudication, evaluation standard, claim ledger, and limitations
+- [`docs/decisions/TECHNICAL_HISTORY.md`](docs/decisions/TECHNICAL_HISTORY.md) — causal direction changes
+- [`docs/FSR4_RE_STATUS.md`](docs/FSR4_RE_STATUS.md) — dated FSR 4.1 RE reconstruction history
+- [`benchmarks/quality_sweeps/`](benchmarks/quality_sweeps/) — quality, motion, and causal experiment tooling/evidence
+- [`benchmarks/video_corpus/RESULTS.md`](benchmarks/video_corpus/RESULTS.md) — real-world corpus findings
 - [`PROVENANCE.md`](PROVENANCE.md) — artifact provenance and unresolved-rights records
+
+Historical plans and progress logs are archived. There is no active FSR campaign in this repository.
 
 ## Requirements
 
-The runtime requires a **Vulkan 1.3** driver. A Vulkan 1.2-only machine cannot run the player.
+The runtime requires a **Vulkan 1.3** driver.
 
 | Package | Role | Required? | Behavior when missing |
 |---|---|---|---|
@@ -112,7 +131,7 @@ The runtime requires a **Vulkan 1.3** driver. A Vulkan 1.2-only machine cannot r
 | Python 3 | build tooling | required | tooling steps fail |
 | Git LFS | review evidence only | optional | review PNGs remain pointer files; build/runtime unaffected |
 | ffmpeg executable with libx264 + aac encoders | test fixtures | optional | affected external-data tests SKIP rather than FAIL |
-| jq, ImageMagick | research/capture scripts | optional | affected scripts fail with a clear error |
+| jq, ImageMagick | historical research/capture scripts | optional | affected scripts fail with a clear error |
 | DXC + SPIR-V tools | native FSR 4.1 pack builds | optional | native pack build tooling cannot run |
 | FidelityFX SDK (`TFORGE_ENABLE_FSR1_PROBE=ON`) | optional probe | optional | probe target is not built by default |
 
@@ -141,4 +160,4 @@ The tracked native INT8 **FSR 4.1 RE** pack data includes reverse-engineering-de
 
 ## Research status
 
-Temporal Forge is active experimental R&D. Its purpose is not to claim that finished video supplies the same information as a game renderer; it is to determine, through controlled experiments, which missing temporal inputs matter, which useful surrogates can be synthesized, and where the approach reaches a hard information boundary.
+**Closed FSR-centered research line.** The broader Temporal Forge objective continues outside this architecture: determine how to recover genuine source-supported spatial detail from information distributed across multiple video frames without assuming FSR, optical flow, machine learning, or any fixed temporal architecture in advance.
