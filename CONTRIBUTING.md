@@ -1,7 +1,8 @@
 # Contributing
 
-A short guide for working in this codebase. Read `docs/README.md` first, then
-`docs/reference/ARCHITECTURE.md` for the layered structure and threading model.
+Temporal Forge Player's **FSR-centered research line is closed as of 2026-09-15**. Read [`docs/current/STATE.md`](docs/current/STATE.md), [`docs/closure/README.md`](docs/closure/README.md), and [`AGENTS.md`](AGENTS.md) before changing the repository.
+
+There is no standing FSR quality campaign, refactor campaign, or expected-input research task. Behavioral changes require an explicit maintainer request. Historical plans and tombstones are not work queues.
 
 ## Build & test
 
@@ -11,15 +12,9 @@ cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
-The test suite registers 23 `tforge_add_test` targets plus 1 conditional
-`add_test` (`file_switch_tests`, gated on its fixture logic). Four targets
-are intentionally disabled GPU diagnostics — `gpu_probe`, `cm_dump`,
-`fsr4_harness_tests`, `jitter_gpu_contract_tests` — because they need a live
-Vulkan device and generated/real FSR4 assets; they do not run under ctest.
+The preserved suite registers 23 `tforge_add_test` targets plus one conditional `add_test` (`file_switch_tests`, gated on fixture logic). Four GPU diagnostics — `gpu_probe`, `cm_dump`, `fsr4_harness_tests`, and `jitter_gpu_contract_tests` — are intentionally disabled under ordinary ctest because they require a live Vulkan device and generated/real FSR4 assets.
 
-On a clean machine (no external test data, no `sample.mp4` fixture), expect
-the external-data-dependent tests to report **SKIP, not FAIL**. A failing
-clean-machine run indicates a portability defect, not a missing fixture.
+On a clean machine without external test data, external-data-dependent tests should report **SKIP, not FAIL**. A failing clean-machine run can indicate a portability regression.
 
 ### Headless smoke test
 
@@ -27,83 +22,49 @@ clean-machine run indicates a portability defect, not a missing fixture.
 timeout --signal=TERM 8 ./build/temporal_forge_player benchmarks/video_corpus/clips/<clip>.mp4
 ```
 
-Exit code 124 is the timeout (expected). Look for `pipelineCPU=` lines to confirm
-FSR4 dispatches are happening (3–4 in 8s for a 1080p→4K encode at 24fps).
-
-### QML edits
-
-The binary embeds QML via RCC + qmlcache. If `cmake --build` says "up to date"
-but the QML change isn't reflected at runtime, force a full recompile:
-
-```sh
-touch CMakeLists.txt && cmake --build build
-```
+Exit code 124 is the timeout. Runtime diagnostics can be inspected to determine which backend actually executed; do not infer successful FSR dispatch merely from requested configuration.
 
 ## Code style
 
-- **Language:** C++23, `-Wall -Wextra -Wpedantic` (see `CMakeLists.txt`).
-- **Formatting:** `.clang-format` is committed (4-space indent, K&R braces,
-  left pointer alignment, ~80 col). It is derived from the existing style to
-  keep diffs minimal — **do not reformat files you aren't otherwise editing.**
-- **Linting:** `.clang-tidy` is committed as advisory config (no gate yet).
-  You may apply trivially-safe auto-fixes (`clang-tidy -p build --fix`) on a
-  file you're already editing, but never accept a fix that changes a signature
-  or touches GPU/resource-lifecycle code.
+- **Language:** C++23 with the warnings configured by `CMakeLists.txt`.
+- **Formatting:** use the committed `.clang-format`; do not reformat unrelated files.
+- **Linting:** `.clang-tidy` is advisory. Never accept mechanical fixes that silently change GPU/resource/threading semantics.
 
-## Documentation convention (plain `//`)
+## Historical invariants
 
-Every non-trivial function gets a `//` block immediately above it:
+The preserved player contains invariants established through regression work. If an explicitly requested change touches them, add/adjust tests and preserve the causal record.
 
-```cpp
-// teardownFsr4Path: stop the decode loop's FSR4 dispatch, wait for the Vulkan
-//                   queue to drain, then free the harness + uploader.
-//
-// Called by: setFsr4Enabled(false), close(), setFsrViewport (only on preset
-//            ratio change). UI thread, while the decode thread may be mid-dispatch.
-// Calls:     vkQueueWaitIdle, resets fsr4Uploader_/fsr4Harness_.
-// Notes:     Holds fsrDispatchMutex_ so a dispatch in flight either completes
-//            its queue submit (retired by the wait-idle) or hasn't started.
-//            The render-thread accessors do NOT take this mutex.
-void teardownFsr4Path();
-```
+Notable examples include:
 
-- **What it does** — one line, beyond restating the function name.
-- **Called by** — concrete callers (e.g. "QML via Q_INVOKABLE",
-  "Qt render thread @ ~60Hz", "videoDecodeLoop when fsr4Enabled_").
-- **Calls** — key callees: GPU/FFmpeg/mutex/atomic operations that matter.
-- **Notes** — threading, ownership, preconditions, side effects.
+1. UI-thread teardown versus decode-thread FSR dispatch synchronization through `fsrDispatchMutex_`.
+2. GPU retirement through `vkQueueWaitIdle()` before teardown destroys resources visible to rendering.
+3. Reconstruction target changes remaining distinct from ordinary window resize.
+4. Decode-thread fence/dispatch lifecycle remaining safe during stop/teardown.
 
-Trivial getters get a single `//` line. Any `Q_INVOKABLE` and any function
-touching GPU/locks/threads always gets the full block.
+These are properties of the historical implementation, not mandatory design choices for a successor project.
 
-## Hard constraints (do not break these)
+## Documentation and evidence
 
-These invariants exist because breaking them caused recorded playback
-regressions. If a change must touch one of them, add a test first.
+Use [`docs/DOCUMENTATION_SYSTEM.md`](docs/DOCUMENTATION_SYSTEM.md) and [`docs/closure/EVALUATION_STANDARD.md`](docs/closure/EVALUATION_STANDARD.md).
 
-1. `fsrDispatchMutex_` serializes UI-thread teardown vs decode-thread dispatch
-   **only**. The render-thread accessors `fsr4NativeOutput()` /
-   `fsr4RawOutput()` must never take it.
-2. Teardown safety for the render thread comes from `vkQueueWaitIdle()` in
-   `teardownFsr4Path()` retiring in-flight GPU work.
-3. `setFsrViewport()` only flips `fsr4Ready_` when the preset **scale** changes,
-   not on pure window resize.
-4. The decode thread does synchronous `vkWaitForFences(UINT64_MAX)` per frame;
-   stopping it cleanly means letting the current dispatch finish.
+- Preserve negative results.
+- Keep invalidated evidence invalidated.
+- Keep conditional results conditional.
+- Do not rewrite old reports to create hindsight.
+- Do not convert archived imperative text back into current authority.
+- If maintenance changes what the preserved player actually does, update current/reference documentation and state why the historical record changed.
 
-## What is NOT junk
+## What should remain discoverable
 
-Before deleting anything, confirm it isn't referenced:
+Before deleting historical material, verify its evidentiary role. In particular, preserve or deliberately replace links to:
 
-- `tools/build_native_int8_pack.sh` — used by `resources/fsr4/*/README.md` and
-  `benchmarks/video_corpus/RESULTS.md`.
-- `tests/gpu_probe.cpp`, `tests/cm_dump.cpp` — disabled but intentional
-  opt-in GPU diagnostics.
-- `docs/reports/FSR4_RECONSTRUCTION_STATUS_20260709.md` — dated FSR4 reverse-engineering status.
-- `external/` headers are gitignored on purpose (re-vendored per build host).
+- FSR reconstruction/provenance records;
+- benchmark manifests and temporal evidence;
+- disabled opt-in diagnostics;
+- lattice and quality adjudication history;
+- clean-clone portability evidence;
+- the 2026-09-15 closure set.
 
-## Refactoring safety
+## Successor work
 
-Follow the `production-refactor` rules: small steps, tests green after each,
-no behavior changes, no stubs. See `docs/REFACTOR_PLAN.md` for the current
-refactor in progress.
+New custom Temporal Forge architecture belongs in its own active project/repository. This codebase may be mined for techniques, tests, evidence, datasets, or code when justified, but it should not be converted in place into the successor merely because doing so is convenient.
