@@ -33,6 +33,6 @@ Root-level [`README.md`](../README.md) describes the repository publicly. Root-l
 
 There is **no active FSR campaign in this repository**.
 
-The former quality, M6, motion-confidence, portability, and orchestration records have been retired from `docs/active/` into reports/archive during closure. Their original imperative language is historical and cannot reactivate the work.
+The former quality, M6, motion-confidence, portability, and orchestration authorities are retired. Their exact pre-closure contents are indexed in [`archive/FSR_ERA_ACTIVE_RECORDS_20260915.md`](archive/FSR_ERA_ACTIVE_RECORDS_20260915.md). The old `docs/active/` paths remain only as explicit closure tombstones so historical links stay meaningful; they contain no current execution authority.
 
 A future successor project may reuse evidence, algorithms, tests, tooling, datasets, or code from this repository when independently justified. It must not inherit FSR-specific architecture merely because it existed here.
