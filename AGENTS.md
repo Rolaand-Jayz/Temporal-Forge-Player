@@ -1,133 +1,56 @@
 # Temporal Forge Agent Instructions
 
-Temporal Forge is currently in a **QUALITY-FOCUSED phase**.
+## Repository status
 
-## Orchestration model
+**CLOSED HISTORICAL RESEARCH LINE — 2026-09-15**
 
-GLM 5.3 is the orchestrator. GLM 5.3 Flash workers execute.
+This repository preserves the FSR-centered Temporal Forge Player research era. It is no longer the active architecture for future Temporal Forge development.
 
-1. GLM 5.3's primary role is orchestration: decomposition, architecture,
-   planning, cross-cutting decisions, conflict resolution, escalation, and
-   final synthesis. Keep routine execution off the orchestrator.
-2. GLM 5.3's secondary role is high-difficulty implementation. GLM 5.3
-   implements directly only when the task is demonstrably beyond GLM 5.3
-   Flash capability — deep architectural reasoning, ambiguous cross-cutting
-   changes, or resolving conflicting worker results. Everything else is
-   delegated.
-3. All implementation, testing, routine debugging, repository exploration,
-   mechanical refactoring, benchmark runs, and repetitive execution go to
-   GLM 5.3 Flash workers by default.
-4. Flash workers have outstanding long-running task capabilities. Reflect
-   this in orchestration:
-   - Give workers complete, well-scoped tasks with explicit ownership,
-     constraints, expected outputs, and verification requirements — not
-     fragmented micro-steps.
-   - Let long jobs run. Do not busy-poll or interrupt workers mid-task;
-     use long waits and check only when the result is needed for the next
-     critical-path decision.
-   - Run independent work streams in parallel with disjoint write sets.
-5. The orchestrator works on the critical-path item locally while workers
-   run in parallel. Do not delegate-and-wait.
-6. GLM 5.3 is blind. GLM 5.3 Flash can see. Flash workers act as the eyes
-   of the orchestrator:
-   - All visual inspection — captured frames, screenshots, rendered output,
-     image comparisons, UI, charts, video frames, layout, pixels — is
-     delegated to Flash.
-   - The orchestrator never invents or assumes visual details. Visual
-     claims come only from concrete Flash observations with actionable
-     findings.
-   - For visually judged work, require Flash workers to visually verify
-     their own output and report what they actually saw.
+There is **no active quality campaign** and no standing instruction to continue FSR 4.1 optimization, expected-input reconstruction, motion/jitter tuning, or campaign capture.
 
-## Primary priority
+Start with:
 
-Improve reconstruction and presentation quality while preserving the existing fast native Vulkan/RDNA3 path.
+- [`docs/current/STATE.md`](docs/current/STATE.md)
+- [`docs/closure/README.md`](docs/closure/README.md)
+- [`docs/closure/FSR41_FINAL_ADJUDICATION_20260915.md`](docs/closure/FSR41_FINAL_ADJUDICATION_20260915.md)
+- [`docs/closure/EVALUATION_STANDARD.md`](docs/closure/EVALUATION_STANDARD.md)
 
-## Documentation maintenance
+## Authority rule
 
-Use [`docs/README.md`](docs/README.md) as the documentation entry point and
-[`docs/DOCUMENTATION_SYSTEM.md`](docs/DOCUMENTATION_SYSTEM.md) as the governing
-model. Distinguish current state, active work, current reference, historical
-reports, research, and archive. Completed or superseded plans must leave the
-active namespace; an active plan must not become an indefinite history journal.
-Accepted implementation changes must update current-state/reference docs when
-needed, preserve meaningful causal decisions, and resolve authority conflicts
-instead of adding another competing source.
+Archived plans, historical progress logs, benchmark runners, and old campaign prompts are evidence and causal context only. They are **not executable authority** merely because they contain imperative language.
 
-## Scope discipline
+Do not resume a closed campaign unless the maintainer explicitly directs that historical work to be reopened.
 
-Do not perform any of the following unless explicitly required by evidence from the active quality plan:
+## Default behavior in this repository
 
-- UI redesign
-- new player features
-- unrelated refactoring
-- model retraining
-- weight changes
-- convolution/topology changes
-- expensive optical flow
-- broad FSR reverse-engineering work
-- architecture churn unrelated to image quality
+Without an explicit maintainer request to change behavior:
 
-The player already functions well enough for this phase. UI and product polish are deferred.
+- preserve source, tests, benchmark evidence, provenance, and historical artifacts;
+- inspect and explain evidence without rewriting history;
+- correct broken links or demonstrably false documentation only when the correction preserves causal context;
+- do not tune FSR quality parameters;
+- do not start new FSR expected-input experiments;
+- do not change shaders, reconstruction behavior, model assets, weights, or backend policy;
+- do not reinterpret invalidated evidence as valid;
+- do not promote a historical candidate to current/default status;
+- do not treat this repository as the template for a successor Temporal Forge architecture.
 
-## Active execution plan
-
-Read and follow:
-
-`docs/active/QUALITY_CAMPAIGN.md`
-
-The execution plan is authoritative for the current quality campaign.
-
-## Working rules
-
-1. Read the complete active plan before changing code.
-2. Treat the experiment ordering, decision gates, and completion criteria as authoritative.
-3. Keep experimental quality parameters runtime-configurable. Do not require source edits or recompilation to test another strength/filter/value.
-4. Preserve the existing baseline path as a selectable control.
-5. Update the execution plan as work proceeds.
-6. Record measurements, observations, rejected hypotheses, and conclusions directly in the plan.
-7. Do not mark an experiment complete without its required validation.
-8. Do not continue blindly into later stages when an earlier result changes the correct path.
-9. Preserve reproducible benchmark artifacts and configuration files.
-10. Run the relevant tests and benchmark subset after behavior changes.
-11. Separate reconstruction defects from Qt/player presentation defects.
-12. Prefer the smallest change that directly tests the active hypothesis.
-13. Quality is the sole development priority for this phase. Avoid feature creep.
-
-## Personal-device performance safeguard
-
-Capture workflows do not pause or stop for running games. The user accepts
-that gaming can affect performance measurements; it must not be treated as an
-image-quality result. Never terminate the game or other user processes.
+Behavioral code changes require an explicit maintainer request.
 
 ## Evidence standard
 
-The goal is not to make the picture subjectively prettier by stacking arbitrary filters.
+Use [`docs/closure/EVALUATION_STANDARD.md`](docs/closure/EVALUATION_STANDARD.md).
 
-The goal is to identify where remaining visual errors originate and correct the responsible stage.
+Keep measured facts, observations, inferences, hypotheses, unresolved questions, and project decisions distinct. Preserve negative results. Keep conditional results conditional. Do not claim that FSR 4.1 can never work for video; the closure decision is narrower: the accumulated evidence no longer justifies FSR adaptation as the architectural center of Temporal Forge.
 
-Every retained quality change must be:
+## Documentation model
 
-- reproducible from configuration;
-- supported by captured output;
-- measured against appropriate references;
-- checked for performance impact;
-- checked for new artifacts;
-- documented with the reason it was retained.
+[`docs/README.md`](docs/README.md) is the documentation entry point. [`docs/DOCUMENTATION_SYSTEM.md`](docs/DOCUMENTATION_SYSTEM.md) defines the historical documentation model.
 
-Failed experiments are valid results. Record them and move on.
+The closure set supersedes stale imperative language in older active-era documents. Completed plans and progress records belong in the archive and must not regain authority through quotation or relocation.
 
-## Completion behavior
+## Successor boundary
 
-Continue working through the active plan until its completion criteria are satisfied or a genuine blocker is reached that cannot be resolved from repository evidence, available tooling, or controlled experimentation.
+Future Temporal Forge development should begin from the video-reconstruction objective and independently choose its architecture. Reuse from this repository is permitted when evidence supports it, but FSR-specific motion, jitter, history, scaling, graph, and composition assumptions are not inherited by default.
 
-Do not declare completion merely because the planned infrastructure or experiment code exists.
-
-
-## Mandatory worker completion wait protocol
-
-An agent that spawns workers may continue independent work while they run. It must not poll, check in with, query, or otherwise contact workers to ask whether they have finished. When no independent work remains and required work is blocked on workers, it must begin a 10,000-second blocking hold/wait. Every required worker must be explicitly instructed to interrupt or wake that hold when it reaches a terminal state.
-
-When the hold is interrupted, immediately evaluate all workers in the group. If any required worker remains active, begin another 10,000-second hold and continue this cycle until every required worker has reached a terminal state, outputs or explicit failures have been collected, and no worker spawned for that group remains active. Do not shorten the hold, impose an arbitrary number of cycles, infer failure from elapsed time, or produce the final result while required workers remain active. Once no workers remain, resume the original task. If the runtime cannot represent 10,000 seconds literally, use its longest supported blocking mechanism and renew it continuously under the same conditions.
-
-This rule applies to all agents and workers operating in this repository and is authoritative at repository scope.
+The old repository is a source of evidence, not a solution template.
