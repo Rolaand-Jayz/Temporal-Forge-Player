@@ -205,13 +205,19 @@ successor contract requires it, keeping the old player's behavior and tests gree
 ### 3.8 Color handling
 
 `ColorMeta` resolved at decode with explicit "unspecified" preservation. One explicit
-working-space boundary: decode → normalized planar float working space (range-explicit,
-inverse-EOTF selected from recorded transfer — v1 supports declared sRGB/709/linear/PQ/HLG
-mapping but REFUSES unspecified-transfer content in deterministic mode rather than assuming),
-matrix conversion from recorded matrix, chroma upsampling at recorded siting. Metrics and
-captures record which space they operate in. The old pipeline's silent assumptions
-(sRGB-EOTF default, primaries dropped, sws normalization without colorspace details) are
-documented as FSR-era behavior and not inherited.
+working-space boundary. **Implemented v1 policy (PROJECT DECISION, refined during Phase 2):**
+the working space is *display-referred planar float RGB in [0,1] at source resolution*;
+matrix/range/chroma-siting are applied from the recorded metadata (with any fallback
+RECORDED, never silent); the recorded transfer is **declared, not linearized** — v1
+reconstruction blends in the declared display-referred space and every manifest, capture,
+and metric row records which space that is. If `color.transfer` is unspecified, a
+`transferOverride` must name the assumption explicitly (`bt709|srgb|linear|pq|hlg`) and the
+override is recorded; unspecified transfer with no override **fails the run loudly**.
+Linearization / HDR working space is a later, explicitly-declared option behind the same
+boundary — the requirement at this gate is that no space is ever *silently* assumed, not
+that v1 linearizes. (The old pipeline's silent assumptions — sRGB-EOTF default, primaries
+dropped, sws normalization without colorspace details — are documented FSR-era behavior and
+not inherited.)
 
 ### 3.9 Codec side-information contract (measured, per guardrails)
 
