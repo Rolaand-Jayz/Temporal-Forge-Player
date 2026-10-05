@@ -10,8 +10,8 @@
 //     (any state a stage keeps must be resettable via onReset).
 #pragma once
 
-#include "anvil/core/Types.hpp"
-#include "anvil/core/Window.hpp"
+#include "anvil/core#/Types.hpp"
+#include "anvil/core#/Window.hpp"
 
 #include <memory>
 #include <string>
@@ -39,10 +39,13 @@ class CoarseCorrespondence {
  public:
   virtual ~CoarseCorrespondence() = default;
   virtual std::string name() const = 0;
-  // Produce the coarse prior for the CENTER frame's alignment to each
-  // neighbor. Null bypass: returns a zero-motion field labeled Estimated with
-  // quality 0 (declared no-op, testable as the zero-motion control arm).
-  virtual MotionField run(const FrameWindow& window, const NormalizedSideInfo& side) = 0;
+  // Produce one coarse prior per neighbor (aligned past-then-future). For
+  // neighbors the chosen prior cannot describe (e.g. codec past-only vectors
+  // vs a future neighbor), the entry is zero motion with quality 0 — an
+  // explicit "no prior" state, never fabricated coverage. Null bypass: zero
+  // motion fields labeled Estimated with quality 0 (the zero-motion control).
+  virtual std::vector<MotionField> run(const FrameWindow& window,
+                                       const NormalizedSideInfo& side) = 0;
   virtual void onReset() {}
 };
 
@@ -50,9 +53,10 @@ class ResidualRefiner {
  public:
   virtual ~ResidualRefiner() = default;
   virtual std::string name() const = 0;
-  // Refine a coarse prior toward image evidence. Null bypass: returns the
-  // seed unchanged.
-  virtual MotionField run(const FrameWindow& window, const MotionField& seed) = 0;
+  // Refine each coarse prior toward image evidence; output aligned 1:1 with
+  // the input vector. Null bypass: returns the seeds unchanged.
+  virtual std::vector<MotionField> run(const FrameWindow& window,
+                                       const std::vector<MotionField>& seeds) = 0;
   virtual void onReset() {}
 };
 
@@ -60,7 +64,9 @@ class VisibilityEstimator {
  public:
   virtual ~VisibilityEstimator() = default;
   virtual std::string name() const = 0;
-  virtual Visibility run(const FrameWindow& window, const MotionField& motion) = 0;
+  // One Visibility per neighbor, aligned with the motion vector above.
+  virtual std::vector<Visibility> run(const FrameWindow& window,
+                                      const std::vector<MotionField>& motion) = 0;
   virtual void onReset() {}
 };
 
@@ -69,17 +75,20 @@ class SampleGeometryEstimator {
   virtual ~SampleGeometryEstimator() = default;
   virtual std::string name() const = 0;
   // Default implementation must return Status::Unknown — no invented jitter.
-  virtual SampleGeometry run(const FrameWindow& window, const MotionField& motion) = 0;
+  virtual SampleGeometry run(const FrameWindow& window,
+                             const std::vector<MotionField>& motion) = 0;
   virtual void onReset() {}
 };
 
-// Input bundle handed to reconstruction (composed by the runner).
+// Input bundle handed to reconstruction (composed by the runner). The three
+// neighbor arrays are index-aligned: neighbors[i], neighborFrameIndices[i],
+// neighborMotion[i], neighborVisibility[i] describe the same window member.
 struct StageBundle {
   WorkingImage center;                        // center observation in working space
   std::vector<WorkingImage> neighbors;        // past then future, working space
   std::vector<int64_t> neighborFrameIndices;  // past then future
-  MotionField motion;                         // center->neighbors (grid space)
-  Visibility visibility;
+  std::vector<MotionField> neighborMotion;    // center -> neighbors[i]
+  std::vector<Visibility> neighborVisibility;
   SampleGeometry geometry;
 };
 
