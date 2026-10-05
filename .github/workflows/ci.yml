@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - main
+      - anvil/successor-build
   workflow_dispatch:
 
 permissions:
@@ -57,6 +58,9 @@ jobs:
 
       - name: CTest
         run: ctest --test-dir build --output-on-failure
+
+      - name: ANVIL arms e2e
+        run: python3 -m pytest -q tests/anvil/test_anvil_arms_e2e.py
 
   python-contracts:
     name: Python contract suite
