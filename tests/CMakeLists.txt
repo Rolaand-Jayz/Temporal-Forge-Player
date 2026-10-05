@@ -287,3 +287,13 @@ tforge_add_test(anvil_core_tests
             ../src/anvil/capture/Capture.cpp
             ../src/anvil/runner/PipelineConfig.cpp)
 target_link_libraries(anvil_core_tests PRIVATE anvil_core)
+tforge_add_test(anvil_obs_tests SOURCES anvil/obs_tests.cpp)
+target_link_libraries(anvil_obs_tests PRIVATE anvil_core)
+tforge_add_test(anvil_codecs_tests SOURCES anvil/codecs_tests.cpp)
+target_link_libraries(anvil_codecs_tests PRIVATE anvil_core)
+tforge_add_test(anvil_stages_tests SOURCES anvil/stages_tests.cpp)
+target_link_libraries(anvil_stages_tests PRIVATE anvil_core)
+tforge_add_test(anvil_capture_oracle_tests SOURCES anvil/capture_oracle_tests.cpp)
+target_link_libraries(anvil_capture_oracle_tests PRIVATE anvil_core)
+tforge_add_test(anvil_runner_tests SOURCES anvil/runner_tests.cpp)
+target_link_libraries(anvil_runner_tests PRIVATE anvil_core)
