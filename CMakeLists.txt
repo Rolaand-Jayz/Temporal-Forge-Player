@@ -155,6 +155,9 @@ file(GLOB_RECURSE TFORGE_LIB_SOURCES CONFIGURE_DEPENDS
 )
 list(FILTER TFORGE_LIB_SOURCES EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/external/.*")
 list(FILTER TFORGE_LIB_SOURCES EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/src/main\\.cpp$")
+# ANVIL successor code (src/anvil/) builds as its own FSR-free targets below;
+# it must never be globbed into the FSR-era library (docs/anvil/RECONCILIATION_20261005.md 3.1).
+list(FILTER TFORGE_LIB_SOURCES EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/src/anvil/.*")
 
 add_library(temporal_forge_lib STATIC ${TFORGE_LIB_SOURCES} ${FSR4_SHADER_FILES}
     ${FSR1_SHADER_FILES})
@@ -216,6 +219,28 @@ set_target_properties(temporal_forge_player PROPERTIES
     WIN32_EXECUTABLE FALSE
     MACOSX_BUNDLE FALSE
 )
+
+# --- ANVIL successor targets (FSR-free, Qt-free; docs/anvil/) ---
+# anvil_core compiles an explicit FSR-free source set; it never links the
+# FSR-era library or Qt. The offline runner is a plain CLI executable.
+file(GLOB_RECURSE ANVIL_CORE_SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/anvil/*.cpp")
+list(FILTER ANVIL_CORE_SOURCES EXCLUDE REGEX "/runner/main\\.cpp$")
+add_library(anvil_core STATIC ${ANVIL_CORE_SOURCES})
+target_compile_features(anvil_core PUBLIC cxx_std_23)
+target_compile_definitions(anvil_core PUBLIC ANVIL_SUCCESSOR_BUILD=1)
+target_include_directories(anvil_core PUBLIC
+    "${CMAKE_CURRENT_SOURCE_DIR}/src"
+    ${FFMPEG_INCLUDE_DIRS})
+target_link_libraries(anvil_core PUBLIC Threads::Threads)
+foreach(lib ${FFMPEG_LIBRARIES})
+    target_link_libraries(anvil_core PUBLIC ${lib})
+endforeach()
+target_link_directories(anvil_core PUBLIC ${FFMPEG_LIBRARY_DIRS})
+
+add_executable(anvil_runner src/anvil/runner/main.cpp)
+target_compile_features(anvil_runner PRIVATE cxx_std_23)
+target_link_libraries(anvil_runner PRIVATE anvil_core)
 
 # --- tests ---
 enable_testing()

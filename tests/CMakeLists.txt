@@ -280,3 +280,10 @@ tforge_add_test(vulkan_capability_plan_tests
             ../src/render/VulkanContext.cpp
             ../src/util/Log.cpp)
 target_link_libraries(vulkan_capability_plan_tests PRIVATE Vulkan::Vulkan)
+
+# --- ANVIL successor tests (docs/anvil/) ---
+tforge_add_test(anvil_core_tests
+    SOURCES anvil_core_tests.cpp
+            ../src/anvil/capture/Capture.cpp
+            ../src/anvil/runner/PipelineConfig.cpp)
+target_link_libraries(anvil_core_tests PRIVATE anvil_core)
