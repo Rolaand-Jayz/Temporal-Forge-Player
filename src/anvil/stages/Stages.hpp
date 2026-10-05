@@ -10,8 +10,8 @@
 //     (any state a stage keeps must be resettable via onReset).
 #pragma once
 
-#include "anvil/core#/Types.hpp"
-#include "anvil/core#/Window.hpp"
+#include "anvil/core/Types.hpp"
+#include "anvil/core/Window.hpp"
 
 #include <memory>
 #include <string>
