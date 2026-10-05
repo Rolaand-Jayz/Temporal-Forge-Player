@@ -36,7 +36,10 @@
 # unused. Pure stdlib only (struct/array); no numpy dependency — the .npy
 # writer is byte-identical to anvil::writeNpy (Capture.cpp).
 #
-# CLI: make_fixtures.py --out DIR [--frames N] [--size WxH]
+# CLI: make_fixtures.py --out DIR [--frames N] [--size WxH] [--no-clip]
+#   --no-clip skips the ffmpeg encode step entirely (fixtures only, for fast
+#   test loops that do not need clip.mp4); every other output is identical.
+#   Default (no flag) behavior is unchanged.
 import argparse
 import json
 import os
@@ -180,6 +183,8 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--frames", type=int, default=16)
     ap.add_argument("--size", default="64x48", help="WxH, both multiples of 8")
+    ap.add_argument("--no-clip", action="store_true",
+                    help="skip the ffmpeg encode; write fixtures only")
     args = ap.parse_args()
 
     if "x" not in args.size:
@@ -281,6 +286,10 @@ def main():
     manifest = ["fixtures written to %s" % os.path.abspath(out)]
     manifest += ["  " + p for p in written]
     manifest.append("  (%d records in oracle_index.json)" % len(records))
+    if args.no_clip:
+        manifest.append("  clip.mp4 SKIPPED: --no-clip (fixtures only)")
+        print("\n".join(manifest))
+        return 0
     clip_ok = have_ffmpeg() and encode_clip(out, args.frames, width, height)
     if clip_ok:
         manifest.append("  clip.mp4 (libx264 yuv420p crf28 veryfast gop=%d)" % args.frames)

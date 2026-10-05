@@ -34,6 +34,13 @@ struct ManifestOutputRecord {
   std::string sha256;   // lowercase hex of the file bytes
 };
 
+// One reset boundary observed during window assembly (WindowAssembler).
+// Additive anvil.run_manifest.v1 field; a clean run carries an empty array.
+struct ManifestResetRecord {
+  int64_t frameIndex = -1;  // fileFrameIndex of the observation that broke the run
+  std::string cause;        // "invalid" | "discontinuity" | "seek" | "dimensions"
+};
+
 struct RunManifest {
   std::string schema = "anvil.run_manifest.v1";
   std::string runId;
@@ -56,6 +63,7 @@ struct RunManifest {
   int64_t framesEmitted = 0;
   int64_t skippedWarmup = 0;      // windows lacking past neighbors
   int64_t skippedTrailing = 0;    // windows lacking future neighbors
+  std::vector<ManifestResetRecord> resets;  // ADDITIVE v1 field, fixed occurrence order
   // window
   int past = 0;
   int future = 0;

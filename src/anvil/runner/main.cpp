@@ -14,6 +14,7 @@
 #include "anvil/oracle/SidecarOracle.hpp"
 #include "anvil/runner/Manifest.hpp"
 #include "anvil/runner/PipelineConfig.hpp"
+#include "anvil/runner/WindowAssembler.hpp"
 #include "anvil/stages/StageFactories.hpp"
 #include "anvil/stages/Stages.hpp"
 
@@ -24,7 +25,6 @@
 #include <cctype>
 #include <cstdio>
 #include <cstdlib>
-#include <deque>
 #include <filesystem>
 #include <fstream>
 #include <memory>
@@ -550,37 +550,20 @@ int runPipeline(const PipelineConfig& cfg, const Provenance& prov,
   // dwfrun-015b2ece).
   FileObservationSource source(cfg.inputPath, cfg.coarse == "codec");
 
-  // --- sliding window buffer ----------------------------------------------
-  // Buffer holds up to past+future+1 contiguous valid observations; a window
-  // is emitted only when the full span is available in display order. The
-  // buffer owns MUTABLE observations (the runner stamps windowOffset per
-  // emission); stages always receive them as const.
-  std::deque<std::shared_ptr<Observation>> buf;
-  uint64_t expectedNext = 0;
-  bool haveExpected = false;
-  uint32_t runGeneration = 0;
+  // --- sliding window assembly ---------------------------------------------
+  // WindowAssembler owns the buffer state machine: a window is emitted only
+  // when the full [past+center+future] span of contiguous valid observations
+  // is buffered; invalid frames, index discontinuities, seek-generation
+  // changes, and mid-stream dimension/format changes surface as ResetEvents.
+  // The runner stages the buffer MUTABLE observations (windowOffset is
+  // stamped per emission); stages always receive them as const.
+  WindowAssembler assembler(cfg.past, cfg.future);
+  std::vector<ManifestResetRecord> resets;
 
   int64_t framesEmitted = 0;
-  int64_t skippedWarmup = 0;
-  int64_t skippedTrailing = 0;
   int64_t firstEmitted = -1;
   int64_t lastEmitted = -1;
   std::vector<ManifestOutputRecord> outputs;
-
-  auto flushRun = [&]() {
-    // Frames left in the buffer never became centers: the first `past` of
-    // them lack past neighbors (warmup), the rest lack future neighbors
-    // (trailing). Both are skipped and counted, never half-windowed.
-    const int64_t remaining = static_cast<int64_t>(buf.size());
-    if (remaining > 0) {
-      const int64_t warm = std::min<int64_t>(cfg.past, remaining);
-      skippedWarmup += warm;
-      skippedTrailing += remaining - warm;
-    }
-    buf.clear();
-    haveExpected = false;
-    resetStages();
-  };
 
   auto captureMotionFields = [&](const std::string& stageId,
                                  const std::vector<MotionField>& fields,
@@ -648,41 +631,35 @@ int runPipeline(const PipelineConfig& cfg, const Provenance& prov,
 
   Observation obs;
   while (source.next(obs)) {
-    if (source.generation() != runGeneration) {
-      // Generation change invalidates frame identity: flush and restart.
-      runGeneration = source.generation();
-      flushRun();
-    }
-    if (!obs.id.valid) {
-      // Decode errors/concealment break temporal continuity: flush loudly
-      // (counted as part of the discarded run, not as warmup/trailing).
-      flushRun();
-      continue;
-    }
+    // Range filtering stays outside the assembler, exactly as before: frames
+    // below firstFrame were never buffered, so the assembler's boundaries on
+    // them were no-ops on an always-empty pre-range buffer (frame indices are
+    // monotonic within one seek generation, so a pre-range frame can never
+    // follow a buffered one without a generation change in between).
     if (obs.id.fileFrameIndex < static_cast<uint64_t>(cfg.firstFrame)) continue;
     if (cfg.lastFrame >= 0 &&
         obs.id.fileFrameIndex > static_cast<uint64_t>(cfg.lastFrame)) {
       break;  // sequential display order: everything past the range is out
     }
-    if (haveExpected && obs.id.fileFrameIndex != expectedNext) {
-      flushRun();  // non-contiguous observation
+    const PushResult pr = assembler.push(std::move(obs), source.generation());
+    for (const ResetEvent& ev : pr.resets) {
+      if (ev.cause == ResetCause::Dimensions) {
+        // v1 has no rescale path: silent mixed-dimension output is
+        // forbidden — fail the run loudly (exit 4).
+        failErr = "frame " + std::to_string(ev.frameIndex) +
+                  ": mid-stream plane dimension/pixel-format change" +
+                  (ev.detail.empty() ? "" : " (" + ev.detail + ")") +
+                  " — v1 has no rescale path, refusing to emit "
+                  "mixed-dimension output";
+        return kExitRuntime;
+      }
+      // Generation/index/invalid boundaries: flush stage history and
+      // continue (observable in the manifest's additive "resets" array).
+      resets.push_back({static_cast<int64_t>(ev.frameIndex), resetCauseName(ev.cause)});
+      resetStages();
     }
-    haveExpected = true;
-    expectedNext = obs.id.fileFrameIndex + 1;
-    buf.push_back(std::make_shared<Observation>(std::move(obs)));
-    if (buf.size() < static_cast<size_t>(cfg.past) + cfg.future + 1) continue;
-
-    // --- full span available: assemble and process one window -------------
-    // windowOffset convention (Types.hpp / sidecar records): thisIndex -
-    // targetIndex, negative for past neighbors. Contiguity makes the offset
-    // purely positional: array index k sits at offset k - past.
-    for (size_t k = 0; k < buf.size(); ++k) {
-      buf[k]->windowOffset = static_cast<int>(k) - cfg.past;
-    }
-    FrameWindow window;
-    window.centerIdx = static_cast<size_t>(cfg.past);
-    window.observations.assign(buf.begin(), buf.end());
-    buf.pop_front();
+    if (pr.windows.empty()) continue;
+    const FrameWindow& window = pr.windows.front();
 
     // Stage chain in DAG order. Stage failures (e.g. a missing oracle record)
     // arrive as exceptions and fail the run loudly — never degraded silently.
@@ -812,7 +789,7 @@ int runPipeline(const PipelineConfig& cfg, const Provenance& prov,
     ++framesEmitted;
   }
   const std::string srcErr = source.lastError();
-  flushRun();  // trailing accounting for the final (partial) run
+  assembler.endOfStream();  // trailing accounting for the final (partial) run
   if (!srcErr.empty()) {
     failErr = "observation source: " + srcErr;
     return kExitRuntime;
@@ -862,8 +839,9 @@ int runPipeline(const PipelineConfig& cfg, const Provenance& prov,
   manifest.frameFirst = firstEmitted;
   manifest.frameLast = lastEmitted;
   manifest.framesEmitted = framesEmitted;
-  manifest.skippedWarmup = skippedWarmup;
-  manifest.skippedTrailing = skippedTrailing;
+  manifest.skippedWarmup = assembler.stats().skippedWarmup;
+  manifest.skippedTrailing = assembler.stats().skippedTrailing;
+  manifest.resets = std::move(resets);
   manifest.past = cfg.past;
   manifest.future = cfg.future;
   // Record the implementation name each stage reports (what actually ran);

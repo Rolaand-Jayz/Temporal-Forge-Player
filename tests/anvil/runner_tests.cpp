@@ -5,6 +5,7 @@
 #include "anvil/core/Sha256.hpp"
 #include "anvil/runner/Manifest.hpp"
 #include "anvil/runner/PipelineConfig.hpp"
+#include "anvil/runner/WindowAssembler.hpp"
 
 #include <algorithm>
 #include <cstdio>
@@ -312,6 +313,211 @@ void testManifestSerialization() {
   CHECK(m2.toJson().find("line1\\nline2") != std::string::npos);
 }
 
+// ---------------------------------------------------------------------------
+// WindowAssembler (sliding-window state machine)
+// ---------------------------------------------------------------------------
+
+// Synthetic observation: identity only matters to the assembler; planes are
+// described by extent + bit depth (the normalized 8-bit 4:2:0 model).
+Observation makeObs(uint64_t index, uint32_t gen, bool valid, int w = 64, int h = 48,
+                    int bitDepth = 8) {
+  Observation o;
+  o.id.fileFrameIndex = index;
+  o.id.seekGeneration = gen;
+  o.id.valid = valid;
+  o.planes.width = w;
+  o.planes.height = h;
+  o.color.bitDepth = bitDepth;
+  return o;
+}
+
+// Feed a whole synthetic stream and collect the results.
+struct FedStream {
+  std::vector<FrameWindow> windows;
+  std::vector<ResetEvent> resets;
+};
+
+FedStream feed(WindowAssembler& a, std::vector<Observation> obsList) {
+  FedStream fed;
+  for (Observation& o : obsList) {
+    const PushResult pr = a.push(std::move(o), 0);
+    fed.windows.insert(fed.windows.end(), pr.windows.begin(), pr.windows.end());
+    fed.resets.insert(fed.resets.end(), pr.resets.begin(), pr.resets.end());
+  }
+  return fed;
+}
+
+// (a) Warmup/trailing accounting: past=2, future=1 over 10 contiguous frames.
+void testWindowWarmupTrailingAccounting() {
+  WindowAssembler a(2, 1);
+  std::vector<Observation> obsList;
+  for (uint64_t i = 0; i < 10; ++i) obsList.push_back(makeObs(i, 0, true));
+  const FedStream fed = feed(a, std::move(obsList));
+  // Centers 2..8 = 7 emitted windows; frames 0,1 lack past neighbors (warmup),
+  // frame 9 lacks a future neighbor (trailing).
+  CHECK(fed.windows.size() == 7);
+  CHECK(fed.resets.empty());
+  a.endOfStream();
+  CHECK(a.stats().skippedWarmup == 2);
+  CHECK(a.stats().skippedTrailing == 1);
+  CHECK(a.stats().skippedDiscontinuity == 0);
+  for (size_t k = 0; k < fed.windows.size(); ++k) {
+    const FrameWindow& w = fed.windows[k];
+    CHECK(w.observations.size() == 4);
+    CHECK(w.centerIdx == 2);
+    CHECK(w.center().id.fileFrameIndex == 2 + k);
+    for (size_t n = 0; n < w.observations.size(); ++n) {
+      CHECK(w.observations[n]->id.fileFrameIndex == 2 + k - 2 + n);
+    }
+  }
+  // Offsets are positional under contiguity (-2,-1,0,+1). Observations are
+  // SHARED across sliding windows and re-stamped per emission (inherited
+  // main.cpp aliasing: stages consume a window immediately, so only the
+  // final window's stamps are stable once the whole stream has been fed).
+  const FrameWindow& last = fed.windows.back();
+  for (size_t n = 0; n < last.observations.size(); ++n) {
+    CHECK(last.observations[n]->windowOffset == static_cast<int>(n) - 2);
+  }
+}
+
+// (b) Invalid frame at index 3 flushes (cause=invalid), then buffering resumes.
+void testWindowInvalidFrameReset() {
+  WindowAssembler a(1, 0);  // span 2
+  std::vector<Observation> obsList;
+  for (uint64_t i = 0; i < 6; ++i) obsList.push_back(makeObs(i, 0, i != 3));
+  const FedStream fed = feed(a, std::move(obsList));
+  a.endOfStream();
+  CHECK_EQ_STR(std::string(resetCauseName(fed.resets[0].cause)), "invalid");
+  CHECK(fed.resets.size() == 1);
+  CHECK(fed.resets[0].frameIndex == 3);
+  // Centers 1,2 before the break (past=1 puts the center at buf[1]); center 5
+  // after the resume.
+  CHECK(fed.windows.size() == 3);
+  CHECK(fed.windows[0].center().id.fileFrameIndex == 1);
+  CHECK(fed.windows[1].center().id.fileFrameIndex == 2);
+  CHECK(fed.windows[2].center().id.fileFrameIndex == 5);
+  // Counts add up over the 5 valid frames (0,1,2,4,5): 3 centers + frame 2
+  // discarded at the break (discontinuity) + frame 5 left at end (warmup).
+  CHECK(a.stats().skippedDiscontinuity == 1);
+  CHECK(a.stats().skippedWarmup == 1);
+  CHECK(a.stats().skippedTrailing == 0);
+}
+
+// (c) Frame-index jump (frame 3 missing) flushes with cause=discontinuity.
+void testWindowIndexDiscontinuityReset() {
+  WindowAssembler a(1, 0);  // span 2
+  std::vector<Observation> obsList;
+  for (uint64_t i : {0ull, 1ull, 2ull, 4ull, 5ull, 6ull}) {
+    obsList.push_back(makeObs(i, 0, true));
+  }
+  const FedStream fed = feed(a, std::move(obsList));
+  a.endOfStream();
+  CHECK(fed.resets.size() == 1);
+  CHECK_EQ_STR(std::string(resetCauseName(fed.resets[0].cause)), "discontinuity");
+  CHECK(fed.resets[0].frameIndex == 4);
+  // Centers 1,2 before the jump; centers 5,6 after the restart.
+  CHECK(fed.windows.size() == 4);
+  CHECK(fed.windows[0].center().id.fileFrameIndex == 1);
+  CHECK(fed.windows[1].center().id.fileFrameIndex == 2);
+  CHECK(fed.windows[2].center().id.fileFrameIndex == 5);
+  CHECK(fed.windows[3].center().id.fileFrameIndex == 6);
+  // Counts add up over the 6 present frames: 4 centers + frame 2 discarded
+  // at the jump + frame 6 left at end (warmup).
+  CHECK(a.stats().skippedDiscontinuity == 1);
+  CHECK(a.stats().skippedWarmup == 1);
+  CHECK(a.stats().skippedTrailing == 0);
+}
+
+// (d) Seek-generation change flushes with cause=seek; indices may restart.
+void testWindowSeekGenerationReset() {
+  WindowAssembler a(0, 0);  // span 1: every valid frame is a center
+  std::vector<Observation> obsList = {
+      makeObs(0, 0, true), makeObs(1, 0, true),
+      makeObs(0, 1, true), makeObs(1, 1, true)};  // seek between index 1 and 0
+  FedStream fed;
+  // feed() passes generation 0; push the generation change by hand.
+  for (size_t k = 0; k < obsList.size(); ++k) {
+    const uint32_t gen = k < 2 ? 0 : 1;
+    const PushResult pr = a.push(std::move(obsList[k]), gen);
+    fed.windows.insert(fed.windows.end(), pr.windows.begin(), pr.windows.end());
+    fed.resets.insert(fed.resets.end(), pr.resets.begin(), pr.resets.end());
+  }
+  a.endOfStream();
+  CHECK(fed.resets.size() == 1);
+  CHECK_EQ_STR(std::string(resetCauseName(fed.resets[0].cause)), "seek");
+  CHECK(fed.resets[0].frameIndex == 0);
+  CHECK(fed.windows.size() == 4);
+  CHECK(fed.windows[2].center().id.fileFrameIndex == 0);  // post-seek restart
+  CHECK(a.stats().skippedDiscontinuity == 0);
+  CHECK(a.stats().skippedWarmup == 0);
+  CHECK(a.stats().skippedTrailing == 0);
+  CHECK(a.generation() == 1);
+  // The very first push adopts the source generation without an event (the
+  // old runner's pre-buffer generation flush was a no-op on an empty buffer).
+  WindowAssembler b(0, 0);
+  const PushResult pr = b.push(makeObs(5, 7, true), 7);
+  CHECK(pr.resets.empty());
+  CHECK(pr.windows.size() == 1);
+  CHECK(b.generation() == 7);
+}
+
+// (e) Mid-stream dimension/format change is a Dimensions reset boundary with
+// precise detail (the runner fails the run loudly on this cause).
+void testWindowDimensionChangeReset() {
+  WindowAssembler a(0, 0);
+  std::vector<Observation> obsList = {
+      makeObs(0, 0, true, 64, 48), makeObs(1, 0, true, 64, 48),
+      makeObs(2, 0, true, 32, 24)};  // mid-stream dimension change
+  const FedStream fed = feed(a, std::move(obsList));
+  a.endOfStream();
+  CHECK(fed.resets.size() == 1);
+  CHECK_EQ_STR(std::string(resetCauseName(fed.resets[0].cause)), "dimensions");
+  CHECK(fed.resets[0].frameIndex == 2);
+  CHECK(fed.resets[0].detail.find("64x48x8") != std::string::npos);
+  CHECK(fed.resets[0].detail.find("32x24x8") != std::string::npos);
+  CHECK(fed.windows.size() == 2);  // frames 0,1 only; frame 2 never buffered
+  CHECK(a.buffered() == 0);
+  // Pixel-format class axis (bit depth) participates too.
+  WindowAssembler b(0, 0);
+  const FedStream fedB = feed(b, {makeObs(0, 0, true, 64, 48, 8),
+                                  makeObs(1, 0, true, 64, 48, 10)});
+  CHECK(fedB.resets.size() == 1);
+  CHECK_EQ_STR(std::string(resetCauseName(fedB.resets[0].cause)), "dimensions");
+}
+
+// (f) A clean contiguous run emits no reset events at all.
+void testWindowCleanRunNoResets() {
+  WindowAssembler a(2, 1);
+  std::vector<Observation> obsList;
+  for (uint64_t i = 0; i < 10; ++i) obsList.push_back(makeObs(i, 0, true));
+  const FedStream fed = feed(a, std::move(obsList));
+  a.endOfStream();
+  CHECK(fed.resets.empty());
+  CHECK(fed.windows.size() == 7);
+  CHECK(a.stats().skippedWarmup == 2 && a.stats().skippedTrailing == 1);
+  CHECK(a.stats().skippedDiscontinuity == 0);
+}
+
+void testWindowResetCauseNames() {
+  CHECK_EQ_STR(std::string(resetCauseName(ResetCause::Invalid)), "invalid");
+  CHECK_EQ_STR(std::string(resetCauseName(ResetCause::Discontinuity)), "discontinuity");
+  CHECK_EQ_STR(std::string(resetCauseName(ResetCause::Seek)), "seek");
+  CHECK_EQ_STR(std::string(resetCauseName(ResetCause::Dimensions)), "dimensions");
+}
+
+// The manifest's additive "resets" array serializes in fixed position and
+// order; a default (clean) manifest carries an empty array.
+void testManifestResetsSerialization() {
+  anvil::RunManifest m;
+  m.resets = {{3, "invalid"}, {7, "dimensions"}};
+  const std::string json = m.toJson();
+  CHECK(json.find("\"skippedTrailing\":0},\"resets\":[{\"frameIndex\":3,"
+                  "\"cause\":\"invalid\"},{\"frameIndex\":7,\"cause\":\"dimensions\"}]"
+                  ",\"window\":{") != std::string::npos);
+  anvil::RunManifest clean;
+  CHECK(clean.toJson().find("\"resets\":[]") != std::string::npos);
+}
+
 }  // namespace
 
 int main() {
@@ -324,6 +530,14 @@ int main() {
   testConfigRejections();
   testReplayKeyStability();
   testManifestSerialization();
+  testWindowWarmupTrailingAccounting();
+  testWindowInvalidFrameReset();
+  testWindowIndexDiscontinuityReset();
+  testWindowSeekGenerationReset();
+  testWindowDimensionChangeReset();
+  testWindowCleanRunNoResets();
+  testWindowResetCauseNames();
+  testManifestResetsSerialization();
   if (g_failures != 0) {
     std::fprintf(stderr, "anvil_runner_tests: %d check(s) FAILED\n", g_failures);
     return 1;

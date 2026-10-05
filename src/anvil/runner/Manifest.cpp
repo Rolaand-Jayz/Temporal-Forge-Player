@@ -74,6 +74,14 @@ std::string RunManifest::toJson() const {
       << ",\"emitted\":" << framesEmitted
       << ",\"skippedWarmup\":" << skippedWarmup
       << ",\"skippedTrailing\":" << skippedTrailing << "}"
+      // Additive field: reset boundaries in fixed occurrence order.
+      << ",\"resets\":[";
+  for (size_t i = 0; i < resets.size(); ++i) {
+    if (i != 0) out << ',';
+    out << "{\"frameIndex\":" << resets[i].frameIndex
+        << ",\"cause\":" << escapeJson(resets[i].cause) << "}";
+  }
+  out << "]"
       << ",\"window\":{\"past\":" << past << ",\"future\":" << future << "}"
       << ",\"stages\":{"
       << "\"sideInfoNormalizer\":" << escapeJson(sideInfoNormalizer)
