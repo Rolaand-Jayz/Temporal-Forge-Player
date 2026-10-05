@@ -232,6 +232,19 @@ does not depend on them.
 
 ## 4. Conflicts and their resolution (kept explicit)
 
+0. **Implementation deviations recorded during the substrate wave (2026-10-05):**
+   - `visibility: "photo_fwbw"` computes its photometric residual on normalized **luma**
+     rather than mean-over-RGB: the pinned `VisibilityEstimator::run(window, motion)`
+     contract passes no working images, and working RGB does not exist at that pipeline
+     point. Documented in `VisibilityEstimator.cpp`; interface or constants may be revisited
+     before the research campaign without breaking the arm semantics.
+   - `OracleDataSource::loadGroundTruth` returns `SourcePlanes`, which is overloaded as a
+     generic 3-plane u8 carrier for RGB ground truth (the fixture's (3,H,W) payload maps
+     1:1 into y/u/v planes). A dedicated RGB carrier type is a candidate cleanup before
+     the campaign; flagged in the oracle module header docs.
+   - The v1 working-space decision (display-referred, declared-not-linearized) refined
+     §3.8 below — that section records the implemented policy.
+
 1. **Hook carrier**: observability audit proposed riding `ITemporalUpscalerBackend`;
    proposal audit proposed new stage interfaces. **Resolution:** new anvil stage interfaces
    (the old interface's packet is FSR-shaped); the old 6-method lifecycle *shape* informs
