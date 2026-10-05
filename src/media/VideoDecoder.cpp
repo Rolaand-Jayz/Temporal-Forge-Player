@@ -123,6 +123,7 @@ bool VideoDecoder::open(AVFormatContext* fmt, int streamIndex) {
                         std::strcmp(motionMode, "codec_refined") == 0 ||
                         std::strcmp(motionMode, "refined") == 0));
     const bool disableHwDecode =
+        softwareForced_ || // ANVIL successor addition (default false: player path unchanged)
         std::getenv("TFORGE_DISABLE_HW_DECODE") != nullptr ||
         motionMetadataRequested;
     if (!disableHwDecode &&
@@ -143,7 +144,7 @@ bool VideoDecoder::open(AVFormatContext* fmt, int streamIndex) {
         logWarn("VideoDecoder: VAAPI device creation failed; continuing with software decode");
     }
     AVDictionary* opts = nullptr;
-    av_dict_set(&opts, "threads", "auto", 0);
+    av_dict_set(&opts, "threads", threadCount_ > 0 ? std::to_string(threadCount_).c_str() : "auto", 0); // ANVIL addition: pin threads when set (additive; player default auto)
     // Low-latency-friendly but keep correct PTS handling.
     if (avcodec_open2(codec_, codec, &opts) < 0) {
         logError("VideoDecoder: avcodec_open2 failed");
@@ -306,6 +307,13 @@ bool VideoDecoder::receiveFrame(DecodedVideoFrame& out) {
     out.frameIndex = frameCounter_++;
     out.ptsTicks = sourceFrame->pts != AV_NOPTS_VALUE ? sourceFrame->pts : -1;
     out.durationTicks = sourceFrame->duration;
+    // ANVIL successor additions (additive; read from the ORIGINAL decoded
+    // frame so the DRM/transfer path above cannot lose them):
+    // pkt_dts recorded when present (AV_NOPTS_VALUE -> -1 sentinel), and the
+    // AV_FRAME_FLAG_CORRUPT marker for FrameIdentity::valid. The player path
+    // never reads either field.
+    out.pktDtsTicks = frame_->pkt_dts != AV_NOPTS_VALUE ? frame_->pkt_dts : -1;
+    out.corrupt = (frame_->flags & AV_FRAME_FLAG_CORRUPT) != 0;
 
     // Convert PTS/duration to microseconds using the stream timebase.
     AVRational tb = codec_->pkt_timebase;

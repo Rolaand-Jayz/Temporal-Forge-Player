@@ -42,6 +42,13 @@ struct DecodedVideoFrame {
     int64_t ptsUs = 0;          // presentation timestamp, microseconds
     int64_t durationUs = 0;     // frame duration, microseconds
     int64_t ptsTicks = -1;      // raw pts in stream timebase (-1 = none)
+    // ANVIL successor addition (reconciliation 3.6, additive): raw packet DTS
+    // in stream timebase (-1 = absent). The player path never reads it; the
+    // observation source records it as FrameIdentity::dtsUs.
+    int64_t pktDtsTicks = -1;
+    // ANVIL successor addition (additive): FFmpeg AV_FRAME_FLAG_CORRUPT /
+    // decode-error marker. The player path never reads it.
+    bool corrupt = false;
     int64_t durationTicks = 0;
     int width = 0;
     int height = 0;
@@ -122,6 +129,19 @@ public:
         motionMetadataRequested_ = requested;
     }
 
+    // setSoftwareDecodeForced: forbid the VAAPI hardware path before open().
+    // ANVIL successor addition (reconciliation 3.6, additive; default false so
+    // the player path is unchanged): the deterministic successor decode mode is
+    // software-only (reconciliation 3.7 — hwaccel is a measured
+    // non-determinism source, and hardware frames carry no host planes or
+    // motion side data the observation source must copy).
+    void setSoftwareDecodeForced(bool forced) { softwareForced_ = forced; }
+
+    // setThreadCount: pin the decoder thread count before open() (0 = FFmpeg
+    // default/auto). ANVIL successor addition (additive; the player path keeps
+    // auto): reconciliation 3.7 pins decode threading in deterministic mode.
+    void setThreadCount(int n) { threadCount_ = n; }
+
     // close: free the codec context + frame (idempotent).
     //        Called by: PlaybackEngine::close, ::openUrl (re-open), dtor.
     void close();
@@ -186,6 +206,8 @@ private:
     uint64_t frameCounter_ = 0;
     bool hwaccelEnabled_ = false;
     bool motionMetadataRequested_ = false;
+    bool softwareForced_ = false; // ANVIL successor addition, default false
+    int threadCount_ = 0;         // ANVIL successor addition, 0 = auto (player default)
     bool drainComplete_ = false;
 };
 

@@ -1,14 +1,27 @@
 // ANVIL capture implementation: minimal .npy v1.0 writer/reader and the disk
-// capture sink. The sink writes synchronously for now; the ring/writer-thread
-// upgrade lands with the substrate wave (docs/anvil/RECONCILIATION_20261005.md 3.7).
+// capture sink. The sink keeps a bounded in-memory FIFO ring (capacity from
+// the constructor arg) drained by a single writer thread.
+//
+// Determinism note (PROJECT DECISION, docs/anvil/RECONCILIATION_20261005.md
+// 3.7): capture() never blocks on disk; when the ring is full it blocks on a
+// condition variable until the writer drains a slot. Drop-oldest is FORBIDDEN
+// (silent record loss) and this bounded-blocking backpressure is itself
+// deterministic: the ring is strict FIFO with a single producer (the runner
+// calls capture() from one thread) and a single consumer, so the set and order
+// of files written is independent of thread timing; only wall-clock duration
+// varies. No atomics are used for output-affecting state; all shared state is
+// under one mutex.
 #include "anvil/capture/Capture.hpp"
 
 #include <algorithm>
+#include <condition_variable>
+#include <deque>
 #include <cstdio>
 #include <filesystem>
 #include <fstream>
 #include <mutex>
 #include <sstream>
+#include <thread>
 
 namespace fs = std::filesystem;
 
@@ -119,15 +132,74 @@ bool readNpy(const std::string& path, std::vector<int64_t>& shape, DType& dtype,
   return static_cast<bool>(in);
 }
 
+// File name for a captured record: <fileFrameIndex>-<name>.<dtype>.npy.
+// Kept byte-identical with the previous synchronous implementation so
+// capture_index.json consumers do not change.
+static std::string recordFileName(const CapturedTensor& tensor) {
+  std::ostringstream name;
+  name << tensor.fileFrameIndex << "-" << tensor.name
+       << (tensor.dtype == DType::F32 ? ".f32.npy" : ".u8.npy");
+  return name.str();
+}
+
 struct DiskCaptureSink::Impl {
-  std::string root;
-  size_t ring = 0;  // reserved for the writer-thread upgrade
+  explicit Impl(std::string rootDir, size_t ringCapacity)
+      : root(std::move(rootDir)), ringCapacity(ringCapacity) {}
+
+  void writerLoop();
+
+  const std::string root;
+  const size_t ringCapacity;
+
   std::mutex mu;
+  std::condition_variable cvNotEmpty;  // writer waits for queued work
+  std::condition_variable cvNotFull;   // producer waits for ring space
+  std::deque<CapturedTensor> ring;     // FIFO, bounded by ringCapacity
+  bool done = false;                   // producer finished; drain and exit
+  bool threadStarted = false;
+
+  // Written only by the writer thread; read by flush() after join, so no
+  // lock is needed on these.
   std::vector<std::string> index;  // record paths, for capture_index.json
+  size_t writeFailures = 0;        // records whose writeNpy failed (not indexed)
+
+  std::thread writer;
 };
 
+void DiskCaptureSink::Impl::writerLoop() {
+  for (;;) {
+    CapturedTensor tensor;
+    {
+      std::unique_lock<std::mutex> lock(mu);
+      cvNotEmpty.wait(lock, [this] { return !ring.empty() || done; });
+      if (ring.empty()) return;  // done && drained
+      tensor = std::move(ring.front());
+      ring.pop_front();
+    }
+    cvNotFull.notify_one();
+
+    // Disk I/O happens outside the lock: capture() never blocks on disk
+    // unless the ring itself is full (bounded backpressure, see file header).
+    std::error_code ec;
+    const fs::path stageDir = fs::path(root) / tensor.stageId;
+    fs::create_directories(stageDir, ec);
+    const fs::path file = stageDir / recordFileName(tensor);
+    const void* data = tensor.dtype == DType::F32
+                           ? static_cast<const void*>(tensor.f32.data())
+                           : static_cast<const void*>(tensor.u8.data());
+    if (writeNpy(file.string(), tensor.shape, tensor.dtype, data)) {
+      index.push_back(file.string());
+    } else {
+      // Preserve the previous synchronous behavior: a failed record is not
+      // indexed (missing data is loud downstream), but the run continues.
+      ++writeFailures;
+    }
+  }
+}
+
 DiskCaptureSink::DiskCaptureSink(std::string rootDir, size_t ringCapacity)
-    : impl_(new Impl{std::move(rootDir), ringCapacity, {}, {}}) {}
+    : impl_(new Impl(std::move(rootDir), ringCapacity == 0 ? 1 : ringCapacity)) {}
+// (capacity 0 would deadlock the producer against itself; clamp to 1)
 
 DiskCaptureSink::~DiskCaptureSink() {
   flush();
@@ -135,33 +207,51 @@ DiskCaptureSink::~DiskCaptureSink() {
 }
 
 void DiskCaptureSink::capture(const CapturedTensor& tensor) {
-  std::lock_guard<std::mutex> lock(impl_->mu);
-  std::error_code ec;
-  const fs::path stageDir = fs::path(impl_->root) / tensor.stageId;
-  fs::create_directories(stageDir, ec);
-  std::ostringstream name;
-  name << tensor.fileFrameIndex << "-" << tensor.name
-       << (tensor.dtype == DType::F32 ? ".f32.npy" : ".u8.npy");
-  const fs::path file = stageDir / name.str();
-  const void* data = tensor.dtype == DType::F32
-                         ? static_cast<const void*>(tensor.f32.data())
-                         : static_cast<const void*>(tensor.u8.data());
-  if (writeNpy(file.string(), tensor.shape, tensor.dtype, data)) {
-    impl_->index.push_back(file.string());
+  // Single-producer contract: the runner calls capture() from one thread
+  // (PROJECT DECISION, deterministic mode). Lazy-start the writer so a sink
+  // that is never used spawns no thread, and restart it after flush() so the
+  // sink stays usable.
+  {
+    std::unique_lock<std::mutex> lock(impl_->mu);
+    if (!impl_->threadStarted) {
+      impl_->threadStarted = true;
+      impl_->done = false;
+      impl_->writer = std::thread(&Impl::writerLoop, impl_);
+    }
+    // Bounded backpressure: block while the ring is at capacity. This is the
+    // documented determinism choice — see file header. No drop-oldest.
+    impl_->cvNotFull.wait(lock,
+                          [this] { return impl_->ring.size() < impl_->ringCapacity; });
+    impl_->ring.push_back(tensor);
   }
+  impl_->cvNotEmpty.notify_one();
 }
 
 void DiskCaptureSink::flush() {
-  if (!impl_ || impl_->index.empty()) return;
-  std::lock_guard<std::mutex> lock(impl_->mu);
-  std::ofstream out(fs::path(impl_->root) / "capture_index.json");
-  out << "{\"records\": [\n";
-  for (size_t i = 0; i < impl_->index.size(); ++i) {
-    out << "  \"" << impl_->index[i] << "\"" << (i + 1 < impl_->index.size() ? "," : "")
-        << "\n";
+  if (!impl_) return;
+  {
+    std::lock_guard<std::mutex> lock(impl_->mu);
+    if (impl_->threadStarted) {
+      impl_->done = true;  // writer drains remaining ring, then exits
+    }
   }
-  out << "]}\n";
-  impl_->index.clear();
+  impl_->cvNotEmpty.notify_all();
+  // Join outside the lock; flush() is called from the producer thread, which
+  // is not the writer, so the join cannot self-deadlock.
+  if (impl_->writer.joinable()) impl_->writer.join();
+  {
+    std::lock_guard<std::mutex> lock(impl_->mu);
+    impl_->threadStarted = false;
+    if (impl_->index.empty()) return;  // matches previous behavior: no empty index file
+    std::ofstream out(fs::path(impl_->root) / "capture_index.json");
+    out << "{\"records\": [\n";
+    for (size_t i = 0; i < impl_->index.size(); ++i) {
+      out << "  \"" << impl_->index[i] << "\"" << (i + 1 < impl_->index.size() ? "," : "")
+          << "\n";
+    }
+    out << "]}\n";
+    impl_->index.clear();
+  }
 }
 
 }  // namespace anvil

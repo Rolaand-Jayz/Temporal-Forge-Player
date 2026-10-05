@@ -9,7 +9,6 @@
 //       visibility:  shape (H,W,) f32 weights (occluded = weight 0)
 //       geometry:    shape (6,) f32 affine (a,b,c,d,e,f)
 //       ground_truth: shape (3,H,W) f32 RGB, plus optional color meta in record
-class SidecarOracleSource;  // declared; implemented by the oracle worker
 #pragma once
 
 #include "anvil/oracle/Oracle.hpp"

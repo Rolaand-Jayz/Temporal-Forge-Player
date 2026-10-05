@@ -42,7 +42,26 @@ struct PipelineConfig {
   // Output
   std::string outputDir;           // reconstructed frames written here as .npy
 
+  // Declared transfer assumption (reconciliation 3.8): "" | bt709 | srgb |
+  // linear | pq | hlg. Required (non-empty) when the input's transfer
+  // metadata is unspecified; recorded in the manifest either way.
+  std::string transferOverride;
+
+  // Neighbor ablation: comma-separated integer window offsets to drop from
+  // the neighbor arrays before reconstruct (e.g. "-1", "-1,1"; "" = none).
+  std::string dropNeighbors;
+
   std::string canonicalJson() const;
 };
+
+// Minimal hand-rolled parser for EXACTLY the canonical config schema:
+//   - any whitespace, any field order;
+//   - unknown fields -> error; duplicate fields -> error;
+//   - missing fields -> PipelineConfig{} defaults;
+//   - strict types (string/int/bool; no nested values, no floats where an
+//     integer is expected, no exponent notation).
+// On success returns true and out holds the parsed config. On failure returns
+// false with a precise message in err; out is reset to defaults.
+bool parsePipelineConfig(const std::string& json, PipelineConfig& out, std::string& err);
 
 }  // namespace anvil

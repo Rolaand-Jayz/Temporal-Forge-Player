@@ -223,10 +223,16 @@ set_target_properties(temporal_forge_player PROPERTIES
 # --- ANVIL successor targets (FSR-free, Qt-free; docs/anvil/) ---
 # anvil_core compiles an explicit FSR-free source set; it never links the
 # FSR-era library or Qt. The offline runner is a plain CLI executable.
+# The reused historical media shell (Demuxer/VideoDecoder/Log) is compiled
+# directly into this target — reuse in place, no fork (reconciliation 3.2).
+# ODR constraint: no binary may link anvil_core AND temporal_forge_lib.
 file(GLOB_RECURSE ANVIL_CORE_SOURCES CONFIGURE_DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/src/anvil/*.cpp")
 list(FILTER ANVIL_CORE_SOURCES EXCLUDE REGEX "/runner/main\\.cpp$")
-add_library(anvil_core STATIC ${ANVIL_CORE_SOURCES})
+add_library(anvil_core STATIC ${ANVIL_CORE_SOURCES}
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/media/Demuxer.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/media/VideoDecoder.cpp"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/util/Log.cpp")
 target_compile_features(anvil_core PUBLIC cxx_std_23)
 target_compile_definitions(anvil_core PUBLIC ANVIL_SUCCESSOR_BUILD=1)
 target_include_directories(anvil_core PUBLIC
