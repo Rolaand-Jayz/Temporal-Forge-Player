@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you reference this research record, please cite it as below."
+title: "Temporal Forge Player: adapting FSR 4.1 temporal reconstruction to ordinary video (closed research record)"
+type: software
+authors:
+  - alias: Rolaand-Jayz
+repository-code: "https://github.com/Rolaand-Jayz/Temporal-Forge-Player"
+license: Apache-2.0
+date-released: "2026-11-19"
+keywords:
+  - temporal reconstruction
+  - video upscaling
+  - Vulkan
+  - evaluation methodology
+  - reproducibility

@@ -1,0 +1,20 @@
+name: Question
+description: Ask about the code, the evidence, or the closure decision.
+title: "[question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a closed research record. Start with `docs/README.md` and `docs/closure/README.md`.
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Files or documents involved
+      description: Paths you have already read, if any.
