@@ -1,0 +1,75 @@
+name: Reproduction or correction
+description: Reproduce a recorded result, or report an error in the record.
+title: "[record] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The FSR-centered research line closed on 2026-09-15. Reports here are used to check and correct the record. They do not reopen the closed campaign.
+        Evidence rules are in `docs/closure/EVALUATION_STANDARD.md`.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Report type
+      options:
+        - Reproduction attempt
+        - Correction to the record
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: Claim, file, or ledger entry
+      description: Quote the claim and give its path. For a ledger entry, name the row in `docs/closure/CLAIM_EVIDENCE_LEDGER.md`.
+    validations:
+      required: true
+  - type: dropdown
+    id: label
+    attributes:
+      label: Evidence label
+      description: How you would classify your own report.
+      options:
+        - Measured fact
+        - Observation
+        - Inference
+        - Hypothesis
+        - Unresolved
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: The commit SHA you built or read.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps
+      description: Commands, configuration, environment variables (for example `TFORGE_*`), input clip, and reference.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, GPU, driver and Mesa version, Vulkan version, Qt and FFmpeg versions. Say which FSR 4.1 RE assets were provisioned, if any.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result
+      description: What you got, compared with the recorded result. Name the backend that actually ran according to runtime diagnostics, not the one requested. Link logs or traces.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Competing explanations
+      description: What else could explain the difference.
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach FSR weight blobs, native pack data, or other reverse-engineering-derived files. See `PROVENANCE.md`.

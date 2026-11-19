@@ -4,6 +4,8 @@ Temporal Forge Player's **FSR-centered research line is closed as of 2026-09-15*
 
 There is no standing FSR quality campaign, refactor campaign, or expected-input research task. Behavioral changes require an explicit maintainer request. Historical plans and tombstones are not work queues.
 
+Participation is covered by the [Code of Conduct](CODE_OF_CONDUCT.md).
+
 ## Build & test
 
 ```sh
