@@ -1,7 +1,7 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_640x360_high_crf12_f48_scale_2_50_lanczos.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_640x360_high_crf12_f48_scale_2_50_lanczos.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1068x600, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_reference_1068x600_f48_scale_2_50.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_reference_1068x600_f48_scale_2_50.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1068x600 [SAR 800:801 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:
@@ -18,10 +18,10 @@ Output #0, null, to 'pipe:':
 [Parsed_psnr_0 @ 0x7fc008002300] PSNR r:23.184469 g:23.969867 b:24.848007 average:23.947975 min:23.947975 max:23.947975
 [out#0/null @ 0x55ea26cd76c0] video:0KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
 frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=2.71x elapsed=0:00:00.01    
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_640x360_high_crf12_f48_scale_2_50_lanczos.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_640x360_high_crf12_f48_scale_2_50_lanczos.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1068x600, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_reference_1068x600_f48_scale_2_50.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_reference_1068x600_f48_scale_2_50.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1068x600 [SAR 800:801 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:

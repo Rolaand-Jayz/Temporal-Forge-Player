@@ -49,7 +49,7 @@
     "note": "All strict candidate/scene/class rows are event-backed; no rendered image payloads are required."
   },
   "executionProvenance": {
-    "plannedBinary": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/build-fast/temporal_forge_player",
+    "plannedBinary": "build-fast/temporal_forge_player",
     "plannedBinarySha256": "c37a509f1c04e07a0846c4177c3cd5ab891c2c02ec1136cd95e3bd37cb6ef8b9",
     "currentGitHead": "7fdf43ce09015626940e37f9baea48c0210def0c",
     "gitCommit": null,

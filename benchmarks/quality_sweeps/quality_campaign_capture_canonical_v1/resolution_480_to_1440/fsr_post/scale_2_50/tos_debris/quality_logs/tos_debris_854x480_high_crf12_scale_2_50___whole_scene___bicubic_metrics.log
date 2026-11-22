@@ -1,7 +1,7 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_854x480_high_crf12_f48_scale_2_50_bicubic.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_854x480_high_crf12_f48_scale_2_50_bicubic.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 3200x1800, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_reference_3200x1800_f48_scale_2_50.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_reference_3200x1800_f48_scale_2_50.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 3200x1800 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:
@@ -18,10 +18,10 @@ Output #0, null, to 'pipe:':
 [Parsed_psnr_0 @ 0x7f04dc0020c0] PSNR r:25.427754 g:26.436344 b:27.757363 average:26.437576 min:26.437576 max:26.437576
 [out#0/null @ 0x564e54f5be40] video:0KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
 frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.558x elapsed=0:00:00.07    
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_854x480_high_crf12_f48_scale_2_50_bicubic.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_854x480_high_crf12_f48_scale_2_50_bicubic.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 3200x1800, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_reference_3200x1800_f48_scale_2_50.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_480_to_1440/fsr_post/scale_2_50/tos_debris/quality_frames/tos_debris_reference_3200x1800_f48_scale_2_50.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 3200x1800 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:

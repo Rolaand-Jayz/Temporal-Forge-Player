@@ -1,7 +1,7 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_1920x1080_high_crf12_f48_scale_2_00.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_1920x1080_high_crf12_f48_scale_2_00.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown), 2560x1440, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_reference_2560x1440_f48_scale_2_00.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_reference_2560x1440_f48_scale_2_00.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 2560x1440 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:
@@ -18,10 +18,10 @@ Output #0, null, to 'pipe:':
 [Parsed_psnr_0 @ 0x7ff568001e80] PSNR r:34.162814 g:33.977846 b:33.612717 average:33.911741 min:33.911741 max:33.911741
 [out#0/null @ 0x55f87b067d40] video:0KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
 frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.928x elapsed=0:00:00.04    
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_1920x1080_high_crf12_f48_scale_2_00.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_1920x1080_high_crf12_f48_scale_2_00.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown), 2560x1440, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_reference_2560x1440_f48_scale_2_00.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_pre/scale_2_00/sintel_cave/quality_frames/sintel_cave_reference_2560x1440_f48_scale_2_00.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 2560x1440 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:

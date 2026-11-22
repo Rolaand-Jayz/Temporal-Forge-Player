@@ -1,4 +1,4 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_reference_1068x600_f48_scale_2_50.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_50/sintel_rooftop/quality_frames/sintel_rooftop_reference_1068x600_f48_scale_2_50.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1068x600 [SAR 800:801 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:

@@ -1,7 +1,7 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_75/tos_daylight/quality_frames/tos_daylight_640x360_high_crf12_f48_scale_2_75_lanczos.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_75/tos_daylight/quality_frames/tos_daylight_640x360_high_crf12_f48_scale_2_75_lanczos.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1174x660, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_75/tos_daylight/quality_frames/tos_daylight_reference_1174x660_f48_scale_2_75.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_post/scale_2_75/tos_daylight/quality_frames/tos_daylight_reference_1174x660_f48_scale_2_75.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1174x660 [SAR 1760:1761 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:

@@ -34,16 +34,16 @@
   ],
   "schemaVersion": 3,
   "runnerVersion": 3,
-  "capture_plan": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_plan.json",
+  "capture_plan": "benchmarks/quality_sweeps/quality_campaign_capture_plan.json",
   "campaign_id": "quality-campaign-20260904-canonical-v1",
   "assets": 92,
   "native_assets": 72,
   "started_at": "2026-09-04T02:25:34.854918+00:00",
   "completed_at": "2026-09-04T02:44:23.241404+00:00",
-  "guard_log": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/game_guard_events.jsonl",
+  "guard_log": "benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/game_guard_events.jsonl",
   "assets_detail": [
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
       "bytes": 6267316,
       "width": 3840,
       "height": 2160,
@@ -75,7 +75,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
       "bytes": 7539720,
       "width": 3840,
       "height": 2160,
@@ -100,7 +100,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
       "bytes": 6267316,
       "width": 3840,
       "height": 2160,
@@ -131,7 +131,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 6267316,
       "width": 3840,
       "height": 2160,
@@ -162,7 +162,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 7917592,
       "width": 3840,
       "height": 2160,
@@ -193,7 +193,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
       "bytes": 6166614,
       "width": 3840,
       "height": 2160,
@@ -224,7 +224,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 6751652,
       "width": 3840,
       "height": 2160,
@@ -255,7 +255,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 8177432,
       "width": 3840,
       "height": 2160,
@@ -286,7 +286,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
       "bytes": 6701229,
       "width": 3840,
       "height": 2160,
@@ -317,7 +317,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 6703343,
       "width": 3840,
       "height": 2160,
@@ -348,7 +348,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 8140093,
       "width": 3840,
       "height": 2160,
@@ -379,7 +379,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
       "bytes": 6657811,
       "width": 3840,
       "height": 2160,
@@ -410,7 +410,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 6680001,
       "width": 3840,
       "height": 2160,
@@ -441,7 +441,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 8128467,
       "width": 3840,
       "height": 2160,
@@ -472,7 +472,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
       "bytes": 6644250,
       "width": 3840,
       "height": 2160,
@@ -503,7 +503,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 6298253,
       "width": 3840,
       "height": 2160,
@@ -534,7 +534,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 7840041,
       "width": 3840,
       "height": 2160,
@@ -565,7 +565,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
       "bytes": 6269441,
       "width": 3840,
       "height": 2160,
@@ -596,7 +596,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
       "bytes": 6267316,
       "width": 3840,
       "height": 2160,
@@ -627,7 +627,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
       "bytes": 7917592,
       "width": 3840,
       "height": 2160,
@@ -658,7 +658,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
       "bytes": 6166614,
       "width": 3840,
       "height": 2160,
@@ -689,7 +689,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
       "bytes": 6640249,
       "width": 3840,
       "height": 2160,
@@ -714,7 +714,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
       "bytes": 6451974,
       "width": 3840,
       "height": 2160,
@@ -739,7 +739,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
       "bytes": 3948421,
       "width": 3840,
       "height": 2160,
@@ -771,7 +771,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
       "bytes": 5325761,
       "width": 3840,
       "height": 2160,
@@ -796,7 +796,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
       "bytes": 3948421,
       "width": 3840,
       "height": 2160,
@@ -827,7 +827,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3948421,
       "width": 3840,
       "height": 2160,
@@ -858,7 +858,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 5821065,
       "width": 3840,
       "height": 2160,
@@ -889,7 +889,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
       "bytes": 3930493,
       "width": 3840,
       "height": 2160,
@@ -920,7 +920,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 4464057,
       "width": 3840,
       "height": 2160,
@@ -951,7 +951,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6149604,
       "width": 3840,
       "height": 2160,
@@ -982,7 +982,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
       "bytes": 4450719,
       "width": 3840,
       "height": 2160,
@@ -1013,7 +1013,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 4382122,
       "width": 3840,
       "height": 2160,
@@ -1044,7 +1044,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6083042,
       "width": 3840,
       "height": 2160,
@@ -1075,7 +1075,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
       "bytes": 4377076,
       "width": 3840,
       "height": 2160,
@@ -1106,7 +1106,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 4388741,
       "width": 3840,
       "height": 2160,
@@ -1137,7 +1137,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6099613,
       "width": 3840,
       "height": 2160,
@@ -1168,7 +1168,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
       "bytes": 4383210,
       "width": 3840,
       "height": 2160,
@@ -1199,7 +1199,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3966113,
       "width": 3840,
       "height": 2160,
@@ -1230,7 +1230,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 5655515,
       "width": 3840,
       "height": 2160,
@@ -1261,7 +1261,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
       "bytes": 3958537,
       "width": 3840,
       "height": 2160,
@@ -1292,7 +1292,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3948421,
       "width": 3840,
       "height": 2160,
@@ -1323,7 +1323,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
       "bytes": 5821065,
       "width": 3840,
       "height": 2160,
@@ -1354,7 +1354,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
       "bytes": 3930493,
       "width": 3840,
       "height": 2160,
@@ -1385,7 +1385,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
       "bytes": 4018210,
       "width": 3840,
       "height": 2160,
@@ -1410,7 +1410,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
       "bytes": 3867813,
       "width": 3840,
       "height": 2160,
@@ -1435,7 +1435,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
       "bytes": 4774886,
       "width": 3840,
       "height": 2160,
@@ -1467,7 +1467,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
       "bytes": 5983174,
       "width": 3840,
       "height": 2160,
@@ -1492,7 +1492,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
       "bytes": 4774886,
       "width": 3840,
       "height": 2160,
@@ -1523,7 +1523,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 4774886,
       "width": 3840,
       "height": 2160,
@@ -1554,7 +1554,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6399433,
       "width": 3840,
       "height": 2160,
@@ -1585,7 +1585,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
       "bytes": 4701812,
       "width": 3840,
       "height": 2160,
@@ -1616,7 +1616,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 5376932,
       "width": 3840,
       "height": 2160,
@@ -1647,7 +1647,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6814898,
       "width": 3840,
       "height": 2160,
@@ -1678,7 +1678,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
       "bytes": 5334657,
       "width": 3840,
       "height": 2160,
@@ -1709,7 +1709,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 5296849,
       "width": 3840,
       "height": 2160,
@@ -1740,7 +1740,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6747360,
       "width": 3840,
       "height": 2160,
@@ -1771,7 +1771,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
       "bytes": 5257693,
       "width": 3840,
       "height": 2160,
@@ -1802,7 +1802,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 5270757,
       "width": 3840,
       "height": 2160,
@@ -1833,7 +1833,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6736456,
       "width": 3840,
       "height": 2160,
@@ -1864,7 +1864,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
       "bytes": 5240114,
       "width": 3840,
       "height": 2160,
@@ -1895,7 +1895,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 4806522,
       "width": 3840,
       "height": 2160,
@@ -1926,7 +1926,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6290098,
       "width": 3840,
       "height": 2160,
@@ -1957,7 +1957,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
       "bytes": 4780950,
       "width": 3840,
       "height": 2160,
@@ -1988,7 +1988,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
       "bytes": 4774886,
       "width": 3840,
       "height": 2160,
@@ -2019,7 +2019,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
       "bytes": 6399433,
       "width": 3840,
       "height": 2160,
@@ -2050,7 +2050,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
       "bytes": 4701812,
       "width": 3840,
       "height": 2160,
@@ -2081,7 +2081,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
       "bytes": 4965989,
       "width": 3840,
       "height": 2160,
@@ -2106,7 +2106,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
       "bytes": 4818196,
       "width": 3840,
       "height": 2160,
@@ -2131,7 +2131,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-current_cas20__out-2160p.png",
       "bytes": 3286973,
       "width": 3840,
       "height": 2160,
@@ -2163,7 +2163,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-base_only_bilinear_cas20__out-2160p.png",
       "bytes": 4233930,
       "width": 3840,
       "height": 2160,
@@ -2188,7 +2188,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_direct_cas20__out-2160p.png",
       "bytes": 3286973,
       "width": 3840,
       "height": 2160,
@@ -2219,7 +2219,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3286973,
       "width": 3840,
       "height": 2160,
@@ -2250,7 +2250,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 4494063,
       "width": 3840,
       "height": 2160,
@@ -2281,7 +2281,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p.png",
       "bytes": 3247290,
       "width": 3840,
       "height": 2160,
@@ -2312,7 +2312,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3626416,
       "width": 3840,
       "height": 2160,
@@ -2343,7 +2343,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 4696345,
       "width": 3840,
       "height": 2160,
@@ -2374,7 +2374,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p.png",
       "bytes": 3597653,
       "width": 3840,
       "height": 2160,
@@ -2405,7 +2405,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3561608,
       "width": 3840,
       "height": 2160,
@@ -2436,7 +2436,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 4653188,
       "width": 3840,
       "height": 2160,
@@ -2467,7 +2467,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p.png",
       "bytes": 3541926,
       "width": 3840,
       "height": 2160,
@@ -2498,7 +2498,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3552888,
       "width": 3840,
       "height": 2160,
@@ -2529,7 +2529,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 4652431,
       "width": 3840,
       "height": 2160,
@@ -2560,7 +2560,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p.png",
       "bytes": 3538131,
       "width": 3840,
       "height": 2160,
@@ -2591,7 +2591,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3308975,
       "width": 3840,
       "height": 2160,
@@ -2622,7 +2622,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p.png",
       "bytes": 4433063,
       "width": 3840,
       "height": 2160,
@@ -2653,7 +2653,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p.png",
       "bytes": 3296030,
       "width": 3840,
       "height": 2160,
@@ -2684,7 +2684,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p.png",
       "bytes": 3286973,
       "width": 3840,
       "height": 2160,
@@ -2715,7 +2715,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p.png",
       "bytes": 4494063,
       "width": 3840,
       "height": 2160,
@@ -2746,7 +2746,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p.png",
       "bytes": 3247290,
       "width": 3840,
       "height": 2160,
@@ -2777,7 +2777,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-conventional_lanczos__out-2160p.png",
       "bytes": 3421030,
       "width": 3840,
       "height": 2160,
@@ -2802,7 +2802,7 @@
       "failed_quality_gate": "visible_periodic_lattice"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-conventional_bicubic__out-2160p.png",
       "bytes": 3296831,
       "width": 3840,
       "height": 2160,
@@ -2829,7 +2829,7 @@
   ],
   "native_assets_detail": [
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 6267316,
       "width": 3840,
       "height": 2160,
@@ -2854,7 +2854,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 6166614,
       "width": 3840,
       "height": 2160,
@@ -2879,7 +2879,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
       "bytes": 6166614,
       "width": 3840,
       "height": 2160,
@@ -2904,7 +2904,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 7539386,
       "width": 4320,
       "height": 2430,
@@ -2929,7 +2929,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 7478311,
       "width": 4320,
       "height": 2430,
@@ -2954,7 +2954,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
       "bytes": 7478311,
       "width": 4320,
       "height": 2430,
@@ -2979,7 +2979,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 8866414,
       "width": 4800,
       "height": 2700,
@@ -3004,7 +3004,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 8805765,
       "width": 4800,
       "height": 2700,
@@ -3029,7 +3029,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
       "bytes": 8805765,
       "width": 4800,
       "height": 2700,
@@ -3054,7 +3054,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 10243163,
       "width": 5280,
       "height": 2970,
@@ -3079,7 +3079,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 10192381,
       "width": 5280,
       "height": 2970,
@@ -3104,7 +3104,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
       "bytes": 10192381,
       "width": 5280,
       "height": 2970,
@@ -3129,7 +3129,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 11024348,
       "width": 5760,
       "height": 3240,
@@ -3154,7 +3154,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 10960534,
       "width": 5760,
       "height": 3240,
@@ -3179,7 +3179,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
       "bytes": 10960534,
       "width": 5760,
       "height": 3240,
@@ -3204,7 +3204,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 6267316,
       "width": 3840,
       "height": 2160,
@@ -3229,7 +3229,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 6166614,
       "width": 3840,
       "height": 2160,
@@ -3254,7 +3254,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_daylight__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
       "bytes": 6166614,
       "width": 3840,
       "height": 2160,
@@ -3279,7 +3279,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 3948421,
       "width": 3840,
       "height": 2160,
@@ -3304,7 +3304,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 3930493,
       "width": 3840,
       "height": 2160,
@@ -3329,7 +3329,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
       "bytes": 3930493,
       "width": 3840,
       "height": 2160,
@@ -3354,7 +3354,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 4921356,
       "width": 4320,
       "height": 2430,
@@ -3379,7 +3379,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 4908087,
       "width": 4320,
       "height": 2430,
@@ -3404,7 +3404,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
       "bytes": 4908087,
       "width": 4320,
       "height": 2430,
@@ -3429,7 +3429,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 5804565,
       "width": 4800,
       "height": 2700,
@@ -3454,7 +3454,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 5800305,
       "width": 4800,
       "height": 2700,
@@ -3479,7 +3479,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
       "bytes": 5800305,
       "width": 4800,
       "height": 2700,
@@ -3504,7 +3504,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 6725876,
       "width": 5280,
       "height": 2970,
@@ -3529,7 +3529,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 6721231,
       "width": 5280,
       "height": 2970,
@@ -3554,7 +3554,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
       "bytes": 6721231,
       "width": 5280,
       "height": 2970,
@@ -3579,7 +3579,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 6792479,
       "width": 5760,
       "height": 3240,
@@ -3604,7 +3604,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 6783946,
       "width": 5760,
       "height": 3240,
@@ -3629,7 +3629,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
       "bytes": 6783946,
       "width": 5760,
       "height": 3240,
@@ -3654,7 +3654,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 3948421,
       "width": 3840,
       "height": 2160,
@@ -3679,7 +3679,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 3930493,
       "width": 3840,
       "height": 2160,
@@ -3704,7 +3704,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-tos_debris__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
       "bytes": 3930493,
       "width": 3840,
       "height": 2160,
@@ -3729,7 +3729,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 4774886,
       "width": 3840,
       "height": 2160,
@@ -3754,7 +3754,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 4701812,
       "width": 3840,
       "height": 2160,
@@ -3779,7 +3779,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
       "bytes": 4701812,
       "width": 3840,
       "height": 2160,
@@ -3804,7 +3804,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 6025051,
       "width": 4320,
       "height": 2430,
@@ -3829,7 +3829,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 5983144,
       "width": 4320,
       "height": 2430,
@@ -3854,7 +3854,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
       "bytes": 5983144,
       "width": 4320,
       "height": 2430,
@@ -3879,7 +3879,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 7138579,
       "width": 4800,
       "height": 2700,
@@ -3904,7 +3904,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 7090930,
       "width": 4800,
       "height": 2700,
@@ -3929,7 +3929,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
       "bytes": 7090930,
       "width": 4800,
       "height": 2700,
@@ -3954,7 +3954,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 8281895,
       "width": 5280,
       "height": 2970,
@@ -3979,7 +3979,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 8238573,
       "width": 5280,
       "height": 2970,
@@ -4004,7 +4004,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
       "bytes": 8238573,
       "width": 5280,
       "height": 2970,
@@ -4029,7 +4029,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 8261060,
       "width": 5760,
       "height": 3240,
@@ -4054,7 +4054,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 8198422,
       "width": 5760,
       "height": 3240,
@@ -4079,7 +4079,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
       "bytes": 8198422,
       "width": 5760,
       "height": 3240,
@@ -4104,7 +4104,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 4774886,
       "width": 3840,
       "height": 2160,
@@ -4129,7 +4129,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 4701812,
       "width": 3840,
       "height": 2160,
@@ -4154,7 +4154,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_rooftop__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
       "bytes": 4701812,
       "width": 3840,
       "height": 2160,
@@ -4179,7 +4179,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 3286973,
       "width": 3840,
       "height": 2160,
@@ -4204,7 +4204,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 3247290,
       "width": 3840,
       "height": 2160,
@@ -4229,7 +4229,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_200x_downsample_no_cas__out-2160p__native.png",
       "bytes": 3247290,
       "width": 3840,
       "height": 2160,
@@ -4254,7 +4254,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 4026355,
       "width": 4320,
       "height": 2430,
@@ -4279,7 +4279,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 3995675,
       "width": 4320,
       "height": 2430,
@@ -4304,7 +4304,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_225x_downsample_no_cas__out-2160p__native.png",
       "bytes": 3995675,
       "width": 4320,
       "height": 2430,
@@ -4329,7 +4329,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 4719296,
       "width": 4800,
       "height": 2700,
@@ -4354,7 +4354,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 4694194,
       "width": 4800,
       "height": 2700,
@@ -4379,7 +4379,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_250x_downsample_no_cas__out-2160p__native.png",
       "bytes": 4694194,
       "width": 4800,
       "height": 2700,
@@ -4404,7 +4404,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 5457746,
       "width": 5280,
       "height": 2970,
@@ -4429,7 +4429,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 5435298,
       "width": 5280,
       "height": 2970,
@@ -4454,7 +4454,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_275x_downsample_no_cas__out-2160p__native.png",
       "bytes": 5435298,
       "width": 5280,
       "height": 2970,
@@ -4479,7 +4479,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 5843497,
       "width": 5760,
       "height": 3240,
@@ -4504,7 +4504,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 5807586,
       "width": 5760,
       "height": 3240,
@@ -4529,7 +4529,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_300x_downsample_no_cas__out-2160p__native.png",
       "bytes": 5807586,
       "width": 5760,
       "height": 3240,
@@ -4554,7 +4554,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_resolve_cas20__out-2160p__native.png",
       "bytes": 3286973,
       "width": 3840,
       "height": 2160,
@@ -4579,7 +4579,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_external_post_cas20__out-2160p__native.png",
       "bytes": 3247290,
       "width": 3840,
       "height": 2160,
@@ -4604,7 +4604,7 @@
       "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346"
     },
     {
-      "path": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
+      "path": "review_harness_canonical_v1/images/scene-sintel_cave__frame-0048__in-1080p__method-fsr_nativeaa_downsample_no_cas__out-2160p__native.png",
       "bytes": 3247290,
       "width": 3840,
       "height": 2160,

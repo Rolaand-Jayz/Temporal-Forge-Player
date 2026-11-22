@@ -8,7 +8,7 @@
   "timestamp_complete_utc": "2026-09-04T00:09:21.188014+00:00",
   "git_head": "850a6bd6e0b303c02d8efc8b27a9bd8162882b16",
   "git_dirty_at_capture_start": false,
-  "binary": "/home/rolaandjayz/ZCodeProject/temporal_forge_player/build-fast/temporal_forge_player",
+  "binary": "build-fast/temporal_forge_player",
   "binary_sha256": "531403376de27ffc107f5647ee58d59146626daf3081c1d090d878880f6581a1",
   "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346",
   "scene": "sintel_cave",
@@ -90,8 +90,8 @@
     "edge_ssim": "0.825407"
   },
   "command": [
-    "/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/run_quality.sh",
-    "/home/rolaandjayz/ZCodeProject/temporal_forge_player/build-fast/temporal_forge_player",
+    "benchmarks/video_corpus/run_quality.sh",
+    "build-fast/temporal_forge_player",
     "640x360",
     "/tmp/tforge_semtrace3_360.3MmKqA/scale_2_00/sintel_cave/raw.csv"
   ],

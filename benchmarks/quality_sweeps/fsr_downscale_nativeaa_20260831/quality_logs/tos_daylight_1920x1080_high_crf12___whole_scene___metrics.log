@@ -1,7 +1,7 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_1920x1080_high_crf12_f48.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_1920x1080_high_crf12_f48.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown), 1280x720, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_reference_1280x720_f48.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_reference_1280x720_f48.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1280x720 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:
@@ -18,10 +18,10 @@ Output #0, null, to 'pipe:':
 [Parsed_psnr_0 @ 0x7f0ea8002300] PSNR r:30.675724 g:31.751790 b:32.645568 average:31.616164 min:31.616164 max:31.616164
 [out#0/null @ 0x55c9ab888d00] video:0KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
 frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=1.92x elapsed=0:00:00.02    
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_1920x1080_high_crf12_f48.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_1920x1080_high_crf12_f48.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown), 1280x720, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_reference_1280x720_f48.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/tos_daylight_reference_1280x720_f48.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 1280x720 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:

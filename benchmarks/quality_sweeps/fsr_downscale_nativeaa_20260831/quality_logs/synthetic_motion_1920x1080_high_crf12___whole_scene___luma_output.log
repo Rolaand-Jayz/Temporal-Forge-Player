@@ -1,4 +1,4 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/synthetic_motion_1920x1080_high_crf12_f48.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/fsr_downscale_nativeaa_20260831/quality_frames/synthetic_motion_1920x1080_high_crf12_f48.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, pal8(pc, gbr/bt709/unknown), 1280x720, 25 fps, 25 tbr, 25 tbn
 Stream mapping:

@@ -1,7 +1,7 @@
-Input #0, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_none/scale_2_25/tos_daylight/candidate_final.png':
+Input #0, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/fsr_none/scale_2_25/tos_daylight/candidate_final.png':
   Duration: N/A, bitrate: N/A
   Stream #0:0: Video: png, rgb24(pc, gbr/bt709/unknown), 2560x1440, 25 fps, 25 tbr, 25 tbn
-Input #1, png_pipe, from '/home/rolaandjayz/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/shared_references/tos_daylight__frame-0048__2560x1440.png':
+Input #1, png_pipe, from 'benchmarks/quality_sweeps/quality_campaign_capture_canonical_v1/resolution_1080_to_1440/shared_references/tos_daylight__frame-0048__2560x1440.png':
   Duration: N/A, bitrate: N/A
   Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 2560x1440 [SAR 1:1 DAR 16:9], 25 fps, 25 tbr, 25 tbn
 Stream mapping:
