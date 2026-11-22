@@ -1,6 +1,6 @@
 # Dirty worktree scope-boundary audit
 
-Audit date: 2026-08-23. Repository: `/home/rolaandjayz/ZCodeProject/temporal_forge_player`.
+Audit date: 2026-08-23. Repository: `temporal_forge_player` (local checkout).
 
 The pre-audit boundary was branch `quality-lab-vibecoder` at `7fdf43c`, with
 22 tracked modified paths and 68 untracked paths from `git status --short -uall`.
