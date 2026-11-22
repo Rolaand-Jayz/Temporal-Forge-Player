@@ -5,7 +5,7 @@
     "scene": "hard_scene_cut",
     "configId": "AMD_SEMANTIC_BASELINE",
     "sourcePath": "/tmp/tforge-qualification-i8wqx5_f/hard_scene_cut.mkv",
-    "referencePath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/references/synthetic_edges_text_2160p_lossless.mkv",
+    "referencePath": "benchmarks/video_corpus/references/synthetic_edges_text_2160p_lossless.mkv",
     "startFrame": 0,
     "endFrame": 7,
     "outputWidth": 852,

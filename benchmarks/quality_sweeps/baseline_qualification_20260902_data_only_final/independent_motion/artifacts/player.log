@@ -6,25 +6,25 @@ lsfg-vk: Placing default configuration file at /tmp/tforge-temporal-config.F8xng
 [2026-09-01 23:30:07] INFO  ?:0: Vulkan: graphics queue family 0, FSR compute queue family 1
 [2026-09-01 23:30:07] INFO  ?:0: Vulkan: device 'AMD Radeon RX 7900 GRE (RADV NAVI31)' selected, queue family 0
 [2026-09-01 23:30:07] INFO  ?:0: Settings: loaded (path: /tmp/tforge-temporal-config.F8xngT/temporal-forge-player/settings.json)
-[2026-09-01 23:30:07] INFO  ?:0: QualityLab: /home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json enabled=true composition=current base=catmull_rom colorSpace=model sharpen=none toneEV=0.000
+[2026-09-01 23:30:07] INFO  ?:0: QualityLab: benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json enabled=true composition=current base=catmull_rom colorSpace=model sharpen=none toneEV=0.000
 [2026-09-01 23:30:07] INFO  ?:0: GpuCapabilityProbe: AMD Radeon RX 7900 GRE (RADV NAVI31) (radv) -> INT8 DOT4 (RDNA3 cooperative matrix, SINT8->SINT32) [tile 16x16, SINT8->SINT32 accum] + FP16 fallback available
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: Vulkan handles set; FSR4 will be initialized on first frame
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: FSR4 upscaling enabled
 [2026-09-01 23:30:07] INFO  ?:0: Auto-opening playlist with 1 item(s)
-[2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: openUrl('file:///home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4')
+[2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: openUrl('file://./benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4')
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: close() stopThreads
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: close() audio.stop
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: FSR4 path torn down
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: close() fully done
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: close() done, opening demuxer
-[2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: demux->open('/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4')
-[2026-09-01 23:30:07] INFO  ?:0: Demuxer: opened '/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4' [mov,mp4,m4a,3gp,3g2,mj2] duration=10.000s streams=1 video=0 audio=-1381258232 sub=-1381258232
+[2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: demux->open('benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4')
+[2026-09-01 23:30:07] INFO  ?:0: Demuxer: opened 'benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4' [mov,mp4,m4a,3gp,3g2,mj2] duration=10.000s streams=1 video=0 audio=-1381258232 sub=-1381258232
 [2026-09-01 23:30:07] DEBUG ?:0: Demuxer: video 426x240 30 fps
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: demux opened ok
 [2026-09-01 23:30:07] INFO  ?:0: VideoDecoder: hardware decode disabled because codec motion metadata was requested
 [2026-09-01 23:30:07] INFO  ?:0: VideoDecoder: opened codec 'h264' 426x240 pix_fmt=yuv420p
 [2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: starting decode threads
-[2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: opened '/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4', playing=true
+[2026-09-01 23:30:07] INFO  ?:0: PlaybackEngine: opened 'benchmarks/video_corpus/clips/synthetic_motion_426x240_high_crf12.mp4', playing=true
 [2026-09-01 23:30:07] INFO  ?:0: Temporal Forge Player: ready
 [h264 @ 0x558c3ee86c80] A hardware frames or device context is required for hardware accelerated decoding.
 [h264 @ 0x558c3ee86c80] Failed setup for format vaapi: hwaccel initialisation returned error.

@@ -8,5 +8,5 @@ TFORGE_FSR4_FORCE_VIEWPORT=2560x1440
 TFORGE_FSR4_JITTER_MODE=off
 TFORGE_FSR4_PROFILE_TIMINGS=1
 TFORGE_HEADLESS_BENCHMARK=1
-TFORGE_QUALITY_LAB_CONFIG=/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json
+TFORGE_QUALITY_LAB_CONFIG=benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json
 XDG_CONFIG_HOME=/tmp/tforge-temporal-config.1epgxW
