@@ -186,7 +186,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -206,7 +206,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -262,7 +262,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -282,7 +282,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -338,7 +338,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -358,7 +358,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -414,7 +414,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -434,7 +434,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -490,7 +490,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -510,7 +510,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -566,7 +566,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -586,7 +586,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -642,7 +642,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -662,7 +662,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -718,7 +718,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -738,7 +738,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -794,7 +794,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -814,7 +814,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -870,7 +870,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -890,7 +890,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -946,7 +946,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -966,7 +966,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -1022,7 +1022,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -1042,7 +1042,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -1098,7 +1098,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -1118,7 +1118,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -1174,7 +1174,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -1194,7 +1194,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -1250,7 +1250,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -1270,7 +1270,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -1326,7 +1326,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -1346,7 +1346,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -1402,7 +1402,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -1422,7 +1422,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -1478,7 +1478,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -1498,7 +1498,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -1554,7 +1554,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -1574,7 +1574,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -1630,7 +1630,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -1650,7 +1650,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -1681,7 +1681,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -1708,7 +1708,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.035430",
         "fsr_vs_lanczos_edge_ssim_delta": "-0.001490",
         "fsr_vs_lanczos_ssim_delta": "-0.031265",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "lanczos_edge_ssim": "0.401493",
         "lanczos_psnr_db": "24.770519",
         "lanczos_ssim": "0.693263",
@@ -1731,13 +1731,13 @@
       },
       "regionSource": {
         "annotationIndex": 0,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -1755,7 +1755,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -1782,7 +1782,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.031095",
         "fsr_vs_lanczos_edge_ssim_delta": "-0.002116",
         "fsr_vs_lanczos_ssim_delta": "-0.025537",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "lanczos_edge_ssim": "0.396867",
         "lanczos_psnr_db": "22.487881",
         "lanczos_ssim": "0.614510",
@@ -1805,13 +1805,13 @@
       },
       "regionSource": {
         "annotationIndex": 1,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -1829,7 +1829,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -1856,7 +1856,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.023100",
         "fsr_vs_lanczos_edge_ssim_delta": "-0.002462",
         "fsr_vs_lanczos_ssim_delta": "-0.010080",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "lanczos_edge_ssim": "0.508188",
         "lanczos_psnr_db": "20.961109",
         "lanczos_ssim": "0.639098",
@@ -1879,13 +1879,13 @@
       },
       "regionSource": {
         "annotationIndex": 2,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -1903,7 +1903,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -1930,7 +1930,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.002460",
         "fsr_vs_lanczos_edge_ssim_delta": "0.000795",
         "fsr_vs_lanczos_ssim_delta": "-0.001052",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "lanczos_edge_ssim": "0.986066",
         "lanczos_psnr_db": "38.290758",
         "lanczos_ssim": "0.387470",
@@ -1953,13 +1953,13 @@
       },
       "regionSource": {
         "annotationIndex": 3,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -1977,7 +1977,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2004,7 +2004,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.007748",
         "fsr_vs_lanczos_edge_ssim_delta": "0.007206",
         "fsr_vs_lanczos_ssim_delta": "0.011913",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "lanczos_edge_ssim": "0.401493",
         "lanczos_psnr_db": "24.770519",
         "lanczos_ssim": "0.693263",
@@ -2027,13 +2027,13 @@
       },
       "regionSource": {
         "annotationIndex": 0,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2051,7 +2051,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2078,7 +2078,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.011317",
         "fsr_vs_lanczos_edge_ssim_delta": "0.009516",
         "fsr_vs_lanczos_ssim_delta": "0.016875",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "lanczos_edge_ssim": "0.396867",
         "lanczos_psnr_db": "22.487881",
         "lanczos_ssim": "0.614510",
@@ -2101,13 +2101,13 @@
       },
       "regionSource": {
         "annotationIndex": 1,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2125,7 +2125,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -2152,7 +2152,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.012804",
         "fsr_vs_lanczos_edge_ssim_delta": "0.007840",
         "fsr_vs_lanczos_ssim_delta": "0.025824",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "lanczos_edge_ssim": "0.508188",
         "lanczos_psnr_db": "20.961109",
         "lanczos_ssim": "0.639098",
@@ -2175,13 +2175,13 @@
       },
       "regionSource": {
         "annotationIndex": 2,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -2199,7 +2199,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -2226,7 +2226,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.000310",
         "fsr_vs_lanczos_edge_ssim_delta": "0.001192",
         "fsr_vs_lanczos_ssim_delta": "0.001098",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "lanczos_edge_ssim": "0.986066",
         "lanczos_psnr_db": "38.290758",
         "lanczos_ssim": "0.387470",
@@ -2249,13 +2249,13 @@
       },
       "regionSource": {
         "annotationIndex": 3,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -2273,7 +2273,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2300,7 +2300,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.008818",
         "fsr_vs_lanczos_edge_ssim_delta": "0.007990",
         "fsr_vs_lanczos_ssim_delta": "0.012983",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "lanczos_edge_ssim": "0.401493",
         "lanczos_psnr_db": "24.770519",
         "lanczos_ssim": "0.693263",
@@ -2323,13 +2323,13 @@
       },
       "regionSource": {
         "annotationIndex": 0,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2347,7 +2347,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2374,7 +2374,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.011656",
         "fsr_vs_lanczos_edge_ssim_delta": "0.009810",
         "fsr_vs_lanczos_ssim_delta": "0.017214",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "lanczos_edge_ssim": "0.396867",
         "lanczos_psnr_db": "22.487881",
         "lanczos_ssim": "0.614510",
@@ -2397,13 +2397,13 @@
       },
       "regionSource": {
         "annotationIndex": 1,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2421,7 +2421,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -2448,7 +2448,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.010795",
         "fsr_vs_lanczos_edge_ssim_delta": "0.009434",
         "fsr_vs_lanczos_ssim_delta": "0.023815",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "lanczos_edge_ssim": "0.508188",
         "lanczos_psnr_db": "20.961109",
         "lanczos_ssim": "0.639098",
@@ -2471,13 +2471,13 @@
       },
       "regionSource": {
         "annotationIndex": 2,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -2495,7 +2495,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -2522,7 +2522,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.000257",
         "fsr_vs_lanczos_edge_ssim_delta": "0.001154",
         "fsr_vs_lanczos_ssim_delta": "0.001665",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "lanczos_edge_ssim": "0.986066",
         "lanczos_psnr_db": "38.290758",
         "lanczos_ssim": "0.387470",
@@ -2545,13 +2545,13 @@
       },
       "regionSource": {
         "annotationIndex": 3,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -2569,7 +2569,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2596,7 +2596,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.001795",
         "fsr_vs_lanczos_edge_ssim_delta": "0.002819",
         "fsr_vs_lanczos_ssim_delta": "0.005960",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "lanczos_edge_ssim": "0.401493",
         "lanczos_psnr_db": "24.770519",
         "lanczos_ssim": "0.693263",
@@ -2619,13 +2619,13 @@
       },
       "regionSource": {
         "annotationIndex": 0,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2643,7 +2643,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2670,7 +2670,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.002462",
         "fsr_vs_lanczos_edge_ssim_delta": "0.003810",
         "fsr_vs_lanczos_ssim_delta": "0.008020",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "lanczos_edge_ssim": "0.396867",
         "lanczos_psnr_db": "22.487881",
         "lanczos_ssim": "0.614510",
@@ -2693,13 +2693,13 @@
       },
       "regionSource": {
         "annotationIndex": 1,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2717,7 +2717,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -2744,7 +2744,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.002535",
         "fsr_vs_lanczos_edge_ssim_delta": "0.003998",
         "fsr_vs_lanczos_ssim_delta": "0.015555",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "lanczos_edge_ssim": "0.508188",
         "lanczos_psnr_db": "20.961109",
         "lanczos_ssim": "0.639098",
@@ -2767,13 +2767,13 @@
       },
       "regionSource": {
         "annotationIndex": 2,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -2791,7 +2791,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -2818,7 +2818,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.002424",
         "fsr_vs_lanczos_edge_ssim_delta": "0.000579",
         "fsr_vs_lanczos_ssim_delta": "-0.001016",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "lanczos_edge_ssim": "0.986066",
         "lanczos_psnr_db": "38.290758",
         "lanczos_ssim": "0.387470",
@@ -2841,13 +2841,13 @@
       },
       "regionSource": {
         "annotationIndex": 3,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -2865,7 +2865,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2892,7 +2892,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.001434",
         "fsr_vs_lanczos_edge_ssim_delta": "0.003864",
         "fsr_vs_lanczos_ssim_delta": "0.005599",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "lanczos_edge_ssim": "0.401493",
         "lanczos_psnr_db": "24.770519",
         "lanczos_ssim": "0.693263",
@@ -2915,13 +2915,13 @@
       },
       "regionSource": {
         "annotationIndex": 0,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -2939,7 +2939,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -2966,7 +2966,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.002108",
         "fsr_vs_lanczos_edge_ssim_delta": "0.003322",
         "fsr_vs_lanczos_ssim_delta": "0.007666",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "lanczos_edge_ssim": "0.396867",
         "lanczos_psnr_db": "22.487881",
         "lanczos_ssim": "0.614510",
@@ -2989,13 +2989,13 @@
       },
       "regionSource": {
         "annotationIndex": 1,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-6-1-current-20260822.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3013,7 +3013,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -3040,7 +3040,7 @@
         "fsr_vs_bicubic_ssim_delta": "0.002291",
         "fsr_vs_lanczos_edge_ssim_delta": "0.005839",
         "fsr_vs_lanczos_ssim_delta": "0.015311",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "lanczos_edge_ssim": "0.508188",
         "lanczos_psnr_db": "20.961109",
         "lanczos_ssim": "0.639098",
@@ -3063,13 +3063,13 @@
       },
       "regionSource": {
         "annotationIndex": 2,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -3087,7 +3087,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -3114,7 +3114,7 @@
         "fsr_vs_bicubic_ssim_delta": "-0.002268",
         "fsr_vs_lanczos_edge_ssim_delta": "0.000756",
         "fsr_vs_lanczos_ssim_delta": "-0.000860",
-        "full_output_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "full_output_path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "lanczos_edge_ssim": "0.986066",
         "lanczos_psnr_db": "38.290758",
         "lanczos_ssim": "0.387470",
@@ -3137,13 +3137,13 @@
       },
       "regionSource": {
         "annotationIndex": 3,
-        "annotationPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/m6_quality_class_annotations.json",
-        "assetPath": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
+        "annotationPath": "benchmarks/quality_sweeps/m6_quality_class_annotations.json",
+        "assetPath": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-6-1-spatial-20260823T035431Z-01-current.png"
       },
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -3191,7 +3191,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3211,7 +3211,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -3267,7 +3267,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3287,7 +3287,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -3343,7 +3343,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -3363,7 +3363,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -3419,7 +3419,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -3439,7 +3439,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-current-20260831T151755Z-01-current_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -3495,7 +3495,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3515,7 +3515,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -3571,7 +3571,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3591,7 +3591,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -3647,7 +3647,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -3667,7 +3667,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -3723,7 +3723,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -3743,7 +3743,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_bilinear-20260831T151812Z-01-base_only_bilinear_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -3799,7 +3799,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3819,7 +3819,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -3875,7 +3875,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -3895,7 +3895,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -3951,7 +3951,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -3971,7 +3971,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -4027,7 +4027,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -4047,7 +4047,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_mitchell-20260831T151829Z-01-base_only_mitchell_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -4103,7 +4103,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -4123,7 +4123,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -4179,7 +4179,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -4199,7 +4199,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -4255,7 +4255,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -4275,7 +4275,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -4331,7 +4331,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -4351,7 +4351,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_catmull_rom-20260831T151845Z-01-base_only_catmull_rom_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [
@@ -4407,7 +4407,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -4427,7 +4427,7 @@
         },
         "capturedClass": "faces-hair-skin",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -4483,7 +4483,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "tos_daylight",
         "width": 1920
       },
@@ -4503,7 +4503,7 @@
         },
         "capturedClass": "fine-fabric-texture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/tos_daylight_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "3eb53d763bd402de7d0efd6eb1b196427ca5855fc22d49b822179c4f513baa13"
         },
         "pairKey": [
@@ -4559,7 +4559,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "sintel_rooftop",
         "width": 1920
       },
@@ -4579,7 +4579,7 @@
         },
         "capturedClass": "high-contrast-architecture",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_rooftop_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "cb8b06176073ab44131eed2fdfa928c998f248d1d3fc4ed5d17c3512cf663b3f"
         },
         "pairKey": [
@@ -4635,7 +4635,7 @@
       "reviewAsset": {
         "frame": 48,
         "height": 1080,
-        "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
+        "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2.png",
         "scene": "sintel_cave",
         "width": 1920
       },
@@ -4655,7 +4655,7 @@
         },
         "capturedClass": "low-light-shadow-detail",
         "controlSource": {
-          "path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
+          "path": "benchmarks/video_corpus/results/quality_frames/sintel_cave_426x240_high_crf12_f48_m6-base_only_lanczos2-20260831T151902Z-01-base_only_lanczos2_gpu_raw.png",
           "sha256": "77d7b8ef4229552cc45e74124ae65468c8a8593d39dee7cf2a9792381166e1a6"
         },
         "pairKey": [

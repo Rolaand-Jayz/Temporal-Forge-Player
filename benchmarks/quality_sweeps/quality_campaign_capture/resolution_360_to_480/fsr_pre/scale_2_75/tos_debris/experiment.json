@@ -8,7 +8,7 @@
   "timestamp_complete_utc": "2026-09-03T04:04:29.570684+00:00",
   "git_head": "eda2f4c2148df6e379032864136badea7311ac03",
   "git_dirty_at_capture_start": false,
-  "binary": "/home/user/ZCodeProject/temporal_forge_player/build-fast/temporal_forge_player",
+  "binary": "build-fast/temporal_forge_player",
   "binary_sha256": "92d10bcb9150cb2e3de72fbf27e50590ebfd3a5bcc19dca3340f054854b867f4",
   "config_sha256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346",
   "scene": "tos_debris",
@@ -19,9 +19,9 @@
   "nominal_scale": "2.75",
   "cas_strength": "0.20",
   "cas_placement": "pre",
-  "source_artifact": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/quality_frames/tos_debris_640x360_high_crf12_f48_scale_2_75_gpu_raw.png",
+  "source_artifact": "benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/quality_frames/tos_debris_640x360_high_crf12_f48_scale_2_75_gpu_raw.png",
   "source_sha256": "b63939560f5699e19319577ae525c6322007e548daa90d555fdae8ef9681b5cb",
-  "output_artifact": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/candidate_final.png",
+  "output_artifact": "benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/candidate_final.png",
   "output_sha256": "1670b0c8e053ca49dc773844a8914dc0329022d2d1381705763f9fa32911607d",
   "output_retained": true,
   "runtime_trace": {
@@ -70,7 +70,7 @@
     "source_to_motion_scale_x": 0.66875,
     "source_to_motion_scale_y": 0.6666666666666666
   },
-  "runtime_trace_path": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/runtime_pipeline.json",
+  "runtime_trace_path": "benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/runtime_pipeline.json",
   "runtime_trace_sha256": "f9ac7d8c50dc49d86f3f34db484b11acb0d4e3d592e749990b92ae8fb03d2b58",
   "metrics": {
     "psnr_db": "27.559868",
@@ -78,13 +78,13 @@
     "edge_ssim": "0.693741"
   },
   "command": [
-    "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/run_quality.sh",
-    "/home/user/ZCodeProject/temporal_forge_player/build-fast/temporal_forge_player",
+    "benchmarks/video_corpus/run_quality.sh",
+    "build-fast/temporal_forge_player",
     "640x360",
-    "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/raw.csv"
+    "benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/raw.csv"
   ],
   "requested_environment": {
-    "TFORGE_QUALITY_MANIFEST": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/video_corpus/manifest.csv",
+    "TFORGE_QUALITY_MANIFEST": "benchmarks/video_corpus/manifest.csv",
     "TFORGE_QUALITY_CLIP": "^tos_debris$",
     "TFORGE_QUALITY_FRAME": "48",
     "TFORGE_QUALITY_TAG": "scale_2_75",
@@ -95,7 +95,7 @@
     "TFORGE_REVIEW_FSR_CAS": "0.20",
     "TFORGE_FSR4_CAS_STRENGTH": "0.20",
     "TFORGE_EXPERIMENT_ID": "09af77901b1e4543a466250ec8820a29",
-    "TFORGE_RUNTIME_TRACE_PATH": "/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/runtime_pipeline.json",
+    "TFORGE_RUNTIME_TRACE_PATH": "benchmarks/quality_sweeps/quality_campaign_capture/resolution_360_to_480/fsr_pre/scale_2_75/tos_debris/runtime_pipeline.json",
     "TFORGE_GIT_HEAD": "eda2f4c2148df6e379032864136badea7311ac03",
     "TFORGE_GIT_DIRTY": "0",
     "TFORGE_CONFIG_SHA256": "576ad1c1d6a02a95a4ef0ce732aea5440fed88d4e0277ea6c9552725d0880346",

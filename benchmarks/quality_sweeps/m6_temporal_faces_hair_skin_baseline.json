@@ -107,7 +107,7 @@
         "allRequiredMetricsNonNull": true
       },
       "executionProvenance": {
-        "binaryPath": "/home/user/ZCodeProject/temporal_forge_player/build/temporal_forge_player",
+        "binaryPath": "build/temporal_forge_player",
         "binarySha256": "5f80bbdbd9651ed82a677ddbf36c4ec905ba23537d19c811c31b96b08c1cc0f1",
         "configSha256": "91800f566018a55bea418d840d4e6ddfcab7d96d7cf9862e789e1cb6e7ebed8c",
         "gitHeadObserved": "7fdf43ce09015626940e37f9baea48c0210def0c",

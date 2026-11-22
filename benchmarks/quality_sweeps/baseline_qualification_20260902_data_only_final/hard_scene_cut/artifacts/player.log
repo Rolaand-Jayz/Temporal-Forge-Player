@@ -6,7 +6,7 @@ lsfg-vk: Placing default configuration file at /tmp/tforge-temporal-config.8bL8f
 [2026-09-01 23:30:11] INFO  ?:0: Vulkan: graphics queue family 0, FSR compute queue family 1
 [2026-09-01 23:30:11] INFO  ?:0: Vulkan: device 'AMD Radeon RX 7900 GRE (RADV NAVI31)' selected, queue family 0
 [2026-09-01 23:30:11] INFO  ?:0: Settings: loaded (path: /tmp/tforge-temporal-config.8bL8fl/temporal-forge-player/settings.json)
-[2026-09-01 23:30:11] INFO  ?:0: QualityLab: /home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json enabled=true composition=current base=catmull_rom colorSpace=model sharpen=none toneEV=0.000
+[2026-09-01 23:30:11] INFO  ?:0: QualityLab: benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json enabled=true composition=current base=catmull_rom colorSpace=model sharpen=none toneEV=0.000
 [2026-09-01 23:30:11] INFO  ?:0: GpuCapabilityProbe: AMD Radeon RX 7900 GRE (RADV NAVI31) (radv) -> INT8 DOT4 (RDNA3 cooperative matrix, SINT8->SINT32) [tile 16x16, SINT8->SINT32 accum] + FP16 fallback available
 [2026-09-01 23:30:11] INFO  ?:0: PlaybackEngine: Vulkan handles set; FSR4 will be initialized on first frame
 [2026-09-01 23:30:11] INFO  ?:0: PlaybackEngine: FSR4 upscaling enabled

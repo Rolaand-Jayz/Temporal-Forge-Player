@@ -1,1 +1,1 @@
-/home/user/ZCodeProject/temporal_forge_player/benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json
+benchmarks/quality_sweeps/swarm/agent_composition_audit/current_control.json
